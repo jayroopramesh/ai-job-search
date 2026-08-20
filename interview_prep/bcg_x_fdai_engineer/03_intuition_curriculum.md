@@ -197,28 +197,87 @@ for x in arr:
         ans += counts[cand - x]
 ```
 
-## 6. Drill lists (the "repetitions", made concrete)
+## 6. Drill lists (the "repetitions", made concrete — linked and sourced)
 
-**The four official examples** (drill until each is a 1-minute classification):
-neighbor-sum array; vowel/consonant pattern count; Tetris drop; pairs summing
-to a power of 2.
+Three confidence tiers, so guesswork is never dressed up as fact:
+- **OFFICIAL** — CodeSignal's own framework PDF, exact worked examples
+- **CORROBORATED** — named as GCA-representative across multiple independent
+  community sources (candidate reports, the Leader-board OA guide, prep blogs)
+- **EXTENSION** — same archetype, chosen by pattern-matching against the
+  recognition cues in §1–4; not specifically named by any source, offered to
+  broaden reps
 
-**Q3 family — 12 LeetCode analogues** (aim 15–20 min each):
-Spiral Matrix (54) · Spiral Matrix II (59) · Rotate Image (48) · Diagonal
-Traverse (498) · Reshape the Matrix (566) · Toeplitz Matrix (766) · Image
-Overlap (835) · Largest Local Values in a Matrix (2373) · Transpose Matrix
-(867) · Count Square Submatrices with All Ones (1277) · Sort the Matrix
-Diagonally (1329) · Text Justification (68 — the string-based outlier).
+LeetCode numbers/links verified by search 2026-08-19.
 
-**Q4 family — 13 LeetCode analogues** (aim 20–30 min each):
-Longest Consecutive Sequence (128) · 4Sum II (454) · Pairs of Songs With
-Total Durations Divisible by 60 (1010) · Longest Palindrome by Concatenating
-Two Letter Words (2131) · Array of Doubled Pairs (954) · 3Sum With
-Multiplicity (923) · Count Number of Nice Subarrays (1248) · K-diff Pairs in
-an Array (532) · Diagonal Traverse II (1424) · Find Occurrences of an Element
-in an Array (3159) · Find the Number of Distinct Colors Among the Balls
-(3160) · Max Sum of a Pair With Equal Sum of Digits (2342) · Minimum Absolute
-Difference-style mirror pairs.
+### Official — drill until each is a 1-minute classification, cold
+| Problem | Slot | Note |
+|---|---|---|
+| Neighbor-sum array (`b[i]=a[i-1]+a[i]+a[i+1]`, 0 for missing) | Q1 | boundary-guarded one-pass |
+| Vowel/consonant pattern count (`y` counts as a vowel) | Q2 | fixed-window match, brute force intended |
+| ["Tetris drop"](https://leetcode.com/discuss/interview-question/1079669/a-tetris-question/) — famous enough to have its own LeetCode Discuss thread | Q3 | pure simulation, decompose into helpers |
+| Count pairs summing to a power of 2 | Q4 | bounded candidate set (~21 powers) + hashmap |
+
+### Q1 — Basic Coding · EXTENSION
+| Problem | Pattern thinking |
+|---|---|
+| [Running Sum of 1d Array (1480)](https://leetcode.com/problems/running-sum-of-1d-array/) | purest accumulate-as-you-go form, no boundary guards needed |
+| [Shuffle the Array (1470)](https://leetcode.com/problems/shuffle-the-array/) | translate an index rule literally — no cleverness required |
+| [Defanging an IP Address (1108)](https://leetcode.com/problems/defanging-an-ip-address/) | character-level rewrite in one pass |
+| [Kids With the Greatest Number of Candies (1431)](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/) | one pass, one condition per element — the shape at its most literal |
+| [Number of Good Pairs (1512)](https://leetcode.com/problems/number-of-good-pairs/) | n is small enough that O(n²) is *correct* — calibrates when not to reach for a hashmap |
+
+### Q2 — Data Manipulation · EXTENSION
+| Problem | Pattern thinking |
+|---|---|
+| [Two Sum (1)](https://leetcode.com/problems/two-sum/) | the hashmap-lookup idea in miniature — this is Q4's core trick, previewed at trivial scale |
+| [Valid Anagram (242)](https://leetcode.com/problems/valid-anagram/) | Counter equality — recognize "compare the multiset of characters" |
+| [Group Anagrams (49)](https://leetcode.com/problems/group-anagrams/) | sorted-string-as-dict-key — the canonical "group by a derived property" move |
+| [Sort Characters By Frequency (451)](https://leetcode.com/problems/sort-characters-by-frequency/) | Counter, then sort by count — chains two Q2 concepts, exactly per spec |
+| [Merge Sorted Array (88)](https://leetcode.com/problems/merge-sorted-array/) | two-pointer merge with a rule — the spec explicitly names "a specific merge function" as in-scope |
+
+### Q3 — Implementation Efficiency · CORROBORATED (12 problems, aim 15–20 min each)
+| Problem | Pattern thinking |
+|---|---|
+| [Spiral Matrix (54)](https://leetcode.com/problems/spiral-matrix/) | direction-vector + boundary skeleton — the base case for "walk the grid unusually" |
+| [Spiral Matrix II (59)](https://leetcode.com/problems/spiral-matrix-ii/) | same skeleton, generation instead of extraction |
+| [Rotate Image (48)](https://leetcode.com/problems/rotate-image/) | transpose + reverse-rows — memorize the 2-line trick outright |
+| [Diagonal Traverse (498)](https://leetcode.com/problems/diagonal-traverse/) | direction flips at each boundary — "alternate rule at edges" |
+| [Reshape the Matrix (566)](https://leetcode.com/problems/reshape-the-matrix/) | flatten-then-refill — 2D structure that's really 1D data |
+| [Toeplitz Matrix (766)](https://leetcode.com/problems/toeplitz-matrix/) | check a diagonal invariant against each cell's up-left neighbor |
+| [Image Overlap (835)](https://leetcode.com/problems/image-overlap/) | shift one grid against another, count alignment — brute every offset |
+| [Largest Local Values in a Matrix (2373)](https://leetcode.com/problems/largest-local-values-in-a-matrix/) | 3×3 neighborhood scan per cell — sliding window in two dimensions |
+| [Transpose Matrix (867)](https://leetcode.com/problems/transpose-matrix/) | `zip(*matrix)` as a one-liner — know it before you need to hand-roll it |
+| [Count Square Submatrices with All Ones (1277)](https://leetcode.com/problems/count-square-submatrices-with-all-ones/) | `dp[i][j]=1+min(top,left,top-left)` — implement the recurrence exactly |
+| [Sort the Matrix Diagonally (1329)](https://leetcode.com/problems/sort-the-matrix-diagonally/) | group cells by `row-col` — every diagonal shares that value |
+| [Text Justification (68)](https://leetcode.com/problems/text-justification/) | the string-based outlier — greedy line-packing, budget extra time |
+
+### Q4 — Problem Solving · CORROBORATED (12 problems, aim 20–30 min each)
+| Problem | Pattern thinking |
+|---|---|
+| [Longest Consecutive Sequence (128)](https://leetcode.com/problems/longest-consecutive-sequence/) | only start a run where `v-1` is absent — O(n log n) sort collapses to O(n) |
+| [4Sum II (454)](https://leetcode.com/problems/4sum-ii/) | hashmap the pairwise sums of two arrays, look up the complement in the other two |
+| [Pairs of Songs Divisible by 60 (1010)](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/) | bucket by `(60-r)%60` — bounded candidate set, same move as the official power-of-2 example |
+| [Longest Palindrome by Concatenating Two Letter Words (2131)](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/) | pair each word with its reverse via a dict |
+| [Array of Doubled Pairs (954)](https://leetcode.com/problems/array-of-doubled-pairs/) | sort by absolute value, greedily match x to 2x in a running count-map |
+| [3Sum With Multiplicity (923)](https://leetcode.com/problems/3sum-with-multiplicity/) | fix one element, hashmap-count the rest — 3Sum reframed for counting |
+| [Count Number of Nice Subarrays (1248)](https://leetcode.com/problems/count-number-of-nice-subarrays/) | reframe "exactly k odds" as prefix-sum-equality counting |
+| [K-diff Pairs in an Array (532)](https://leetcode.com/problems/k-diff-pairs-in-an-array/) | for each x, check whether `x+k` exists in a set — complement-lookup, direct |
+| [Diagonal Traverse II (1424)](https://leetcode.com/problems/diagonal-traverse-ii/) | group cells by `row+col`, sort within each group — ordering hiding as traversal |
+| [Find Occurrences of an Element in an Array (3159)](https://leetcode.com/problems/find-occurrences-of-an-element-in-an-array/) | precompute every match in one pass, answer queries by lookup |
+| [Find the Number of Distinct Colors Among the Balls (3160)](https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls/) | two hashmaps in lockstep — track a running count as state mutates |
+| [Max Sum of a Pair With Equal Sum of Digits (2342)](https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/) | group by digit-sum, keep only the running top-2 per group |
+
+### Sources considered and set aside (honesty over padding)
+- **StrataScratch** — real platform, but its "Algorithm Questions" section
+  and Python content are aimed at data-science interviews (SQL, pandas,
+  stats-adjacent). That's BCG X's *other* assessment track (the Data Science
+  framework used for Scientist roles), not this GCA. Low marginal value here.
+- **CodeSignal's own blog** (`codesignal.com/blog/example-codesignal-questions/`)
+  — this environment's network policy blocks direct access to codesignal.com,
+  so any extra examples beyond the four official framework problems above
+  couldn't be independently verified; not included rather than guessed at.
+- **InterviewQuery** — has a general practice dashboard, but nothing indexed
+  specifically to GCA archetypes; no more useful than the LeetCode list above.
 
 **How to drill for intuition (not syntax):** for each problem, before any
 code — (1) classify the archetype out loud, (2) say the invariant sentence,
