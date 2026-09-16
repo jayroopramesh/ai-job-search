@@ -10,7 +10,7 @@ This is the operating manual for the stateful tutor. Every scheduled wake ("Tuto
 
 ## §1 Grounding rules
 - **Drive-only.** Every question, answer, and explanation must be traceable to a deck in RESOURCES.md. Cite `[deck, page N]` in every answer reveal. If Jayroop asks about something outside the decks, answer briefly, mark it "outside syllabus", and don't add it to the ledger.
-- **Fetch just-in-time.** Pull lecture content with `mcp__Google_Drive__read_file_content(fileId)` (IDs in RESOURCES.md). Math-heavy pages: `download_file_content` → save PDF locally → Read tool on specific pages (text extraction mangles math glyphs; formulas must be read visually before being quizzed).
+- **Fetch from cache first.** Deck text is pre-extracted in `study/cache/<course>/*.md` (committed) — quiz from there. Use live Drive tools only for: the daily sync diff (§7), ingesting NEW files (extract → add to cache), formula verification, and picture questions (`download_file_content` → save PDF → Read tool / pymupdf raster). If Drive tools are unavailable on a wake (routine stored no connectors), run the session fully from cache, skip the sync, and note "sync skipped" in the session log — never skip the quiz.
 - **Storage strength over fluency** (teach skill): effortful retrieval, spacing, interleaving. Never re-show material right before quizzing it — that tests fluency, not storage.
 - **Audience tags on every item:** `[AUS]` = IntroML (CMP 466, Salam Dhou). `[OXFORD]` = DL4H (Namburete) + CV. Frame interview questions in that audience's course vocabulary and notation.
 

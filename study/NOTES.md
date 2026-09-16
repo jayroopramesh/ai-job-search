@@ -5,3 +5,4 @@
 - Interview dates and formats unknown — ask casually during week 1; if learned, apply TUTOR.md §9 front-loading.
 - DL4H PDFs: text extraction mangles math glyphs → read formula slides visually (download + Read tool).
 - Jayroop's own problem-sheet answers exist (ps1–ps4 `*_student_ans`) — richest source of real misconceptions; mine on D10/D17/D24.
+- Routines warned "stores no MCP connectors" at creation — wakes may arrive without Drive tools. Mitigation: full deck-text cache in study/cache/ (2026-09-16); sessions run cache-first per TUTOR.md §1. If the first wake confirms Drive tools are missing, tell Jayroop to recreate the three routines from the claude.ai Routines UI (that path can attach connectors) — names and prompts can be copied via list_triggers.
