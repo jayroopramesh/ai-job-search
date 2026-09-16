@@ -1,0 +1,217 @@
+<title>Study HQ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#F6F8F4; --surface:#FFFFFF; --surface2:#EEF2EC; --ink:#1B2420; --muted:#5A6A61;
+  --line:#D9E0D8; --accent:#0B6E4F; --accent-soft:#E2F0E9;
+  --oxford:#002147; --oxford-ink:#F2F6FF; --aus:#8F5407; --aus-ink:#FFF7EA;
+  --flag:#B3261E; --flag-soft:#F9E7E5; --warn:#8F5407;
+  --bar-track:#DCE4DB;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#111613; --surface:#1A211C; --surface2:#212A24; --ink:#E7ECE7; --muted:#98A79E;
+    --line:#2C3730; --accent:#53C08D; --accent-soft:#1E3229;
+    --oxford:#24406E; --oxford-ink:#D9E4FA; --aus:#6E4408; --aus-ink:#F6E3C4;
+    --flag:#E5766E; --flag-soft:#3A2321; --warn:#DFA04F;
+    --bar-track:#2C3730;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111613; --surface:#1A211C; --surface2:#212A24; --ink:#E7ECE7; --muted:#98A79E;
+  --line:#2C3730; --accent:#53C08D; --accent-soft:#1E3229;
+  --oxford:#24406E; --oxford-ink:#D9E4FA; --aus:#6E4408; --aus-ink:#F6E3C4;
+  --flag:#E5766E; --flag-soft:#3A2321; --warn:#DFA04F;
+  --bar-track:#2C3730;
+}
+body{background:var(--ground); color:var(--ink); font-family:"Public Sans",system-ui,sans-serif;
+  font-size:15px; line-height:1.55; padding-inline:16px; padding-block:8px 40px;}
+.wrap{max-width:1040px; margin:0 auto;}
+h1,h2{font-family:"Fraunces",Georgia,serif; font-weight:650; letter-spacing:-0.01em; text-wrap:balance; margin:0;}
+h1{font-size:clamp(1.9rem,4vw,2.6rem);}
+h2{font-size:1.15rem; margin-bottom:10px;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums;}
+.eyebrow{font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:6px;}
+header{padding-block:22px 14px;}
+.meta{display:flex; flex-wrap:wrap; gap:8px 18px; color:var(--muted); margin-top:8px; font-size:.85rem;}
+.meta b{color:var(--ink); font-weight:600;}
+.tag{display:inline-block; border-radius:4px; padding:1px 7px; font-family:"IBM Plex Mono",monospace; font-size:.68rem; font-weight:600; letter-spacing:.05em; vertical-align:middle;}
+.tag.ox{background:var(--oxford); color:var(--oxford-ink);}
+.tag.aus{background:var(--aus); color:var(--aus-ink);}
+.bar{height:8px; border-radius:4px; background:var(--bar-track); margin-top:14px; overflow:hidden;}
+.bar i{display:block; height:100%; width:1%; background:var(--accent); border-radius:4px;}
+.barlab{display:flex; justify-content:space-between; font-size:.75rem; color:var(--muted); margin-top:4px;}
+main{display:grid; gap:16px;}
+section.card{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:16px 18px;}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+@media (max-width:760px){.grid2{grid-template-columns:1fr;}}
+/* today strip */
+.windows{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:6px;}
+@media (max-width:600px){.windows{grid-template-columns:1fr;}}
+.win{background:var(--surface2); border:1px solid var(--line); border-radius:8px; padding:10px 12px;}
+.win .t{font-family:"IBM Plex Mono",monospace; font-size:.72rem; color:var(--muted);}
+.win .n{font-weight:600; margin-top:2px;}
+.win .d{font-size:.8rem; color:var(--muted); margin-top:2px;}
+/* stats */
+.stats{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,1fr);}}
+.stat{background:var(--surface2); border-radius:8px; padding:10px 12px;}
+.stat .v{font-family:"IBM Plex Mono",monospace; font-size:1.25rem; font-weight:600;}
+.stat .k{font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-top:2px;}
+/* flags */
+.empty{color:var(--muted); background:var(--surface2); border:1px dashed var(--line); border-radius:8px; padding:12px 14px; font-size:.87rem;}
+.flagdot{color:var(--flag); font-weight:700;}
+/* courses */
+.course{display:grid; gap:4px; padding-block:10px; border-top:1px solid var(--line);}
+.course:first-of-type{border-top:0; padding-top:2px;}
+.course .head{display:flex; flex-wrap:wrap; align-items:center; gap:8px; font-weight:600;}
+.course .sub{font-size:.82rem; color:var(--muted);}
+/* schedule */
+details{border-top:1px solid var(--line); padding-block:8px;}
+details:first-of-type{border-top:0;}
+summary{cursor:pointer; font-weight:600; padding-block:4px; list-style-position:inside;}
+summary .mono{color:var(--muted); font-size:.8rem; font-weight:400;}
+.sched{width:100%; border-collapse:collapse; font-size:.85rem; margin-top:6px;}
+.sched td{padding:5px 8px 5px 0; border-top:1px solid var(--line); vertical-align:top;}
+.sched td:first-child{white-space:nowrap; font-family:"IBM Plex Mono",monospace; font-size:.75rem; color:var(--muted); padding-right:12px;}
+.sched tr.special td{background:var(--accent-soft);}
+.tbl{overflow-x:auto;}
+/* methods */
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;}
+.chip{background:var(--surface2); border:1px solid var(--line); border-radius:999px; padding:2px 10px; font-size:.76rem;}
+.ladder{font-family:"IBM Plex Mono",monospace; color:var(--accent); font-weight:600;}
+ul{margin:6px 0 0; padding-left:18px;}
+li{margin-bottom:4px;}
+footer{color:var(--muted); font-size:.8rem; margin-top:20px; border-top:1px solid var(--line); padding-top:12px;}
+a{color:var(--accent);}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">28-day interview sprint · Phase 1 of 2</div>
+  <h1>Study HQ</h1>
+  <div class="meta">
+    <span><b>Jayroop</b> · 3 × 15 min/day</span>
+    <span>Sprint <b class="mono">Sep 17 → Oct 14</b> · DL4H + IntroML</span>
+    <span>CV long track <b class="mono">→ Nov 15</b></span>
+    <span><span class="tag aus">AUS</span> IntroML panel &nbsp;·&nbsp; <span class="tag ox">OXFORD</span> DL4H + CV panel</span>
+  </div>
+  <div class="bar"><i style="width:1%"></i></div>
+  <div class="barlab"><span>Day 0 — system armed</span><span class="mono">0 / 28 days</span></div>
+</header>
+
+<main>
+<section class="card">
+  <h2>Today · Wed Sep 16 — Day 0 (setup)</h2>
+  <p style="margin:0 0 4px; color:var(--muted); font-size:.9rem;">System built and scheduled. First live session: <b style="color:var(--ink)">tomorrow 08:00 — Day 1 baseline diagnostic</b>. Answer in the Claude Code session when a window pings you.</p>
+  <div class="windows">
+    <div class="win"><div class="t">W1 · 08:00</div><div class="n">Morning review</div><div class="d">Drive sync + everything due in the spaced-repetition ladder</div></div>
+    <div class="win"><div class="t">W2 · 13:00</div><div class="n">New material</div><div class="d">Pre-test → micro-lesson → recall quiz on today's decks</div></div>
+    <div class="win"><div class="t">W3 · 20:00</div><div class="n">Interleaved gauntlet</div><div class="d">Both courses mixed + flag-point attack + interview questions</div></div>
+  </div>
+  <p style="margin:8px 0 0; font-size:.78rem; color:var(--muted);">Times are Copenhagen defaults — say the word in the session and the tutor moves them.</p>
+</section>
+
+<div class="grid2">
+<section class="card">
+  <h2>Scoreboard</h2>
+  <div class="stats">
+    <div class="stat"><div class="v">0<span style="color:var(--muted);font-size:.85rem">/84</span></div><div class="k">Windows done</div></div>
+    <div class="stat"><div class="v">—</div><div class="k">7-day retention</div></div>
+    <div class="stat"><div class="v">0</div><div class="k">Ledger items</div></div>
+    <div class="stat"><div class="v">0</div><div class="k">Due today</div></div>
+    <div class="stat"><div class="v"><span class="flagdot">0</span></div><div class="k">Flags open</div></div>
+    <div class="stat"><div class="v">0<span style="color:var(--muted);font-size:.85rem">/7</span></div><div class="k">Mocks passed</div></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2><span class="flagdot">🚩</span> Flag points</h2>
+  <div class="empty">None yet. Day 1's baseline diagnostic seeds this list; every miss becomes a flag and gets re-attacked from a new angle (different question format) until it survives 3 consecutive passes.</div>
+</section>
+</div>
+
+<section class="card">
+  <h2>Courses</h2>
+  <div class="course">
+    <div class="head">Deep Learning in Healthcare (DL4H) <span class="tag ox">OXFORD</span></div>
+    <div class="sub">Ana Namburete, University of Oxford · 13 lecture decks (L1–L16) + problem sheets PS1–PS4 with Jayroop's own answers — mined for real misconceptions on mock Saturdays. Sprint priority.</div>
+  </div>
+  <div class="course">
+    <div class="head">Intro ML — CMP 466 Machine Learning &amp; Data Mining <span class="tag aus">AUS</span></div>
+    <div class="sub">Salam Dhou, American University of Sharjah · 11 decks (1–9, 13, 15). Decks 10–12 &amp; 14 not uploaded yet — the morning Drive sync will catch them. Sprint priority.</div>
+  </div>
+  <div class="course">
+    <div class="head">Computer Vision <span class="tag ox">OXFORD</span></div>
+    <div class="sub">20 decks · 60-day track. During the sprint only the 8 overlap decks appear (Filtering, Classification, CNNs, Transformers, Visualization, Generative, Representation, Unsupervised); the rest run Oct 15 – Nov 15.</div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Sprint schedule</h2>
+  <details open><summary>Week 1 · Baseline &amp; foundations <span class="mono">Sep 17–20</span></summary><div class="tbl"><table class="sched">
+    <tr><td>D1 Thu 17</td><td>Baseline diagnostic — IntroML sampler (midday) + DL4H sampler (evening) → seeds ledger &amp; flags</td></tr>
+    <tr><td>D2 Fri 18</td><td>IntroML 1 Introduction + 2 Data · DL4H L1 Why DL for healthcare</td></tr>
+    <tr class="special"><td>D3 Sat 19</td><td>Mock #0 (12-question calibration) + Feynman teach-back on weakest baseline concept</td></tr>
+    <tr class="special"><td>D4 Sun 20</td><td>Review-only + weekly retro</td></tr>
+  </table></div></details>
+  <details><summary>Week 2 · Classical core &amp; training fundamentals <span class="mono">Sep 21–27</span></summary><div class="tbl"><table class="sched">
+    <tr><td>D5 Mon 21</td><td>IntroML 3 KNN · DL4H L2 Loss &amp; metrics</td></tr>
+    <tr><td>D6 Tue 22</td><td>IntroML 4 Decision Trees · DL4H L3 Backprop &amp; optimisation</td></tr>
+    <tr><td>D7 Wed 23</td><td>IntroML 5 Overfitting · DL4H L7-8 Regularisation pt 1 — deliberate interleave</td></tr>
+    <tr><td>D8 Thu 24</td><td>IntroML 6 Class Imbalance &amp; Evaluation · DL4H ROC/PR deep-dive · CV 06 overlap</td></tr>
+    <tr><td>D9 Fri 25</td><td>IntroML 7 Naïve Bayes · DL4H L4 Initialisation &amp; normalisation</td></tr>
+    <tr class="special"><td>D10 Sat 26</td><td>Mock #1 + Feynman + PS1 mining (Jayroop's answers vs official)</td></tr>
+    <tr class="special"><td>D11 Sun 27</td><td>Review-only + retro</td></tr>
+  </table></div></details>
+  <details><summary>Week 3 · Models &amp; representation <span class="mono">Sep 28 – Oct 4</span></summary><div class="tbl"><table class="sched">
+    <tr><td>D12 Mon 28</td><td>IntroML 8 Regression I · DL4H L5 CNNs · CV 02 Filtering overlap</td></tr>
+    <tr><td>D13 Tue 29</td><td>IntroML 9 Regression II · DL4H L6 Advanced CNNs · CV 07 overlap</td></tr>
+    <tr><td>D14 Wed 30</td><td>DL4H L7-8 Regularisation pt 2 · IntroML consolidation sweep</td></tr>
+    <tr><td>D15 Thu 1</td><td>DL4H L9-10 Transfer learning &amp; low-data · CV 17 Representation overlap</td></tr>
+    <tr><td>D16 Fri 2</td><td>IntroML 13 Clustering I · CV 18 Unsupervised overlap</td></tr>
+    <tr class="special"><td>D17 Sat 3</td><td>Mock #2 + Feynman + PS2 mining</td></tr>
+    <tr class="special"><td>D18 Sun 4</td><td>Review-only + retro</td></tr>
+  </table></div></details>
+  <details><summary>Week 4 · Advanced DL <span class="mono">Oct 5–11</span></summary><div class="tbl"><table class="sched">
+    <tr><td>D19 Mon 5</td><td>IntroML 15 Clustering III · DL4H L11-12 Generative pt 1</td></tr>
+    <tr><td>D20 Tue 6</td><td>DL4H L11-12 Generative pt 2 · CV 16 overlap</td></tr>
+    <tr><td>D21 Wed 7</td><td>DL4H L14-15 Sequence models</td></tr>
+    <tr><td>D22 Thu 8</td><td>DL4H L15-16 Self-attention &amp; transformers · CV 08 overlap</td></tr>
+    <tr><td>D23 Fri 9</td><td>DL4H L13 Federated learning · L16 Explainability pt 1</td></tr>
+    <tr class="special"><td>D24 Sat 10</td><td>Mock #3 + Feynman + PS3–PS4 mining</td></tr>
+    <tr class="special"><td>D25 Sun 11</td><td>Review-only + retro</td></tr>
+  </table></div></details>
+  <details><summary>Final stretch <span class="mono">Oct 12–14</span></summary><div class="tbl"><table class="sched">
+    <tr><td>D26 Mon 12</td><td>DL4H L16 Explainability pt 2 · CV 09 overlap · full red-item sweep</td></tr>
+    <tr class="special"><td>D27 Tue 13</td><td>Mock interviews — morning <span class="tag aus">AUS</span> IntroML oral · evening <span class="tag ox">OXFORD</span> DL4H/CV oral</td></tr>
+    <tr class="special"><td>D28 Wed 14</td><td>Final mixed mock → readiness report → switch to CV-only phase 2</td></tr>
+  </table></div></details>
+  <details><summary>Phase 2 · CV long track <span class="mono">Oct 15 – Nov 15 · mornings only</span></summary><div class="tbl"><table class="sched">
+    <tr><td>Oct 15–21</td><td>CV 01 Introduction · 03 Fourier · 04 Restoration · 05 Matching/Indexing</td></tr>
+    <tr><td>Oct 22–31</td><td>CV 10 Object Detection · 11 Segmentation · 12 Videos · 13 Tracking</td></tr>
+    <tr><td>Nov 1–10</td><td>CV 14 Camera Models · 15 MVG · 19 Vision-Language · 20 Ethics/Privacy</td></tr>
+    <tr class="special"><td>Nov 11–15</td><td>Full-syllabus sweep → CV mock (Nov 14) → final retro</td></tr>
+  </table></div></details>
+</section>
+
+<section class="card">
+  <h2>How the tutor works</h2>
+  <ul>
+    <li><b>Spaced repetition</b> — every tested fact climbs the ladder <span class="ladder">1 → 3 → 7 → 14 → 30 days</span>; a miss resets it to 1 day and raises a 🚩 flag.</li>
+    <li><b>Flag-point attack</b> — each open flag is re-hit every evening from a question format it hasn't seen yet; cleared only after 3 consecutive passes on different days.</li>
+    <li><b>Active recall first</b> — new topics start with a pre-test before any teaching; material is never shown right before it's quizzed.</li>
+    <li><b>Interleaving</b> — evening gauntlets mix both courses (never &gt;2 same-course questions in a row) plus CV overlap.</li>
+    <li><b>Feynman</b> — daily 60-second close-out teach-backs + weekly deep teach-back on Saturdays.</li>
+    <li><b>Drive-only</b> — every answer cites deck + page; new Drive uploads are auto-ingested each morning.</li>
+  </ul>
+  <div class="chips">
+    <span class="chip">flashcards</span><span class="chip">open questions</span><span class="chip">interview questions</span><span class="chip">timed mini-tests</span><span class="chip">clozes</span><span class="chip">complete the sentence</span><span class="chip">intuition checks</span><span class="chip">complete the formula</span><span class="chip">identify the picture</span><span class="chip">odd one out</span><span class="chip">teach-backs</span>
+  </div>
+</section>
+</main>
+
+<footer>
+  Updated <span class="mono">2026-09-16 · Day 0</span> · refreshed after every window · state of record: <span class="mono">study/student_progress.md</span> on branch <span class="mono">claude/busy-brahmagupta-v2r6hb</span> · sources: the three course folders in Google Drive
+</footer>
+</div>

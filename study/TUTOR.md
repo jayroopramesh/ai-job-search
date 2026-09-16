@@ -73,7 +73,7 @@ A flag point opens when: an item is failed; the same *type* of question keeps go
 2. Log to kit state when a session completes: `cd study && python3 .learning/scripts/log_progress.py <topic> "<summary>" "<concept>"...`
 3. Learning records / GLOSSARY.md per teach-skill rules (evidence, not coverage).
 4. `git add study/ && git commit -m "study: <window> <date> — <one-line result>" && git push -u origin claude/busy-brahmagupta-v2r6hb` (retry per repo git rules). Never let quiz state exist only in the container.
-5. Republish the **Study HQ** artifact (same URL) with refreshed scoreboard, flags, and today/tomorrow rows.
+5. Republish the **Study HQ** artifact with refreshed scoreboard, flags, and today/tomorrow rows: regenerate `study/dashboard/study-hq.html` and publish it to the existing URL `https://claude.ai/artifact/1AVC1zvbbrLdKpV1CQU5TW` (pass it as `url` if this conversation hasn't published it yet).
 
 ## §9 Wind-down & Phase 2
 - **After 2026-10-14 (sprint end):** run the final readiness report in W3 of D28. Then: disable the midday and evening routines (`update_trigger enabled=false`), keep the morning routine as the **CV track** (Phase 2 in SYLLABUS.md) — new CV material + spaced review of everything, 1 window/day.
