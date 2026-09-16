@@ -1,0 +1,7 @@
+{
+  "agent": "claude-code",
+  "mode": "exam",
+  "initialized_at": "2026-09-16",
+  "source": "hluaguo/learn-faster-kit@c0168f3",
+  "topics": ["dl4h", "intro-ml", "computer-vision"]
+}
