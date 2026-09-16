@@ -4,7 +4,7 @@ Extracted 2026-09-16 via Drive `read_file_content` so tutoring runs cache-first 
 
 Known limitations:
 - **Math glyphs are mangled** by text extraction — always verify a formula visually in the source PDF (RESOURCES.md has file IDs) before quizzing it.
-- **Tail truncation**: Drive's extraction can cut off the last slides of large decks. Observed in introml 01, 07, 08, 09, 13, 15 (end mid-sentence). When covering late-deck topics, cross-check the PDF tail visually and append missing content to the cache file.
+- **Tail truncation**: Drive's extraction can cut off the last slides of large decks. Observed in introml 01, 07, 08, 09, 13, 15 and dl4h L2, L3, L5, L6, L7-8, L9-10, L11-12, L13, L14-15, L15-16, L16 (mostly trailing reference/appendix slides; core content intact). When covering late-deck topics, cross-check the PDF tail visually and append missing content to the cache file. Problem sheets extracted completely.
 - Figures are not captured — picture questions always go back to the PDF (pymupdf raster).
 
 Refresh policy: when the daily sync (§7) sees a changed/new Drive file, re-extract and overwrite/add the cache file in the same commit that updates RESOURCES.md.
