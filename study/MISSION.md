@@ -6,12 +6,14 @@ Jayroop is interviewing for two positions within the next month. One interview p
 ## Success looks like
 - Answer any [AUS] IntroML question fluently: definitions, algorithm mechanics, trade-offs, worked micro-examples, evaluation pitfalls
 - Explain and derive core [OXFORD] DL4H concepts: losses/metrics, backprop, initialisation/normalisation, CNNs, regularisation, transfer learning & low-data regimes, generative models, sequence models, transformers, federated learning, explainability
-- Hold an [OXFORD] CV conversation on sprint-overlap topics now; full CV syllabus by day 60
+- Hold an [OXFORD] CV conversation on sprint-overlap topics by 16 Oct; full CV syllabus by 15 Nov
 - Every 🚩 flag point cleared by 3 consecutive passes from different question angles
-- Rising retention scores across the 3×15-min daily windows; final mocks on Day 27–28 pass at interview standard
+- Rising retention across the 3×15-min daily windows; the **AUS oral mock (7 Oct)** and **Oxford oral mock (14 Oct)** both pass at interview standard
+- Every [AUS] flag cleared by 8 Oct and every [OXFORD] flag by 14 Oct
 
 ## Constraints
-- **Sprint:** Day 1 = 2026-09-17 → Day 28 = 2026-10-14 (DL4H + IntroML priority). **CV long track** ends 2026-11-15.
+- **🎤 INTERVIEW DATES (fixed):** **[AUS] IntroML — Sat 10 Oct 2026.** **[OXFORD] DL4H + CV — Fri 16 Oct 2026.**
+- **Sprint:** Day 1 = 2026-09-17 → Day 30 = 2026-10-16, built backwards from those two dates. **CV long track** runs 17 Oct → 15 Nov.
 - 3 quiz windows/day, ~15 minutes each (morning / midday / evening)
 - **Source of truth: ONLY the Drive folder materials** (see RESOURCES.md). No outside syllabus creep; new Drive uploads are ingested automatically.
 - Methods: spaced repetition, active recall, testing effect, interleaving, Feynman technique (per the teach skill + FASTER framework)

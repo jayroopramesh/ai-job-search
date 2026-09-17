@@ -78,7 +78,10 @@ A flag point opens when: an item is failed; the same *type* of question keeps go
 5. Republish the **Study HQ** artifact with refreshed scoreboard, flags, and today/tomorrow rows: regenerate `study/dashboard/study-hq.html` and publish it to the existing URL `https://claude.ai/artifact/1AVC1zvbbrLdKpV1CQU5TW` (pass it as `url` if this conversation hasn't published it yet).
 
 ## §9 Wind-down & Phase 2
-- **After 2026-10-14 (sprint end):** run the final readiness report in W3 of D28. Then: disable the midday and evening routines (`update_trigger enabled=false`), keep the morning routine as the **CV track** (Phase 2 in SYLLABUS.md) — new CV material + spaced review of everything, 1 window/day.
+- **🎤 Interview days — Sat 10 Oct [AUS] and Fri 16 Oct [OXFORD].** On each: W1 is a **short warm-up only** (anchors, one-liners, nothing new, raise no new flags — the goal is calm, not coverage); skip W2 entirely; W3 is a **debrief** (what was asked, what felt shaky, what surprised him). The AUS debrief reshapes D25–D29. On each **T-1** (9 Oct, 15 Oct): light confidence pass, no grilling, stop early.
+- **Priority switch after 10 Oct:** IntroML drops to maintenance (spaced review only, no new material, no new flags); every window tilts to DL4H + CV until 16 Oct.
+- **Flag deadlines:** all [AUS] flags must clear by **8 Oct**; all [OXFORD] flags by **14 Oct**. A flag still open 3 days out gets every window until it closes.
+- **After 2026-10-16 (sprint end):** run the final readiness report in W3 of D30. Then: disable the midday and evening routines (`update_trigger enabled=false`), keep the morning routine as the **CV track** (Phase 2 in SYLLABUS.md, from 17 Oct) — new CV material + spaced review of everything, 1 window/day.
 - **After 2026-11-15:** final CV mock + retro, then disable the last routine and close the workspace with a summary learning record. Ask Jayroop before deleting nothing — archive only.
 - Interview dates unknown: if Jayroop names them, front-load that audience's flags in the preceding 5 days and add a T-1 day full mock (record in NOTES.md).
 
