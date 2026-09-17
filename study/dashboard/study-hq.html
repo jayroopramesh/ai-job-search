@@ -96,14 +96,14 @@ a{color:var(--accent);}
     <span>CV long track <b class="mono">→ Nov 15</b></span>
     <span><span class="tag aus">AUS</span> IntroML panel &nbsp;·&nbsp; <span class="tag ox">OXFORD</span> DL4H + CV panel</span>
   </div>
-  <div class="bar"><i style="width:1%"></i></div>
-  <div class="barlab"><span>Day 0 — system armed</span><span class="mono">0 / 28 days</span></div>
+  <div class="bar"><i style="width:3.6%"></i></div>
+  <div class="barlab"><span>Day 1 — baseline taken</span><span class="mono">1 / 28 days</span></div>
 </header>
 
 <main>
 <section class="card">
-  <h2>Today · Wed Sep 16 — Day 0 (setup)</h2>
-  <p style="margin:0 0 4px; color:var(--muted); font-size:.9rem;">System built and scheduled. First live session: <b style="color:var(--ink)">tomorrow 08:00 — Day 1 baseline diagnostic</b>. Answer in the Claude Code session when a window pings you.</p>
+  <h2>Today · Thu Sep 17 — Day 1</h2>
+  <p style="margin:0 0 4px; color:var(--muted); font-size:.9rem;">Baseline part 1 done: <b style="color:var(--ink)">3 / 7 on [AUS] IntroML</b>. Vocabulary is there; mechanisms and directions are not. Part 2 (<b style="color:var(--ink)">[OXFORD] DL4H</b>) runs in tonight's window, and 5 items come due tomorrow morning.</p>
   <div class="windows">
     <div class="win"><div class="t">W1 · 08:00</div><div class="n">Morning review</div><div class="d">Drive sync + everything due in the spaced-repetition ladder</div></div>
     <div class="win"><div class="t">W2 · 13:00</div><div class="n">New material</div><div class="d">Pre-test → micro-lesson → recall quiz on today's decks</div></div>
@@ -116,18 +116,25 @@ a{color:var(--accent);}
 <section class="card">
   <h2>Scoreboard</h2>
   <div class="stats">
-    <div class="stat"><div class="v">0<span style="color:var(--muted);font-size:.85rem">/84</span></div><div class="k">Windows done</div></div>
-    <div class="stat"><div class="v">—</div><div class="k">7-day retention</div></div>
-    <div class="stat"><div class="v">0</div><div class="k">Ledger items</div></div>
-    <div class="stat"><div class="v">0</div><div class="k">Due today</div></div>
-    <div class="stat"><div class="v"><span class="flagdot">0</span></div><div class="k">Flags open</div></div>
+    <div class="stat"><div class="v">2<span style="color:var(--muted);font-size:.85rem">/84</span></div><div class="k">Windows done</div></div>
+    <div class="stat"><div class="v">43%</div><div class="k">7-day retention</div></div>
+    <div class="stat"><div class="v">7</div><div class="k">Ledger items</div></div>
+    <div class="stat"><div class="v">5</div><div class="k">Due tomorrow</div></div>
+    <div class="stat"><div class="v"><span class="flagdot">5</span></div><div class="k">Flags open</div></div>
     <div class="stat"><div class="v">0<span style="color:var(--muted);font-size:.85rem">/7</span></div><div class="k">Mocks passed</div></div>
   </div>
 </section>
 
 <section class="card">
   <h2><span class="flagdot">🚩</span> Flag points</h2>
-  <div class="empty">None yet. Day 1's baseline diagnostic seeds this list; every miss becomes a flag and gets re-attacked from a new angle (different question format) until it survives 3 consecutive passes.</div>
+  <div class="tbl"><table class="sched">
+    <tr><td>FP-1</td><td><b>KNN scaling — wrong mechanism.</b> Blamed correlation; the cause is raw magnitude. <span class="tag aus">AUS</span></td></tr>
+    <tr><td>FP-2</td><td><b>Cosine vs Euclidean on text.</b> No account of the Euclidean tie; angle put at 180° (orthogonal is 90°). <span class="tag aus">AUS</span></td></tr>
+    <tr><td>FP-3</td><td><b>GINI extremes inverted.</b> Max placed at a pure node; max is at equal class distribution. <span class="tag aus">AUS</span></td></tr>
+    <tr class="special"><td>FP-4</td><td><b>Precision ↔ recall swapped.</b> Top priority — the most common ML interview killer. <span class="tag aus">AUS</span></td></tr>
+    <tr class="special"><td>FP-5</td><td><b>Pattern: directional inversion.</b> Two-pole concepts come back with the poles reversed. Drilled twice per window until 80% over a rolling week.</td></tr>
+  </table></div>
+  <p style="margin:8px 0 0; font-size:.78rem; color:var(--muted);">Each flag is re-attacked from a format it has not seen yet; cleared only after 3 consecutive passes on different days.</p>
 </section>
 </div>
 
@@ -212,6 +219,6 @@ a{color:var(--accent);}
 </main>
 
 <footer>
-  Updated <span class="mono">2026-09-16 · Day 0</span> · refreshed after every window · state of record: <span class="mono">study/student_progress.md</span> on branch <span class="mono">claude/busy-brahmagupta-v2r6hb</span> · sources: the three course folders in Google Drive
+  Updated <span class="mono">2026-09-17 · Day 1</span> · refreshed after every window · state of record: <span class="mono">study/student_progress.md</span> on branch <span class="mono">claude/busy-brahmagupta-v2r6hb</span> · sources: the three course folders in Google Drive
 </footer>
 </div>

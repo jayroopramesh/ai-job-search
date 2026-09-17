@@ -22,3 +22,20 @@ Linked flag: FP-2
 Q: Validation set vs test set — what is each for, and what goes wrong if you tune on the test set?
 A: Validation is carved out of the *training* data to estimate generalization error while building the model (choosing hyperparameters, early-stopping thresholds); its drawback is less data left to train on. The test set is touched once, for the final estimate. Tune on test and that estimate is optimistically biased — it no longer measures unseen performance.
 Asked: 2026-09-17 ✅ (correct, framed as data leakage)
+
+### QB-INTROML-0005 · [AUS] · open · deck 4 Decision Trees p.35–36 · first asked 2026-09-17
+Q: What does the GINI index measure at a node, and at what class distribution does it hit its maximum?
+A: Node impurity. **Maximum** when records are equally distributed across classes (least beneficial for classification); **minimum of 0** when all records belong to one class (most beneficial — a pure node). Used by CART, SLIQ, SPRINT. Distinct from entropy, though both measure impurity.
+Asked: 2026-09-17 ❌ (said "entropy?" and placed the maximum at a 0/100 split — that is the minimum)
+Linked flag: FP-3, FP-5
+
+### QB-INTROML-0006 · [AUS] · intuition · deck 6 Class Imbalance & Evaluation p.10 · first asked 2026-09-17
+Q: Pond of fish, model catches red fish. Describe high-precision/low-recall and high-recall/low-precision in terms of what is in the net.
+A: High precision, low recall = everything you caught IS red, but you missed many red fish (small, clean catch). High recall, low precision = you caught most of the red fish, but hauled in a lot of blue ones too (big, dirty catch). Precision is exactness/quality of the catch; recall is quantity/completeness of red fish found.
+Asked: 2026-09-17 ❌ (answers swapped — described low precision as high precision)
+Linked flag: FP-4, FP-5
+
+### QB-INTROML-0007 · [AUS] · interview-style · deck 5 Overfitting p.16 · first asked 2026-09-17
+Q: Two models generalize about equally well but one is far more complex. Which do you ship, and what principle backs it?
+A: The simpler one — **Occam's Razor** (law of parsimony): "given two models of similar generalization errors, prefer the simpler model." Reason: a complex model has a greater chance of having been fitted accidentally, so its apparent performance is likelier to be an artefact of this particular data. Hence complexity belongs in the evaluation: Gen.Error(Model) = Train.Error + α × Complexity(Model).
+Asked: 2026-09-17 🟡 (answered "bias-variance trade-off" — adjacent family, not the named principle, and no reason given)
