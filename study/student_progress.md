@@ -25,6 +25,8 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | Date | Window | Type | Items | Score | Notes |
 |---|---|---|---|---|---|
 | 2026-09-16 | setup | Day 0 — system built, routines armed | – | – | Baseline diagnostic scheduled for D1 (Sep 17) |
+| 2026-09-17 | W1 | D1 morning — Drive sync only | 0 | – | Fired 06:10Z, processed 11:08Z (session was idle). Sync clean: all 3 folders match inventory, no new files. Ledger empty on D1 so nothing was due — no quiz owed. |
+| 2026-09-17 | W2 | D1 baseline diagnostic [AUS] IntroML | in progress | – | Running live |
 
 ## Misconception journal (Feynman & mining notes)
 *Problem-sheet mining (D10/D17/D24) and Feynman close-outs land here; durable insights get promoted to `learning-records/`.*
