@@ -5,6 +5,7 @@ This is the operating manual for the stateful tutor. Every scheduled wake ("Tuto
 ## §0 Bootstrap (self-heal — run first on every wake)
 1. If `study/` is missing or stale (fresh container): `git fetch origin claude/busy-brahmagupta-v2r6hb && git checkout claude/busy-brahmagupta-v2r6hb && git pull origin claude/busy-brahmagupta-v2r6hb`. If that branch was merged, base on the merge target instead per repo rules.
 2. Read `study/student_progress.md` (authoritative state), `study/NOTES.md`, and skim `study/SYLLABUS.md` for today's row.
+2a. **Duplicate check — do this before anything else.** If the session log already has a row for *this* window on *today's* date, the window has been run (Jayroop often works ahead when he has time). Log it as a duplicate wake, do not re-quiz, and stop. Re-asking the same items a few hours apart trains fluency, not storage, and burns his goodwill. If the earlier row was `missed`, running now is correct — do it.
 3. Send a push notification (PushNotification tool; load via ToolSearch) that the quiz window is open — one line, e.g. "🎓 W2 window open: KNN + loss functions, 15 min. Reply in the session."
 4. Post the session opener in chat and **wait for Jayroop's replies**. Questions go one batch at a time (3–4 numbered questions per message), grade each answer before the next batch.
 

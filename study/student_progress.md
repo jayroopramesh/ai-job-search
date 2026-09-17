@@ -1,10 +1,10 @@
 # Student Progress — Jayroop
 
-Sprint: **2026-09-17 → 2026-10-14** (DL4H [OXFORD] + IntroML [AUS]) · CV long track [OXFORD] → 2026-11-15
+Sprint: **2026-09-17 (D1) → 2026-10-16 (D30)** · 🎤 **[AUS] Sat 10 Oct** · 🎤 **[OXFORD] Fri 16 Oct** · CV long track → 2026-11-15
 State file is authoritative (TUTOR.md §4/§8). Updated at the end of every window; committed and pushed each time.
 
 ## Scoreboard
-- Sessions completed: **3 / 84** sprint windows (3/day × 28) · missed: 0
+- Sessions completed: **3 / 88** sprint windows (3/day × 30, less the 2 skipped midday windows on interview days) · missed: 0
 - Retention (7-day rolling pass rate): **38%** (2 ✅ · 5 🟡 · 5 ❌ of 12, full D1 baseline + close-out)
 - Ledger items: 11 · due tomorrow (D2, 09-18): **9**
 - 🚩 Flag points — open: **7** (5 concept + 2 pattern) · cleared: 0
@@ -42,8 +42,9 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 |---|---|---|---|---|---|
 | 2026-09-16 | setup | Day 0 — system built, routines armed | – | – | Baseline diagnostic scheduled for D1 (Sep 17) |
 | 2026-09-17 | W1 | D1 morning — Drive sync only | 0 | – | Fired 06:10Z, processed 11:08Z (session was idle). Sync clean: all 3 folders match inventory, no new files. Ledger empty on D1 so nothing was due — no quiz owed. |
-| 2026-09-17 | W3 | D1 baseline pt 2 — [OXFORD] DL4H (L2 losses/metrics) + FP-4 re-attack | 5 | 1.5/5 (30%) | 🟡 ERM named as MLE, 🟡 Dice/imbalance (core insight right, CE high↔low inverted) · ❌ noise models (no idea), ❌ **FP-4 missed again** from the structural angle. Recorded oral-interview format preference: no arithmetic questions — TUTOR.md §3 updated. Taught the P/R anchor rather than only re-testing. Close-out (rare-disease screening case) 🟡: error types finally classified correctly, conclusion not drawn — called 460 FP and 5 FN "about the same". Wrote LR-0001. |
 | 2026-09-17 | W2 | D1 baseline pt 1 — [AUS] IntroML (KNN, overfitting, trees, evaluation) | 7 | 3/7 (43%) | ✅ k trade-off, validation vs test · 🟡 KNN scaling mechanism, Occam's Razor · ❌ cosine/Euclidean, GINI extremes, precision/recall. Seeded 7 ledger items, 5 flags. **Diagnosis: vocabulary is present, mechanisms and directions are not.** Two of the three failures are concepts he annotated CORRECTLY in his own margin notes — fluency decayed, storage strength never formed. |
+| 2026-09-17 | W3 | D1 baseline pt 2 — [OXFORD] DL4H (L2 losses/metrics) + FP-4 re-attack | 5 | 1.5/5 (30%) | 🟡 ERM named as MLE, 🟡 Dice/imbalance (core insight right, CE high↔low inverted) · ❌ noise models (no idea), ❌ **FP-4 missed again** from the structural angle. Recorded oral-interview format preference: no arithmetic questions — TUTOR.md §3 updated. Taught the P/R anchor rather than only re-testing. Close-out (rare-disease screening case) 🟡: error types finally classified correctly, conclusion not drawn — called 460 FP and 5 FN "about the same". Wrote LR-0001. |
+| 2026-09-17 | W3 (wake) | Duplicate — scheduled 18:01Z wake arrived after the window had already been run live earlier in the evening | 0 | – | Closed as duplicate, no re-quiz (re-asking the same items hours apart would test fluency, not storage). Exposed a protocol gap → TUTOR.md §0 now requires a same-day duplicate check. |
 
 ## Misconception journal (Feynman & mining notes)
 - **2026-09-17 — "correlation" standing in for "scale" (FP-1).** Asked why loan amount dominates KNN, answered that age and loan aren't correlated. Correlation between features is not what breaks an unscaled distance metric; raw magnitude is ($-differences in the tens of thousands swamp year-differences in the tens, both squared). Watch for the general pattern: reaching for a statistical-relationship explanation where the cause is arithmetic. Deck 3 p.13–17.
