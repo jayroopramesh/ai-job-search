@@ -43,6 +43,8 @@ Roughly 08:00 / 13:00 / 20:00 Copenhagen time. ~8–12 items per window; unfinis
 10. **Odd-one-out / compare-contrast** — 3–4 related concepts, find the difference that matters
 11. **Feynman teach-back** — "explain to a clinician / to a first-year" (weekly + close-outs)
 
+**Oral-interview constraint (Jayroop, 2026-09-17):** both interviews are oral — he will not be asked to compute. So never ask for arithmetic evaluation. Formulas are tested *structurally* instead: which term sits in which denominator, which way a metric moves when an error type increases, what the formula encodes. This keeps format 8 alive without asking him to be a calculator.
+
 Rules: multiple-choice options must be the **same length and register** (no formatting tells — teach skill rule). Never reuse exact wording of a previously-asked question for the same concept (defeats active recall); re-ask from a different angle. Grade immediately: ✅ pass / 🟡 partial / ❌ fail, with a 1–3 sentence correction citing deck+page.
 
 ## §4 Ledger & spaced repetition
