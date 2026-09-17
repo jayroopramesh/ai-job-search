@@ -39,3 +39,9 @@ Linked flag: FP-4, FP-5
 Q: Two models generalize about equally well but one is far more complex. Which do you ship, and what principle backs it?
 A: The simpler one — **Occam's Razor** (law of parsimony): "given two models of similar generalization errors, prefer the simpler model." Reason: a complex model has a greater chance of having been fitted accidentally, so its apparent performance is likelier to be an artefact of this particular data. Hence complexity belongs in the evaluation: Gen.Error(Model) = Train.Error + α × Complexity(Model).
 Asked: 2026-09-17 🟡 (answered "bias-variance trade-off" — adjacent family, not the named principle, and no reason given)
+
+### QB-INTROML-0008 · [AUS]+[OXFORD] · Feynman clinical case · deck 6 p.10 + DL4H L2 · first asked 2026-09-17
+Q: A rare-disease screening model flags 500 patients; 40 of them actually have the disease, and it misses 5 cases. Precision problem or recall problem — and how would you put it to a clinician?
+A: **Precision problem.** TP=40, FP=460, FN=5 → recall ≈ 40/45 ≈ 89% (it finds nearly every case), precision = 40/500 = 8% (nearly everything it flags is a false alarm). To a clinician: "it almost never misses the disease, but for every real case it sends about eleven healthy people for follow-up." The asymmetry between 460 and 5 *is* the answer — summing them discards it. Worth adding: for rare-disease screening this trade is often deliberate (miss nothing, confirm downstream), which is why the metric you optimise follows the clinical cost.
+Asked: 2026-09-17 🟡 (classified 460 FP / 5 FN correctly — first time — then called the two "about the same")
+Linked flag: FP-4, FP-5
