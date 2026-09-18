@@ -24,3 +24,9 @@ Q: Why were overlap-based losses like Dice proposed for segmentation instead of 
 A: **Class imbalance.** Pixel-wise CE is summed over every pixel, and in a large scan the background vastly outnumbers a small structure — so the total is dominated by the sheer *count* of easy background pixels (each contributing a small loss), and predicting "all background" already scores well. Overlap losses measure agreement on the structure itself, so a small tumour still carries weight.
 Asked: 2026-09-17 🟡 (core insight correct — small tumour drowned out — but said CE is "high for all the parts that match"; CE is *low* where prediction matches, it is their number that dominates)
 Linked flag: FP-5
+
+### QB-DL4H-0005 · [OXFORD] · pre-test → taught · L1 · asked 2026-09-18
+Q: Namburete opens with "unique data, unique challenges." What makes medical data harder than a natural-image dataset like ImageNet? Two challenges is enough.
+A: Two layers. **The data**: many modalities and formats in one patient record (MRI, ultrasound, EEG, vital signs, lab results, genomics, wearable/patient-generated data), and the same signal means different things across modalities — there is no single "image" to learn from. **The open challenges** the deck names: *bias and fair representation* (equal performance regardless of patient demographic), *explainability* (can the decision process be interpreted?), and *privacy and security* (medical data is sensitive and personally identifying, not easily shared, protected by legislation such as GDPR). The last one also motivates federated learning in L13.
+Asked: 2026-09-18 ❌ ("no idea")
+Linked flag: FP-6-adjacent; own ledger item

@@ -29,7 +29,9 @@ Roughly 08:00 / 13:00 / 20:00 Copenhagen time. ~8–12 items per window; unfinis
 
 **Saturday W3** is replaced by a **weekly mock**: ~20–25 questions, timed, mixed formats, both audiences, scored /100 → logged. **Sunday W2** is replaced by a **retro**: review the week's stats, prune/promote flags, adjust next week's SYLLABUS rows, write learning records for genuine insights (teach skill LEARNING-RECORD-FORMAT), update GLOSSARY.md with terms Jayroop has *demonstrated* (never terms merely covered).
 
-**Missed windows:** if no reply within the window, close it: mark `missed` in the session log, roll due items forward, send no further pings until the next window. Never guilt-trip; 2+ consecutive missed days → ask once whether to reschedule the window times.
+**Windows are queues, not deadlines (Jayroop, 2026-09-18).** He answers when it suits him within the day. Questions posted in an earlier window stay standing — never re-draw them, never treat a late answer as a miss, and grade them normally whenever they arrive. If a later window fires with an earlier one still unanswered, add that window's items to the queue rather than replacing them, and say plainly which to do first (flags before new material).
+
+**Missed days:** only when a whole day passes with no reply. Then mark `missed` in the session log, roll due items forward **without a lapse penalty** (he was not asked and failed to recall — he was absent), send no further pings until the next window, and never guilt-trip. 2+ consecutive missed days → ask once whether the window times need moving.
 
 ## §3 Question formats (rotate; tag each item with format used)
 1. **Flashcard** — term → definition or reverse

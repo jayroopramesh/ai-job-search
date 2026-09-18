@@ -45,3 +45,38 @@ Q: A rare-disease screening model flags 500 patients; 40 of them actually have t
 A: **Precision problem.** TP=40, FP=460, FN=5 → recall ≈ 40/45 ≈ 89% (it finds nearly every case), precision = 40/500 = 8% (nearly everything it flags is a false alarm). To a clinician: "it almost never misses the disease, but for every real case it sends about eleven healthy people for follow-up." The asymmetry between 460 and 5 *is* the answer — summing them discards it. Worth adding: for rare-disease screening this trade is often deliberate (miss nothing, confirm downstream), which is why the metric you optimise follows the clinical cost.
 Asked: 2026-09-17 🟡 (classified 460 FP / 5 FN correctly — first time — then called the two "about the same")
 Linked flag: FP-4, FP-5
+
+### QB-INTROML-0009 · [AUS] · forced-choice direction (FP-5 drill) · deck 6 p.10 · asked 2026-09-18
+Q: A model is retuned to flag twice as many cases — a few more true positives, many more false alarms. Which of precision/recall rises and which falls?
+A: Recall rises (TP up, FN down — the extra real cases found were previously misses). Precision falls (FP grows far faster than TP). Denominators tell you directly: recall = TP/(TP+FN), precision = TP/(TP+FP).
+Asked: 2026-09-18 ✅ (reasoned from the denominators unprompted; minor slip — said FN "stays the same" when it falls slightly)
+Linked flag: FP-4 (1/3), FP-5 (1/3)
+
+### QB-INTROML-0010 · [AUS] · forced-choice direction (FP-5 drill) · deck 4 p.35–36 · asked 2026-09-18
+Q: Node A = 50 records all one class; Node B = 50 records split 25/25. Which has the higher GINI, and which is the tree moving towards?
+A: Node B (25/25) has the higher GINI — maximum impurity, least useful for classification. The tree splits *towards* Node A, the pure node, where GINI = 0.
+Asked: 2026-09-18 ✅ (both halves correct)
+Linked flag: FP-3 (1/3), FP-5 (1/3)
+
+### QB-INTROML-0011 · [AUS] · interview-style + mechanism · deck 3 p.13–17 · asked 2026-09-18
+Q: "KNN performs poorly on patient age, weight and annual income. What do you check first?" — then: "Why does that happen? Be precise."
+A: Feature scaling — AND the mechanism: Euclidean distance squares raw differences, so income (spread over tens of thousands) contributes a squared term that dwarfs age or weight (spread over tens). The neighbour ranking is then decided by income alone; the other features are arithmetically invisible. Fix: min-max scaling, or standardise to mean 0 / sd 1.
+Asked: 2026-09-18 🟡 (said "scaling", stopped there — the requested mechanism was not produced)
+Linked flag: FP-1, FP-9
+
+### QB-INTROML-0012 · [AUS] · reverse flashcard (FP-7 drill) · deck 5 p.16 · asked 2026-09-18
+Q: Name the principle: "it is futile to do with more what can be done with fewer — prefer the simpler of two models with similar generalization error." Then one line on why.
+A: **Occam's Razor** (law of parsimony). Why: a complex model has more ways to fit this particular dataset by accident, so its apparent performance is likelier to be an artefact of the sample than a property of the problem. Hence complexity enters the evaluation: Gen.Error = Train.Error + α × Complexity.
+Asked: 2026-09-18 🟡 (named it correctly — the D1 substitution behaviour is fixed — but gave no justification)
+Linked flag: FP-7, FP-9
+
+### QB-INTROML-0013 · [AUS] · pre-test → taught · deck 2 p.9–11 · asked 2026-09-18
+Q: Classify by attribute type: zip code · 1–5 star rating · temperature in °C · weight in kg.
+A: Nominal · ordinal · interval · ratio. The deck's test is four properties — distinctness (=), order (<>), meaningful differences (+−), meaningful ratios (×÷). Interval has meaningful differences but no true zero (10°C is not twice 5°C); ratio has a true zero so multiples are meaningful. Kelvin is ratio, Celsius/Fahrenheit are interval.
+Asked: 2026-09-18 ❌ (1/4 — zip correct; star→ratio, °C→ordinal, kg→ordinal)
+Linked flag: FP-8
+
+### QB-INTROML-0014 · [AUS] · pre-test → taught · deck 2 p.28 · asked 2026-09-18
+Q: Name the data quality problems the deck lists, and say which you'd fix by dropping the feature rather than repairing it.
+A: Noise and outliers · wrong data · fake data · missing values · duplicate data. Drop the *feature* when missing values dominate it (his own margin note: "so many missing values → drop one of them"); drop the *record* for duplicates, keeping the most recent. Cleaning = detecting and correcting or removing corrupt/inaccurate records.
+Asked: 2026-09-18 ❌ (offered "missing at random" only — a statistical missingness mechanism, not the deck's taxonomy)
