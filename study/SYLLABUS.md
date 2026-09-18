@@ -1,82 +1,72 @@
-# SYLLABUS — Sprint to Two Interviews + CV Long Track
+# SYLLABUS — 98-Day Campaign to Three Assessments
 
-> **🎤 HARD DEADLINES** — **[AUS] IntroML: Sat 10 Oct 2026 (D24)** · **[OXFORD] DL4H+CV: Fri 16 Oct 2026 (D30)**
-> The sprint therefore runs **D1–D30 (Sep 17 → Oct 16)**, not 28 days. Everything below is built backwards from those two dates: all IntroML teaching finishes D19, AUS gets a mock on D21 and an untaxing T-1 on D23; after D24 the whole system turns to Oxford and IntroML drops to maintenance review.
+> **🎤 HARD DATES** — **[AUS] IntroML: Mon 16 Nov 2026** (D60) · **[OXFORD] DL4H: Fri 20 Nov 2026** (D64) · **[OXFORD] CV: Fri 25 Dec 2026** (D99)
+> D1 = 17 Sep 2026. Everything below is built backwards from those three dates.
+> This replaces the old 28-day sprint: the dates moved out by ~5 weeks on 2026-09-18, and CV decoupled from the DL4H panel into its own assessment.
 
-Windows: **W1** morning review · **W2** midday new material · **W3** evening interleaved gauntlet (see TUTOR.md §2).
-This table drives W2 (new material) and W3 overlap injections. W1 is always ledger-driven. Sunday retros may reshuffle future rows — edit this file, don't fork it.
+**Four windows/day** (see TUTOR.md §2): **W1** 08:00 review · **W2** 12:30 new material · **W3** 17:00 interleaved gauntlet · **W4** 21:00 flag clinic + teach-back. Copenhagen times; queues, not deadlines.
 
-## Phase 1 — Sprint (Thu 2026-09-17 → Fri 2026-10-16) · DL4H + IntroML · CV overlap only
+**What the extra time buys.** The old plan force-fed two decks a day and capped the spaced-repetition ladder at 28 days. Now: one deck taught properly per day, the full **1→3→7→14→30** ladder actually runs to term, every problem sheet gets mined, and there is room for four mocks per course instead of a scramble. Depth, not more speed.
 
-### Week 1 — Baseline & foundations (D1–D4)
-| Day | Date | W2 new material | W3 extras |
-|---|---|---|---|
-| D1 | Thu 09-17 | **Baseline diagnostic pt 1** [AUS]: sampler across IntroML 1–9 | **Baseline pt 2** [OXFORD]: sampler across DL4H L1–L8 → seed ledger + first flags |
-| D2 | Fri 09-18 | IntroML 1 Introduction + 2 Data · DL4H L1 Why DL for healthcare | first flag attacks |
-| D3 | Sat 09-19 | — (Saturday) | **Mock #0** (short, 12 Q calibration) + Feynman on weakest baseline concept |
-| D4 | Sun 09-20 | — (Sunday retro #1) | review-only gauntlet |
+---
 
-### Week 2 — Core classical + training fundamentals (D5–D11)
-| Day | Date | W2 new material | W3 extras |
-|---|---|---|---|
-| D5 | Mon 09-21 | IntroML 3 KNN · DL4H L2 Loss & metrics | distance measures ↔ loss functions contrast |
-| D6 | Tue 09-22 | IntroML 4 Decision Trees · DL4H L3 Backprop & optimisation | |
-| D7 | Wed 09-23 | IntroML 5 Model Overfitting · DL4H L7-8 Regularisation (pt 1) | overfitting ↔ regularisation interleave |
-| D8 | Thu 09-24 | IntroML 6 Class Imbalance & Evaluation · DL4H L2 metrics deep-dive (ROC/PR) | CV 06 Classification overlap |
-| D9 | Fri 09-25 | IntroML 7 Naïve Bayes · DL4H L4 Initialisation & normalisation | |
-| D10 | Sat 09-26 | — | **Mock #1** + Feynman + **PS1 mining** (student vs official answers) |
-| D11 | Sun 09-27 | — retro #2 | review-only |
+## Block 1 — Foundations · **Sat 19 Sep → Fri 16 Oct** (4 weeks)
+Goal: the whole [AUS] syllabus taught once, and DL4H through regularisation. Pace: one primary deck per day, second course as interleaved review.
 
-### Week 3 — Models & representation (D12–D18)
-| Day | Date | W2 new material | W3 extras |
-|---|---|---|---|
-| D12 | Mon 09-28 | IntroML 8 Regression I · DL4H L5 CNNs | CV 02 Filtering (convolution) |
-| D13 | Tue 09-29 | IntroML 9 Regression II · DL4H L6 Advanced CNNs | CV 07 CNNs |
-| D14 | Wed 09-30 | DL4H L7-8 Regularisation pt 2 (dropout/augmentation) · IntroML consolidation sweep | |
-| D15 | Thu 10-01 | DL4H L9-10 Low-data, transfer learning & domain adaptation | CV 17 Representation Learning |
-| D16 | Fri 10-02 | IntroML 13 Cluster Analysis I | CV 18 Unsupervised |
-| D17 | Sat 10-03 | — | **Mock #2** + Feynman + **PS2 mining** |
-| D18 | Sun 10-04 | — retro #3 | review-only |
+| Week | Dates | [AUS] IntroML | [OXFORD] DL4H | Weekend |
+|---|---|---|---|---|
+| 1 | Sep 19–25 | 1 Introduction · 2 Data · 3 KNN | L1 Why DL for healthcare · L2 Loss & metrics | Sat: **Mock #1** (calibration) · Sun: retro |
+| 2 | Sep 26 – Oct 2 | 4 Decision Trees · 5 Model Overfitting | L3 Backprop & optimisation · L4 Init & normalisation | Sat: **Mock #2** + **PS1 mining** · Sun: retro |
+| 3 | Oct 3–9 | 6 Class Imbalance & Evaluation · 7 Naïve Bayes | L5 CNNs · L6 Advanced CNNs | Sat: **Mock #3** + **PS2 mining** · Sun: retro |
+| 4 | Oct 10–16 | 8 Regression I · 9 Regression II | L7-8 Regularisation (both parts) | Sat: **Mock #4** + **PS3 mining** · Sun: retro |
 
-### Week 4 — Advanced DL + AUS run-up (D19–D23)
-| Day | Date | W2 new material | W3 extras |
-|---|---|---|---|
-| D19 | Mon 10-05 | IntroML 15 Cluster Analysis III — **last new IntroML material** · DL4H L11-12 Generative pt 1 | AUS flag sweep begins |
-| D20 | Tue 10-06 | DL4H L11-12 Generative pt 2 | CV 16 Generative · full AUS syllabus sweep |
-| D21 | Wed 10-07 | DL4H L14-15 Sequence models | **🎤 AUS ORAL MOCK (Mock #3)** — full panel simulation + PS3/PS4 mining |
-| D22 | Thu 10-08 | DL4H L15-16 Self-attention & transformers | CV 08 · **AUS re-attack on everything the mock exposed** |
-| D23 | Fri 10-09 | **T-1 AUS — no new IntroML.** DL4H L13 Federated learning | **Light AUS confidence pass only**: recall the anchors, no grilling, stop early. Cramming the night before costs more than it adds. |
+## Block 2 — Advanced DL + CV overlap · **Sat 17 Oct → Fri 6 Nov** (3 weeks)
+Goal: DL4H finished; the eight CV decks that overlap DL4H enter as reinforcement, so CV starts Block 4 already half-warm.
 
-### 🎤 AUS INTERVIEW — Sat 10 Oct (D24)
-| Day | Date | W1 | W3 |
-|---|---|---|---|
-| D24 | Sat 10-10 | **Short warm-up before you go** — anchors and one-liners only, nothing new, no new flags raised | **Debrief**: what were you actually asked, what felt shaky, what surprised you → feeds straight into Oxford prep and reshapes D25–D29 |
+| Week | Dates | [AUS] IntroML | [OXFORD] DL4H | CV overlap injected |
+|---|---|---|---|---|
+| 5 | Oct 17–23 | 13 Cluster Analysis I · 15 Cluster Analysis III | L9-10 Low-data, transfer learning & domain adaptation | 17 Representation · 18 Unsupervised |
+| 6 | Oct 24–30 | *maintenance review only* | L11-12 Generative modelling · L13 Federated learning | 16 Generative · 02 Filtering |
+| 7 | Oct 31 – Nov 6 | *maintenance review only* | L14-15 Sequence models · L15-16 Transformers · L16 Explainability | 07 CNNs · 08 Transformers · 09 Visualization · 06 Classification |
 
-### Oxford push (D25–D29) — IntroML drops to maintenance review only
-| Day | Date | W2 | W3 |
-|---|---|---|---|
-| D25 | Sun 10-11 | Retro #4 + **re-plan around the AUS debrief** | review-only |
-| D26 | Mon 10-12 | DL4H L16 Explainability pt 2 | CV 09 Visualization/Understanding |
-| D27 | Tue 10-13 | DL4H full-syllabus sweep | CV overlap sweep (02/06/07/08/09/16/17/18) |
-| D28 | Wed 10-14 | DL4H + CV flag-points-only attack | **🎤 OXFORD ORAL MOCK** — full panel simulation, Namburete framing |
-| D29 | Thu 10-15 | **T-1 Oxford:** re-attack only what the mock exposed | **Light confidence pass** — stop early |
+Sat 24 Oct **Mock #5** + **PS4 mining** · Sat 31 Oct **Mock #6** · Sun retros throughout.
+If IntroML decks 10–12/14 appear in Drive, slot them into week 5–6 W2 and shift clustering right.
 
-### 🎤 OXFORD INTERVIEW — Fri 16 Oct (D30)
-| Day | Date | W1 | W3 |
-|---|---|---|---|
-| D30 | Fri 10-16 | **Short warm-up before you go** | **Debrief + full sprint retro → readiness report → wind-down to CV-only (TUTOR.md §9)** |
+## Block 3 — Consolidation & mocks · **Sat 7 Nov → Sun 15 Nov** (9 days)
+No new material. Everything now points at the two interviews.
 
-If IntroML decks 10–12/14 arrive, slot them into the earliest free W2 from week 3 on (clustering days can shift 1 day right).
+| Day | Date | Focus |
+|---|---|---|
+| Sat 7 | full [AUS] syllabus sweep — every deck, cold | |
+| Sun 8 | full [OXFORD] DL4H sweep — every lecture, cold | |
+| Mon 9 | flag clinic: every open flag, all four windows | |
+| Tue 10 | weakest-quartile re-teach, both courses | |
+| Wed 11 | **🎤 AUS ORAL MOCK** — full panel simulation, follow-up chains | |
+| Thu 12 | AUS re-attack on everything the mock exposed — **all [AUS] flags close today** | |
+| Fri 13 | **🎤 OXFORD ORAL MOCK** — Namburete framing, clinical-deployment pressure | |
+| Sat 14 | Oxford re-attack — **all [OXFORD] DL4H flags close today** | |
+| Sun 15 | **T-1 AUS:** light confidence pass, anchors only, stop early | |
 
-## Phase 2 — CV long track (Sat 2026-10-17 → Sun 2026-11-15) · morning window only
-One deck per ~2 days, interleaved with whole-syllabus spaced review; overlap decks (02, 06, 07, 08, 09, 16, 17, 18) enter as review, not new material.
+## 🎤 **Mon 16 Nov — AUS INTERVIEW (D60)**
+W1 short warm-up (anchors and one-liners, nothing new, no new flags) · W2 skipped · W3 **debrief** — what was asked, what felt shaky, what surprised you. The debrief reshapes 17–19 Nov.
 
-| Span | New material |
-|---|---|
-| Oct 17–19 | CV 01 Introduction · 03 Fourier Transforms |
-| Oct 20–23 | CV 04 Restoration · 05 Matching/Indexing/Search |
-| Oct 24–27 | CV 10 Object Detection · 11 Segmentation |
-| Oct 28–31 | CV 12 Videos · 13 Tracking |
-| Nov 01–05 | CV 14 Camera Models · 15 MVG |
-| Nov 06–10 | CV 19 Vision-Language · 20 Ethics/Privacy |
-| Nov 11–15 | Full-syllabus review sweep → **CV mock (Nov 14) → final retro (Nov 15)** |
+## Block 4 — Oxford final push · **Tue 17 Nov → Thu 19 Nov**
+IntroML drops to maintenance. Three days of DL4H only, steered by the AUS debrief (the panels probe similarly; whatever caught you out on Monday gets hunted here). Thu 19 is **T-1**: light pass, stop early.
+
+## 🎤 **Fri 20 Nov — OXFORD DL4H INTERVIEW (D64)**
+W1 warm-up · W3 **debrief** → then the campaign turns entirely to CV.
+
+## Block 5 — Computer Vision · **Sat 21 Nov → Thu 24 Dec** (34 days)
+The eight overlap decks (02, 06, 07, 08, 09, 16, 17, 18) are already taught — they enter as review. Twelve genuinely new decks over five weeks, one per ~2.5 days, DL4H and IntroML kept alive by the spaced ladder only.
+
+| Week | Dates | New CV material |
+|---|---|---|
+| 1 | Nov 21–27 | 01 Introduction · 03 Fourier Transforms · 04 Restoration |
+| 2 | Nov 28 – Dec 4 | 05 Matching/Indexing/Search · 10 Object Detection |
+| 3 | Dec 5–11 | 11 Segmentation · 12 Videos · 13 Tracking |
+| 4 | Dec 12–18 | 14 Camera Models · 15 MVG · 19 Vision-Language |
+| 5 | Dec 19–24 | 20 Ethics/Privacy · full-syllabus sweep · **🎤 CV ORAL MOCK Tue 22 Dec** · Thu 24 **T-1 light pass** |
+
+## 🎤 **Fri 25 Dec — CV ASSESSMENT (D99)**
+W1 warm-up · W3 debrief + **full campaign retro → final readiness report → wind-down (TUTOR.md §9)**.
+⚠️ *25 Dec is Christmas Day — worth double-checking that date.*

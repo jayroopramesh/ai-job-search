@@ -46,7 +46,8 @@ section.card{background:var(--surface); border:1px solid var(--line); border-rad
 .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
 @media (max-width:760px){.grid2{grid-template-columns:1fr;}}
 /* today strip */
-.windows{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:6px;}
+.windows{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:6px;}
+@media (max-width:900px){.windows{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:600px){.windows{grid-template-columns:1fr;}}
 .win{background:var(--surface2); border:1px solid var(--line); border-radius:8px; padding:10px 12px;}
 .win .t{font-family:"IBM Plex Mono",monospace; font-size:.72rem; color:var(--muted);}
@@ -88,16 +89,16 @@ a{color:var(--accent);}
 
 <div class="wrap">
 <header>
-  <div class="eyebrow">Sprint to two interviews · Phase 1 of 2</div>
+  <div class="eyebrow">98-day campaign · three assessments</div>
   <h1>Study HQ</h1>
   <div class="meta">
-    <span><b>Jayroop</b> · 3 × 15 min/day</span>
-    <span>Sprint <b class="mono">Sep 17 → Oct 16</b> · CV track <b class="mono">→ Nov 15</b></span>
-    <span><span class="tag aus">AUS</span> IntroML — <b class="mono">Sat 10 Oct</b> · <b>22 days</b></span>
-    <span><span class="tag ox">OXFORD</span> DL4H + CV — <b class="mono">Fri 16 Oct</b> · <b>28 days</b></span>
+    <span><b>Jayroop</b> · 4 × 15 min/day</span>
+    <span><span class="tag aus">AUS</span> IntroML — <b class="mono">Mon 16 Nov</b> · <b>59 days</b></span>
+    <span><span class="tag ox">OXFORD</span> DL4H — <b class="mono">Fri 20 Nov</b> · <b>63 days</b></span>
+    <span><span class="tag ox">OXFORD</span> CV — <b class="mono">Fri 25 Dec</b> · <b>98 days</b></span>
   </div>
-  <div class="bar"><i style="width:6.7%"></i></div>
-  <div class="barlab"><span>Day 2 — first review day</span><span class="mono">2 / 30 days</span></div>
+  <div class="bar"><i style="width:2%"></i></div>
+  <div class="barlab"><span>Day 2 — foundations</span><span class="mono">2 / 99 days</span></div>
 </header>
 
 <main>
@@ -106,10 +107,11 @@ a{color:var(--accent);}
   <p style="margin:0 0 4px; color:var(--muted); font-size:.9rem;">First review day, and the anchors held: <b style="color:var(--ink)">3 of 4 re-attacked flags passed</b>, including precision/recall — reasoned from the denominators rather than recalled. New material (IntroML Introduction + Data, DL4H L1) pre-tested cold at 0/3, which is the design, and has now been taught.</p>
   <div class="windows">
     <div class="win"><div class="t">W1 · 08:00</div><div class="n">Morning review</div><div class="d">Drive sync + everything due in the spaced-repetition ladder</div></div>
-    <div class="win"><div class="t">W2 · 13:00</div><div class="n">New material</div><div class="d">Pre-test → micro-lesson → recall quiz on today's decks</div></div>
-    <div class="win"><div class="t">W3 · 20:00</div><div class="n">Interleaved gauntlet</div><div class="d">Both courses mixed + flag-point attack + interview questions</div></div>
+    <div class="win"><div class="t">W2 · 12:30</div><div class="n">New material</div><div class="d">Pre-test → micro-lesson → recall quiz on today's deck</div></div>
+    <div class="win"><div class="t">W3 · 17:00</div><div class="n">Interleaved gauntlet</div><div class="d">Both courses mixed, interview questions with follow-up chains</div></div>
+    <div class="win"><div class="t">W4 · 21:00</div><div class="n">Flag clinic + teach-back</div><div class="d">Every open flag from a new angle · the three pattern drills · Feynman close-out</div></div>
   </div>
-  <p style="margin:8px 0 0; font-size:.78rem; color:var(--muted);">Times are Copenhagen defaults — say the word in the session and the tutor moves them.</p>
+  <p style="margin:8px 0 0; font-size:.78rem; color:var(--muted);">Copenhagen times, and they are queues rather than deadlines — answer whenever suits you within the day and nothing is marked missed.</p>
 </section>
 
 <div class="grid2">
@@ -162,62 +164,53 @@ a{color:var(--accent);}
 </section>
 
 <section class="card">
-  <h2>Sprint schedule</h2>
-  <details open><summary>Week 1 · Baseline &amp; foundations <span class="mono">Sep 17–20</span></summary><div class="tbl"><table class="sched">
-    <tr><td>D1 Thu 17</td><td>Baseline diagnostic — IntroML sampler (midday) + DL4H sampler (evening) → seeds ledger &amp; flags</td></tr>
-    <tr><td>D2 Fri 18</td><td>IntroML 1 Introduction + 2 Data · DL4H L1 Why DL for healthcare</td></tr>
-    <tr class="special"><td>D3 Sat 19</td><td>Mock #0 (12-question calibration) + Feynman teach-back on weakest baseline concept</td></tr>
-    <tr class="special"><td>D4 Sun 20</td><td>Review-only + weekly retro</td></tr>
+  <h2>Campaign schedule</h2>
+  <p style="margin:0 0 8px; font-size:.84rem; color:var(--muted);">Rebuilt 18 Sep when the dates moved out five weeks. The extra time buys depth, not speed: one deck taught properly per day, every problem sheet mined, and the spaced-repetition ladder finally long enough that 30-day intervals run to term.</p>
+  <details open><summary>Block 1 · Foundations <span class="mono">19 Sep – 16 Oct</span></summary><div class="tbl"><table class="sched">
+    <tr><td>Week 1</td><td><span class="tag aus">AUS</span> Introduction · Data · KNN &nbsp; <span class="tag ox">OXFORD</span> L1 Why DL · L2 Loss &amp; metrics</td></tr>
+    <tr><td>Week 2</td><td><span class="tag aus">AUS</span> Decision Trees · Overfitting &nbsp; <span class="tag ox">OXFORD</span> L3 Backprop · L4 Init &amp; normalisation</td></tr>
+    <tr><td>Week 3</td><td><span class="tag aus">AUS</span> Class Imbalance · Naïve Bayes &nbsp; <span class="tag ox">OXFORD</span> L5 CNNs · L6 Advanced CNNs</td></tr>
+    <tr><td>Week 4</td><td><span class="tag aus">AUS</span> Regression I &amp; II &nbsp; <span class="tag ox">OXFORD</span> L7-8 Regularisation</td></tr>
+    <tr class="special"><td>Saturdays</td><td>Mocks #1–#4, each paired with a problem-sheet mining pass (PS1–PS3)</td></tr>
   </table></div></details>
-  <details><summary>Week 2 · Classical core &amp; training fundamentals <span class="mono">Sep 21–27</span></summary><div class="tbl"><table class="sched">
-    <tr><td>D5 Mon 21</td><td>IntroML 3 KNN · DL4H L2 Loss &amp; metrics</td></tr>
-    <tr><td>D6 Tue 22</td><td>IntroML 4 Decision Trees · DL4H L3 Backprop &amp; optimisation</td></tr>
-    <tr><td>D7 Wed 23</td><td>IntroML 5 Overfitting · DL4H L7-8 Regularisation pt 1 — deliberate interleave</td></tr>
-    <tr><td>D8 Thu 24</td><td>IntroML 6 Class Imbalance &amp; Evaluation · DL4H ROC/PR deep-dive · CV 06 overlap</td></tr>
-    <tr><td>D9 Fri 25</td><td>IntroML 7 Naïve Bayes · DL4H L4 Initialisation &amp; normalisation</td></tr>
-    <tr class="special"><td>D10 Sat 26</td><td>Mock #1 + Feynman + PS1 mining (Jayroop's answers vs official)</td></tr>
-    <tr class="special"><td>D11 Sun 27</td><td>Review-only + retro</td></tr>
+  <details><summary>Block 2 · Advanced DL + CV overlap <span class="mono">17 Oct – 6 Nov</span></summary><div class="tbl"><table class="sched">
+    <tr><td>Week 5</td><td><span class="tag aus">AUS</span> Clustering I &amp; III &nbsp; <span class="tag ox">OXFORD</span> L9-10 Transfer learning · CV 17, 18 as reinforcement</td></tr>
+    <tr><td>Week 6</td><td><span class="tag ox">OXFORD</span> L11-12 Generative · L13 Federated · CV 16, 02 — IntroML now maintenance only</td></tr>
+    <tr><td>Week 7</td><td><span class="tag ox">OXFORD</span> L14-16 Sequence models, transformers, explainability · CV 06, 07, 08, 09</td></tr>
+    <tr class="special"><td>Saturdays</td><td>Mocks #5–#6 · PS4 mining</td></tr>
   </table></div></details>
-  <details><summary>Week 3 · Models &amp; representation <span class="mono">Sep 28 – Oct 4</span></summary><div class="tbl"><table class="sched">
-    <tr><td>D12 Mon 28</td><td>IntroML 8 Regression I · DL4H L5 CNNs · CV 02 Filtering overlap</td></tr>
-    <tr><td>D13 Tue 29</td><td>IntroML 9 Regression II · DL4H L6 Advanced CNNs · CV 07 overlap</td></tr>
-    <tr><td>D14 Wed 30</td><td>DL4H L7-8 Regularisation pt 2 · IntroML consolidation sweep</td></tr>
-    <tr><td>D15 Thu 1</td><td>DL4H L9-10 Transfer learning &amp; low-data · CV 17 Representation overlap</td></tr>
-    <tr><td>D16 Fri 2</td><td>IntroML 13 Clustering I · CV 18 Unsupervised overlap</td></tr>
-    <tr class="special"><td>D17 Sat 3</td><td>Mock #2 + Feynman + PS2 mining</td></tr>
-    <tr class="special"><td>D18 Sun 4</td><td>Review-only + retro</td></tr>
+  <details open><summary>Block 3 · Consolidation &amp; mocks <span class="mono">7 – 15 Nov</span></summary><div class="tbl"><table class="sched">
+    <tr><td>Sat 7 – Sun 8</td><td>Full cold sweep of each syllabus in turn — every deck, no notes</td></tr>
+    <tr><td>Mon 9 – Tue 10</td><td>Flag clinic across all four windows · weakest-quartile re-teach</td></tr>
+    <tr class="special"><td>Wed 11</td><td>🎤 <b>AUS oral mock</b> — full panel simulation with follow-up chains</td></tr>
+    <tr><td>Thu 12</td><td>AUS re-attack — <b>all [AUS] flags close today</b></td></tr>
+    <tr class="special"><td>Fri 13</td><td>🎤 <b>Oxford oral mock</b> — Namburete framing, clinical-deployment pressure</td></tr>
+    <tr><td>Sat 14</td><td>Oxford re-attack — <b>all DL4H flags close today</b></td></tr>
+    <tr><td>Sun 15</td><td><b>T-1:</b> light confidence pass, anchors only, stop early</td></tr>
   </table></div></details>
-  <details open><summary>Week 4 · Advanced DL + <span class="tag aus">AUS</span> run-up <span class="mono">Oct 5–9</span></summary><div class="tbl"><table class="sched">
-    <tr><td>D19 Mon 5</td><td>IntroML 15 Clustering III — <b>last new IntroML material</b> · DL4H L11-12 Generative pt 1</td></tr>
-    <tr><td>D20 Tue 6</td><td>DL4H L11-12 Generative pt 2 · CV 16 · full AUS syllabus sweep</td></tr>
-    <tr class="special"><td>D21 Wed 7</td><td>🎤 <b>AUS oral mock</b> — full panel simulation + PS3/PS4 mining · DL4H L14-15 Sequence models</td></tr>
-    <tr><td>D22 Thu 8</td><td>DL4H L15-16 Transformers · CV 08 · <b>AUS re-attack on whatever the mock exposed</b> — all AUS flags must close today</td></tr>
-    <tr class="special"><td>D23 Fri 9</td><td><b>T-1:</b> light confidence pass only, no grilling, stop early · DL4H L13 Federated learning</td></tr>
+  <details open><summary>🎤 The two interviews <span class="mono">16 – 20 Nov</span></summary><div class="tbl"><table class="sched">
+    <tr class="special"><td>Mon 16</td><td><b>🎤 AUS INTERVIEW.</b> Morning warm-up · evening debrief — what was asked, what felt shaky. The debrief steers the next three days.</td></tr>
+    <tr><td>Tue 17 – Thu 19</td><td>Oxford-only push, aimed by the AUS debrief. Thu is T-1: light, stop early.</td></tr>
+    <tr class="special"><td>Fri 20</td><td><b>🎤 OXFORD DL4H INTERVIEW.</b> Then the campaign turns entirely to CV.</td></tr>
   </table></div></details>
-  <details open><summary>🎤 <span class="tag aus">AUS</span> interview <span class="mono">Sat 10 Oct</span> → Oxford push <span class="mono">Oct 11–15</span></summary><div class="tbl"><table class="sched">
-    <tr class="special"><td>D24 Sat 10</td><td><b>🎤 AUS INTERVIEW.</b> Morning: short warm-up, anchors only. Evening: debrief — what were you actually asked? It reshapes the rest.</td></tr>
-    <tr><td>D25 Sun 11</td><td>Retro + re-plan around the debrief. IntroML now maintenance-only.</td></tr>
-    <tr><td>D26 Mon 12</td><td>DL4H L16 Explainability pt 2 · CV 09 Visualization</td></tr>
-    <tr><td>D27 Tue 13</td><td>DL4H full-syllabus sweep · CV overlap sweep</td></tr>
-    <tr class="special"><td>D28 Wed 14</td><td>🎤 <b>Oxford oral mock</b> — full panel simulation · all OXFORD flags must close today</td></tr>
-    <tr class="special"><td>D29 Thu 15</td><td><b>T-1:</b> re-attack only what the mock exposed, then light pass, stop early</td></tr>
-  </table></div></details>
-  <details open><summary>🎤 <span class="tag ox">OXFORD</span> interview <span class="mono">Fri 16 Oct</span></summary><div class="tbl"><table class="sched">
-    <tr class="special"><td>D30 Fri 16</td><td><b>🎤 OXFORD INTERVIEW.</b> Morning warm-up · evening debrief + full sprint retro + readiness report → wind down to CV-only</td></tr>
-  </table></div></details>
-  <details><summary>Phase 2 · CV long track <span class="mono">Oct 17 – Nov 15 · mornings only</span></summary><div class="tbl"><table class="sched">
-    <tr><td>Oct 17–23</td><td>CV 01 Introduction · 03 Fourier · 04 Restoration · 05 Matching/Indexing</td></tr>
-    <tr><td>Oct 24–31</td><td>CV 10 Object Detection · 11 Segmentation · 12 Videos · 13 Tracking</td></tr>
-    <tr><td>Nov 1–10</td><td>CV 14 Camera Models · 15 MVG · 19 Vision-Language · 20 Ethics/Privacy</td></tr>
-    <tr class="special"><td>Nov 11–15</td><td>Full-syllabus sweep → CV mock (Nov 14) → final retro</td></tr>
+  <details><summary>Block 5 · Computer Vision <span class="mono">21 Nov – 24 Dec</span></summary><div class="tbl"><table class="sched">
+    <tr><td>Nov 21–27</td><td>01 Introduction · 03 Fourier · 04 Restoration</td></tr>
+    <tr><td>Nov 28 – Dec 4</td><td>05 Matching/Indexing/Search · 10 Object Detection</td></tr>
+    <tr><td>Dec 5–11</td><td>11 Segmentation · 12 Videos · 13 Tracking</td></tr>
+    <tr><td>Dec 12–18</td><td>14 Camera Models · 15 MVG · 19 Vision-Language</td></tr>
+    <tr class="special"><td>Dec 19–24</td><td>20 Ethics/Privacy · full sweep · 🎤 <b>CV oral mock Tue 22</b> · Thu 24 T-1 light pass</td></tr>
+  </table></div>
+  <p style="margin:8px 0 0; font-size:.8rem; color:var(--muted);">The eight overlap decks (02, 06, 07, 08, 09, 16, 17, 18) are taught back in Blocks 1–2, so CV starts this block already half-warm.</p></details>
+  <details open><summary>🎤 CV assessment <span class="mono">Fri 25 Dec</span></summary><div class="tbl"><table class="sched">
+    <tr class="special"><td>Fri 25</td><td><b>🎤 CV ASSESSMENT.</b> Warm-up, then debrief + full campaign retro + final readiness report. ⚠️ This is Christmas Day — worth double-checking the date.</td></tr>
   </table></div></details>
 </section>
 
 <section class="card">
   <h2>How the tutor works</h2>
   <ul>
-    <li><b>Spaced repetition</b> — every tested fact climbs the ladder <span class="ladder">1 → 3 → 7 → 14 → 30 days</span>; a miss resets it to 1 day and raises a 🚩 flag.</li>
-    <li><b>Flag-point attack</b> — each open flag is re-hit every evening from a question format it hasn't seen yet; cleared only after 3 consecutive passes on different days.</li>
+    <li><b>Spaced repetition</b> — every tested fact climbs the ladder <span class="ladder">1 → 3 → 7 → 14 → 30 days</span>; a miss resets it to 1 day and raises a 🚩 flag. At 98 days the ladder finally runs to term, so items reach real long-term spacing instead of churning.</li>
+    <li><b>Flag-point attack</b> — the 21:00 clinic hits every open flag from a format it has not seen yet; cleared only after 3 consecutive passes on different days and different formats.</li>
     <li><b>Active recall first</b> — new topics start with a pre-test before any teaching; material is never shown right before it's quizzed.</li>
     <li><b>Interleaving</b> — evening gauntlets mix both courses (never &gt;2 same-course questions in a row) plus CV overlap.</li>
     <li><b>Feynman</b> — daily 60-second close-out teach-backs + weekly deep teach-back on Saturdays.</li>
@@ -230,6 +223,6 @@ a{color:var(--accent);}
 </main>
 
 <footer>
-  Updated <span class="mono">2026-09-18 · Day 2 complete · 3 flags moving</span> · refreshed after every window · state of record: <span class="mono">study/student_progress.md</span> on branch <span class="mono">claude/busy-brahmagupta-v2r6hb</span> · sources: the three course folders in Google Drive
+  Updated <span class="mono">2026-09-18 · Day 2 · replanned around the new dates</span> · refreshed after every window · state of record: <span class="mono">study/student_progress.md</span> on branch <span class="mono">claude/busy-brahmagupta-v2r6hb</span> · sources: the three course folders in Google Drive
 </footer>
 </div>

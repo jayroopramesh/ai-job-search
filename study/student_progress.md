@@ -1,13 +1,14 @@
 # Student Progress — Jayroop
 
-Sprint: **2026-09-17 (D1) → 2026-10-16 (D30)** · 🎤 **[AUS] Sat 10 Oct** · 🎤 **[OXFORD] Fri 16 Oct** · CV long track → 2026-11-15
+Campaign: **2026-09-17 (D1) → 2026-12-25 (D99)** · 🎤 **[AUS] IntroML Mon 16 Nov** · 🎤 **[OXFORD] DL4H Fri 20 Nov** · 🎤 **[OXFORD] CV Fri 25 Dec**
+*Rescoped 2026-09-18: dates moved out ~5 weeks, CV decoupled into its own assessment, 4th daily window added.*
 State file is authoritative (TUTOR.md §4/§8). Updated at the end of every window; committed and pushed each time.
 
 ## Scoreboard
-- Sessions completed: **5 / 88** sprint windows · missed: **0**
+- Windows completed: **5** · missed: **0** · cadence now **4/day** (~385 windows across the campaign)
 - **Review pass rate (the number that matters): 75%** on D2 — 2 ✅ / 2 🟡 / 0 ❌ of 4 re-attacked flags
 - Overall retention incl. cold pre-tests: **39%** (4 ✅ · 7 🟡 · 8 ❌ of 19)
-- Ledger items: 14 · due 09-19: **12**
+- Ledger items: 14 · due 09-19: **12** · ladder now uncapped (98 days means 30-day spacing genuinely runs to term)
 - 🚩 Flag points — open: **9** (6 concept + 3 pattern) · cleared: 0 · **2 now moving (1/3 passes)**
 - Mocks: #0 — · #1 — · #2 — · #3 — · AUS oral — · OXFORD oral — · final —
 

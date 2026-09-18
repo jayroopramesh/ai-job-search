@@ -16,7 +16,7 @@ This is the operating manual for the stateful tutor. Every scheduled wake ("Tuto
 - **Audience tags on every item:** `[AUS]` = IntroML (CMP 466, Salam Dhou). `[OXFORD]` = DL4H (Namburete) + CV. Frame interview questions in that audience's course vocabulary and notation.
 
 ## §2 Daily windows (15 min hard cap each)
-Roughly 08:00 / 13:00 / 20:00 Copenhagen time. ~8–12 items per window; unfinished items roll to the next window, never extend the clock.
+**Four windows**: 08:00 / 12:30 / 17:00 / 21:00 Copenhagen. ~8–12 items per window; unfinished items roll, never extend the clock.
 
 **W1 Morning — Spaced review + Drive sync**
 1. Drive sync (§7). 2. Quiz every ledger item due today (intervals §4), oldest first, flag points first among those. 3. Update ledger + progress file, commit, republish artifact (§8).
@@ -24,8 +24,15 @@ Roughly 08:00 / 13:00 / 20:00 Copenhagen time. ~8–12 items per window; unfinis
 **W2 Midday — New material (active-recall-first)**
 1. Take today's SYLLABUS topics; fetch the deck(s). 2. **Pre-test** 2–3 questions before teaching (FASTER "Forget": baseline before study — being wrong here is expected and priceless). 3. Micro-lesson: ≤5 tight paragraphs per topic chunk, intuition first, then formalism, cited to slides. 4. Immediate recall quiz on what was just taught (different phrasings than the lesson). 5. New items → ledger with first interval; misses → flag points.
 
-**W3 Evening — Interleaved gauntlet**
-1. Mixed quiz across BOTH sprint courses + any CV overlap deck for today; never more than 2 consecutive items from the same course (interleaving). 2. At least one interview-style question per audience, asked the way that panel would ask it. 3. Flag-point attack (§5): every open flag gets hit from a NEW angle. 4. End with a 60-second "close-out": Jayroop summarises the day's weakest concept from memory (mini-Feynman).
+**W3 Afternoon — Interleaved gauntlet**
+1. Mixed quiz across BOTH courses + any CV overlap deck for today; never more than 2 consecutive items from the same course (interleaving). 2. At least one interview-style question per audience, asked the way that panel would ask it, with a follow-up chain. 3. New-material recall from today's W2, re-phrased.
+
+**W4 Night — Flag clinic + teach-back** (added 2026-09-18)
+This window belongs entirely to weaknesses; it never introduces new material.
+1. **Every open flag** gets one item from a format not yet in its angle history (§5) — this is where the "attack from multiple angles" promise is actually kept.
+2. **The three standing pattern drills, every night:** FP-5 directional inversion (2 forced-choice "which pole?" items) · FP-7 adjacent-concept substitution (1 name-the-principle item, exact term **and** justification) · FP-9 mechanism (every answer tonight gets a "why?" follow-up; a bare label is 🟡 however correct).
+3. **Feynman teach-back close-out:** Jayroop explains the day's weakest concept from memory to a named audience ("to a clinician", "to a first-year"), no notes, 60 seconds.
+4. Clear flags that hit 3/3, and write a learning record when a fix revealed something durable.
 
 **Saturday W3** is replaced by a **weekly mock**: ~20–25 questions, timed, mixed formats, both audiences, scored /100 → logged. **Sunday W2** is replaced by a **retro**: review the week's stats, prune/promote flags, adjust next week's SYLLABUS rows, write learning records for genuine insights (teach skill LEARNING-RECORD-FORMAT), update GLOSSARY.md with terms Jayroop has *demonstrated* (never terms merely covered).
 
@@ -51,7 +58,7 @@ Roughly 08:00 / 13:00 / 20:00 Copenhagen time. ~8–12 items per window; unfinis
 Rules: multiple-choice options must be the **same length and register** (no formatting tells — teach skill rule). Never reuse exact wording of a previously-asked question for the same concept (defeats active recall); re-ask from a different angle. Grade immediately: ✅ pass / 🟡 partial / ❌ fail, with a 1–3 sentence correction citing deck+page.
 
 ## §4 Ledger & spaced repetition
-`student_progress.md` → **Ledger** table is authoritative. Intervals (days): **1 → 3 → 7 → 14 → 30** (learn-faster-kit ladder, capped at sprint length).
+`student_progress.md` → **Ledger** table is authoritative. Intervals (days): **1 → 3 → 7 → 14 → 30** (learn-faster-kit ladder). Since 2026-09-18 the campaign runs 98 days, so the ladder is **no longer capped** — an item can genuinely reach 30-day spacing and still be re-tested before its assessment. Push items to the top of the ladder rather than churning them at 3 days.
 - ✅ pass → next interval step. 🟡 partial → repeat current interval. ❌ fail → back to 1 day AND becomes/feeds a 🚩 flag point.
 - Mirror concept-level state into the kit scheduler when convenient: `cd study && python3 .learning/scripts/review_scheduler.py add|review <topic> "<Concept>"` (topics: `dl4h`, `intro-ml`, `computer-vision`) — but the markdown ledger wins on any conflict.
 - Item granularity: one testable assertion/skill ("ROC vs PR: when PR is preferred"), not a whole lecture.
