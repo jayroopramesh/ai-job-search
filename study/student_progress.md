@@ -4,9 +4,9 @@ Sprint: **2026-09-17 (D1) → 2026-10-16 (D30)** · 🎤 **[AUS] Sat 10 Oct** ·
 State file is authoritative (TUTOR.md §4/§8). Updated at the end of every window; committed and pushed each time.
 
 ## Scoreboard
-- Sessions completed: **3 / 88** sprint windows (3/day × 30, less the 2 skipped midday windows on interview days) · missed: 0
+- Sessions completed: **3 / 88** sprint windows (3/day × 30, less the 2 skipped midday windows on interview days) · **missed: 1**
 - Retention (7-day rolling pass rate): **38%** (2 ✅ · 5 🟡 · 5 ❌ of 12, full D1 baseline + close-out)
-- Ledger items: 11 · due tomorrow (D2, 09-18): **9**
+- Ledger items: 11 · due now: **9** (rolled from 09-18 — W1 went unanswered; 4 of them are already posted and awaiting answers)
 - 🚩 Flag points — open: **7** (5 concept + 2 pattern) · cleared: 0
 - Mocks: #0 — · #1 — · #2 — · #3 — · AUS oral — · OXFORD oral — · final —
 
@@ -25,17 +25,17 @@ State file is authoritative (TUTOR.md §4/§8). Updated at the end of every wind
 Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1d + flag.
 | Item (one testable assertion/skill) | Course | Aud. | Interval | Last seen | Next due | Lapses |
 |---|---|---|---|---|---|---|
-| Unscaled features let the large-magnitude attribute dominate the distance metric (KNN) | IntroML | [AUS] | 1d 🟡 | 2026-09-17 | 2026-09-18 | 1 |
+| Unscaled features let the large-magnitude attribute dominate the distance metric (KNN) | IntroML | [AUS] | 1d 🟡 | 2026-09-17 | 2026-09-19 | 1 |
 | Effect of k: too small → noise-sensitive; too large → neighbourhood pulls in other classes | IntroML | [AUS] | 3d ✅ | 2026-09-17 | 2026-09-20 | 0 |
-| Euclidean counts mismatched positions and ties unrelated doc pairs; cosine measures angle/overlap | IntroML | [AUS] | 1d ❌ | 2026-09-17 | 2026-09-18 | 1 |
+| Euclidean counts mismatched positions and ties unrelated doc pairs; cosine measures angle/overlap | IntroML | [AUS] | 1d ❌ | 2026-09-17 | 2026-09-19 | 1 |
 | Validation set estimates generalization error during model building; test set stays untouched | IntroML | [AUS] | 3d ✅ | 2026-09-17 | 2026-09-20 | 0 |
-| GINI measures node impurity: max at equal class distribution, min (0) at a pure node | IntroML | [AUS] | 1d ❌ | 2026-09-17 | 2026-09-18 | 1 |
-| Occam's Razor: given equal generalization error prefer the simpler model (complex models fit accidentally) | IntroML | [AUS] | 1d 🟡 | 2026-09-17 | 2026-09-18 | 1 |
-| Training a NN = minimising loss over data = **empirical risk minimisation** (the named principle) | DL4H | [OXFORD] | 1d 🟡 | 2026-09-17 | 2026-09-18 | 1 |
-| Every loss is a noise model: L2 ↔ Gaussian, L1 ↔ Laplace, CE ↔ categorical; squaring makes outliers dominate | DL4H | [OXFORD] | 1d ❌ | 2026-09-17 | 2026-09-18 | 1 |
-| FP sits in precision's denominator only; FN sits in recall's only — so FP cannot move recall | both | both | 1d ❌ | 2026-09-17 | 2026-09-18 | **2** |
-| Overlap losses (Dice) address class imbalance: background pixel count dominates pixel-wise CE | DL4H | [OXFORD] | 1d 🟡 | 2026-09-17 | 2026-09-18 | 1 |
-| The two error types are NOT interchangeable — summing FP and FN is accuracy thinking, which is what P/R exist to prevent | both | both | 1d 🟡 | 2026-09-17 | 2026-09-18 | 1 |
+| GINI measures node impurity: max at equal class distribution, min (0) at a pure node | IntroML | [AUS] | 1d ❌ | 2026-09-17 | 2026-09-19 | 1 |
+| Occam's Razor: given equal generalization error prefer the simpler model (complex models fit accidentally) | IntroML | [AUS] | 1d 🟡 | 2026-09-17 | 2026-09-19 | 1 |
+| Training a NN = minimising loss over data = **empirical risk minimisation** (the named principle) | DL4H | [OXFORD] | 1d 🟡 | 2026-09-17 | 2026-09-19 | 1 |
+| Every loss is a noise model: L2 ↔ Gaussian, L1 ↔ Laplace, CE ↔ categorical; squaring makes outliers dominate | DL4H | [OXFORD] | 1d ❌ | 2026-09-17 | 2026-09-19 | 1 |
+| FP sits in precision's denominator only; FN sits in recall's only — so FP cannot move recall | both | both | 1d ❌ | 2026-09-17 | 2026-09-19 | **2** |
+| Overlap losses (Dice) address class imbalance: background pixel count dominates pixel-wise CE | DL4H | [OXFORD] | 1d 🟡 | 2026-09-17 | 2026-09-19 | 1 |
+| The two error types are NOT interchangeable — summing FP and FN is accuracy thinking, which is what P/R exist to prevent | both | both | 1d 🟡 | 2026-09-17 | 2026-09-19 | 1 |
 
 ## Session log
 | Date | Window | Type | Items | Score | Notes |
@@ -44,6 +44,7 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | 2026-09-17 | W1 | D1 morning — Drive sync only | 0 | – | Fired 06:10Z, processed 11:08Z (session was idle). Sync clean: all 3 folders match inventory, no new files. Ledger empty on D1 so nothing was due — no quiz owed. |
 | 2026-09-17 | W2 | D1 baseline pt 1 — [AUS] IntroML (KNN, overfitting, trees, evaluation) | 7 | 3/7 (43%) | ✅ k trade-off, validation vs test · 🟡 KNN scaling mechanism, Occam's Razor · ❌ cosine/Euclidean, GINI extremes, precision/recall. Seeded 7 ledger items, 5 flags. **Diagnosis: vocabulary is present, mechanisms and directions are not.** Two of the three failures are concepts he annotated CORRECTLY in his own margin notes — fluency decayed, storage strength never formed. |
 | 2026-09-17 | W3 | D1 baseline pt 2 — [OXFORD] DL4H (L2 losses/metrics) + FP-4 re-attack | 5 | 1.5/5 (30%) | 🟡 ERM named as MLE, 🟡 Dice/imbalance (core insight right, CE high↔low inverted) · ❌ noise models (no idea), ❌ **FP-4 missed again** from the structural angle. Recorded oral-interview format preference: no arithmetic questions — TUTOR.md §3 updated. Taught the P/R anchor rather than only re-testing. Close-out (rare-disease screening case) 🟡: error types finally classified correctly, conclusion not drawn — called 460 FP and 5 FN "about the same". Wrote LR-0001. |
+| 2026-09-18 | W1 | D2 morning review — 9 items due, 4 posted (FP-4, FP-3, FP-1, FP-7 from fresh angles) | 4 posted | – | **Missed** — no reply within the window. Drive sync clean (44 files, no change). Due items rolled to 09-19 with no lapse penalty (not his failure to recall — he simply wasn't asked). The 4 questions stay standing rather than being re-drawn; they are already the new-angle attack for those flags. |
 | 2026-09-17 | W3 (wake) | Duplicate — scheduled 18:01Z wake arrived after the window had already been run live earlier in the evening | 0 | – | Closed as duplicate, no re-quiz (re-asking the same items hours apart would test fluency, not storage). Exposed a protocol gap → TUTOR.md §0 now requires a same-day duplicate check. |
 
 ## Misconception journal (Feynman & mining notes)
@@ -65,3 +66,4 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | structural / formula-reading | 0/1 (❌) | watch — no arithmetic per preference |
 | complete the sentence | 1/2 | watch |
 | Feynman / clinical case | 0/1 (🟡) | watch |
+| forced-choice direction (FP-5 drill) | — posted 09-18, awaiting | — |
