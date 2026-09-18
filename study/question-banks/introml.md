@@ -80,3 +80,15 @@ Linked flag: FP-8
 Q: Name the data quality problems the deck lists, and say which you'd fix by dropping the feature rather than repairing it.
 A: Noise and outliers · wrong data · fake data · missing values · duplicate data. Drop the *feature* when missing values dominate it (his own margin note: "so many missing values → drop one of them"); drop the *record* for duplicates, keeping the most recent. Cleaning = detecting and correcting or removing corrupt/inaccurate records.
 Asked: 2026-09-18 ❌ (offered "missing at random" only — a statistical missingness mechanism, not the deck's taxonomy)
+
+### QB-INTROML-0015 · [AUS] · applied intuition (FP-2 new angle) · deck 3 p.18 · asked 2026-09-18
+Q: Two clinical reports on the same patient — a 2-page summary and a 20-page workup using the same vocabulary. Which measure calls them similar, which calls them far apart, and what property of each decides it?
+A: Cosine calls them similar; Euclidean calls them far apart. Property: **Euclidean measures magnitude, cosine measures direction.** d(a,b)=√Σ(aᵢ−bᵢ)² grows with every count difference, and the long report's counts are several times larger in every coordinate. cos(θ)=(a·b)/(‖a‖‖b‖) divides out both magnitudes, so multiplying a vector by any positive constant leaves it unchanged — only the *proportions* of the vocabulary survive. That invariance is why the deck says cosine is better with text.
+Asked: 2026-09-18 🟡 (direction correct unprompted; property "I don't know", asked to be shown the formula)
+Linked flag: FP-2, FP-9
+
+### QB-INTROML-0016 · [AUS] · applied means (FP-8 + FP-5 drill) · deck 2 p.9–11 · asked 2026-09-18
+Q: A colleague takes the mean of (a) ZIP codes, (b) pain scores 1–10, (c) weights in kg. Which mean is meaningless, which dubious, which fine — and what property decides each?
+A: (a) meaningless — ZIP is **nominal**, only distinctness holds, so mode is the summary statistic, not mean. (b) dubious — pain is **ordinal**: order holds but differences are not meaningful, so "average pain 4.7" assumes 4→5 is the same step as 8→9. (c) fine — kg is **ratio**: true zero, so sums, means and multiples are all meaningful.
+Asked: 2026-09-18 🟡 (all three sorted correctly and volunteered mode for ZIP; but labelled weight "interval (no absolute zero)" — kg has a true zero and is ratio)
+Linked flag: FP-8, FP-5

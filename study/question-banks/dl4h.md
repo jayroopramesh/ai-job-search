@@ -30,3 +30,15 @@ Q: Namburete opens with "unique data, unique challenges." What makes medical dat
 A: Two layers. **The data**: many modalities and formats in one patient record (MRI, ultrasound, EEG, vital signs, lab results, genomics, wearable/patient-generated data), and the same signal means different things across modalities — there is no single "image" to learn from. **The open challenges** the deck names: *bias and fair representation* (equal performance regardless of patient demographic), *explainability* (can the decision process be interpreted?), and *privacy and security* (medical data is sensitive and personally identifying, not easily shared, protected by legislation such as GDPR). The last one also motivates federated learning in L13.
 Asked: 2026-09-18 ❌ ("no idea")
 Linked flag: FP-6-adjacent; own ledger item
+
+### QB-DL4H-0006 · [OXFORD] · forced choice + pairing (FP-6 new angle) · L2 p.15–16 · asked 2026-09-18
+Q: Regression targets contain large outliers. Which loss treats a big residual as nearly impossible and contorts the fit to chase it — L1 or L2? And which noise distribution is each assuming?
+A: **L2.** It squares the residual, so a point 10× further out contributes 100× the loss and dominates the gradient. The assumption underneath: L2 ↔ **Gaussian** noise, whose tails are thin, so a large residual is treated as near-impossible and worth great effort to remove. L1 ↔ **Laplace** noise, whose heavier tails make a large residual merely unusual — which is exactly why L1 is the robust choice. Cross-entropy ↔ categorical uncertainty.
+Asked: 2026-09-18 🟡 (L2 + Gaussian correct; L1 ↔ Laplace missing, and no account of why thin tails cause the contortion)
+Linked flag: FP-6, FP-5
+
+### QB-DL4H-0007 · [OXFORD] · reverse flashcard (FP-7 drill) · L2 p.2 · asked 2026-09-18
+Q: Name the principle: minimising the average loss over your training sample as a stand-in for the loss you actually care about. What are you replacing with what?
+A: **Empirical risk minimisation.** The substitution: the **true risk** — the expected loss over the real data distribution, which you cannot compute because you never see the distribution — is replaced by the **empirical risk**, the average loss over the finite sample you happen to hold. The whole edifice rests on that sample resembling what the model will meet in deployment; the deck flags this as the lecture's "implicit assumptions", and in healthcare it is where distribution shift between hospitals bites.
+Asked: 2026-09-18 🟡 (named correctly — the same item he answered "MLE" to on D1, so the FP-7 substitution habit is fixed — but the substitution itself not articulated)
+Linked flag: FP-7 (1/3), FP-9
