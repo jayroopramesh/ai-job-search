@@ -103,7 +103,7 @@ a{color:var(--accent);}
 <main>
 <section class="card">
   <h2>Today · Fri Sep 18 — Day 2</h2>
-  <p style="margin:0 0 4px; color:var(--muted); font-size:.9rem;">First review day. The morning window went unanswered, so its <b style="color:var(--ink)">9 due items rolled forward with no penalty</b> — four of them are posted and waiting. Midday adds new material: IntroML <b style="color:var(--ink)">Introduction + Data</b> and DL4H <b style="color:var(--ink)">L1</b>.</p>
+  <p style="margin:0 0 4px; color:var(--muted); font-size:.9rem;">First review day, and the anchors held: <b style="color:var(--ink)">3 of 4 re-attacked flags passed</b>, including precision/recall — reasoned from the denominators rather than recalled. New material (IntroML Introduction + Data, DL4H L1) pre-tested cold at 0/3, which is the design, and has now been taught.</p>
   <div class="windows">
     <div class="win"><div class="t">W1 · 08:00</div><div class="n">Morning review</div><div class="d">Drive sync + everything due in the spaced-repetition ladder</div></div>
     <div class="win"><div class="t">W2 · 13:00</div><div class="n">New material</div><div class="d">Pre-test → micro-lesson → recall quiz on today's decks</div></div>
@@ -116,12 +116,12 @@ a{color:var(--accent);}
 <section class="card">
   <h2>Scoreboard</h2>
   <div class="stats">
-    <div class="stat"><div class="v">3<span style="color:var(--muted);font-size:.85rem">/88</span></div><div class="k">Windows done</div></div>
-    <div class="stat"><div class="v">38%</div><div class="k">7-day retention</div></div>
-    <div class="stat"><div class="v">11</div><div class="k">Ledger items</div></div>
-    <div class="stat"><div class="v">9</div><div class="k">Due now</div></div>
-    <div class="stat"><div class="v"><span class="flagdot">7</span></div><div class="k">Flags open</div></div>
-    <div class="stat"><div class="v">0<span style="color:var(--muted);font-size:.85rem">/7</span></div><div class="k">Mocks passed</div></div>
+    <div class="stat"><div class="v">5<span style="color:var(--muted);font-size:.85rem">/88</span></div><div class="k">Windows done</div></div>
+    <div class="stat"><div class="v">75%</div><div class="k">Review pass rate</div></div>
+    <div class="stat"><div class="v">14</div><div class="k">Ledger items</div></div>
+    <div class="stat"><div class="v">12</div><div class="k">Due tomorrow</div></div>
+    <div class="stat"><div class="v"><span class="flagdot">9</span></div><div class="k">Flags open</div></div>
+    <div class="stat"><div class="v">3</div><div class="k">Flags moving</div></div>
   </div>
 </section>
 
@@ -131,10 +131,15 @@ a{color:var(--accent);}
     <tr><td>FP-1</td><td><b>KNN scaling — wrong mechanism.</b> Blamed correlation; the cause is raw magnitude. <span class="tag aus">AUS</span></td></tr>
     <tr><td>FP-2</td><td><b>Cosine vs Euclidean on text.</b> No account of the Euclidean tie; angle put at 180° (orthogonal is 90°). <span class="tag aus">AUS</span></td></tr>
     <tr><td>FP-3</td><td><b>GINI extremes inverted.</b> Max placed at a pure node; max is at equal class distribution. <span class="tag aus">AUS</span></td></tr>
-    <tr class="special"><td>FP-4</td><td><b>🔥 Precision ↔ recall swapped.</b> Missed twice on D1 from unrelated angles — encoding is reversed, not just weak. Anchor taught: P = Prediction set, R = Real set. <span class="tag aus">AUS</span> <span class="tag ox">OXFORD</span></td></tr>
-    <tr><td>FP-6</td><td><b>Losses as noise models.</b> L2 ↔ Gaussian, L1 ↔ Laplace, CE ↔ categorical — total gap. <span class="tag ox">OXFORD</span></td></tr>
-    <tr class="special"><td>FP-5</td><td><b>Pattern: directional inversion.</b> Two-pole concepts come back with the poles reversed (4× on D1). Drilled twice per window until 80% over a rolling week.</td></tr>
-    <tr class="special"><td>FP-7</td><td><b>Pattern: adjacent-concept substitution.</b> Names a neighbouring famous principle instead of the exact one (bias-variance for Occam's Razor; MLE for empirical risk minimisation). 0/2.</td></tr>
+    <tr class="special"><td>FP-9 🔴</td><td><b>Pattern: stops at the label, omits the mechanism.</b> New — and the costliest one for an oral panel, whose next word is always "why?". Bare-label answers now graded 🟡 however right the label.</td></tr>
+    <tr><td>FP-1 🔴</td><td><b>KNN scaling — mechanism still missing.</b> Two attempts, the "why" never produced. <span class="tag aus">AUS</span></td></tr>
+    <tr><td>FP-8 🔴</td><td><b>Attribute-type taxonomy.</b> "Ordinal" used as a catch-all for anything numeric; 1/4 on the pre-test. <span class="tag aus">AUS</span></td></tr>
+    <tr><td>FP-2 🔴</td><td><b>Cosine vs Euclidean on text.</b> Not yet re-attacked. <span class="tag aus">AUS</span></td></tr>
+    <tr><td>FP-6 🔴</td><td><b>Losses as noise models.</b> L2 ↔ Gaussian, L1 ↔ Laplace. Not yet re-attacked. <span class="tag ox">OXFORD</span></td></tr>
+    <tr class="special"><td>FP-4 🟢</td><td><b>Precision ↔ recall — moving, 1/3.</b> First clean pass on D2, reasoned from the denominators. <span class="tag aus">AUS</span> <span class="tag ox">OXFORD</span></td></tr>
+    <tr class="special"><td>FP-3 🟢</td><td><b>GINI extremes — moving, 1/3.</b> Inversion corrected on D2. <span class="tag aus">AUS</span></td></tr>
+    <tr class="special"><td>FP-5 🟢</td><td><b>Pattern: directional inversion — moving, 1/3.</b> Drill ran 2/2 on D2; best-performing format so far.</td></tr>
+    <tr><td>FP-7 🟠</td><td><b>Pattern: adjacent-concept substitution — half fixed.</b> Named Occam's Razor correctly, but supplied no reason.</td></tr>
   </table></div>
   <p style="margin:8px 0 0; font-size:.78rem; color:var(--muted);">Each flag is re-attacked from a format it has not seen yet; cleared only after 3 consecutive passes on different days.</p>
 </section>
@@ -225,6 +230,6 @@ a{color:var(--accent);}
 </main>
 
 <footer>
-  Updated <span class="mono">2026-09-18 · Day 2 · morning missed, items rolled</span> · refreshed after every window · state of record: <span class="mono">study/student_progress.md</span> on branch <span class="mono">claude/busy-brahmagupta-v2r6hb</span> · sources: the three course folders in Google Drive
+  Updated <span class="mono">2026-09-18 · Day 2 complete · 3 flags moving</span> · refreshed after every window · state of record: <span class="mono">study/student_progress.md</span> on branch <span class="mono">claude/busy-brahmagupta-v2r6hb</span> · sources: the three course folders in Google Drive
 </footer>
 </div>
