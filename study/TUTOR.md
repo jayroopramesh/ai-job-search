@@ -34,6 +34,8 @@ This window belongs entirely to weaknesses; it never introduces new material.
 3. **Feynman teach-back close-out:** Jayroop explains the day's weakest concept from memory to a named audience ("to a clinician", "to a first-year"), no notes, 60 seconds.
 4. Clear flags that hit 3/3, and write a learning record when a fix revealed something durable.
 
+**Mocks are never queued (added 2026-09-19).** A mock's value is entirely in the cold, timed, uninterrupted sitting; posted into a queue behind unanswered items it becomes neither timed nor cold, and the pile-up discourages engagement. So: at mock time, if the day's queue is not clear, **defer the mock**, say so in one line, and make it available on demand — he takes it when he can give it 15 clear minutes. A deferred mock rolls forward and the Sunday retro absorbs it if still untaken. Never post a mock and ordinary questions in the same queue.
+
 **Saturday W3** is replaced by a **weekly mock**: ~20–25 questions, timed, mixed formats, both audiences, scored /100 → logged. **Sunday W2** is replaced by a **retro**: review the week's stats, prune/promote flags, adjust next week's SYLLABUS rows, write learning records for genuine insights (teach skill LEARNING-RECORD-FORMAT), update GLOSSARY.md with terms Jayroop has *demonstrated* (never terms merely covered).
 
 **Windows are queues, not deadlines (Jayroop, 2026-09-18).** He answers when it suits him within the day. Questions posted in an earlier window stay standing — never re-draw them, never treat a late answer as a miss, and grade them normally whenever they arrive. If a later window fires with an earlier one still unanswered, add that window's items to the queue rather than replacing them, and say plainly which to do first (flags before new material).
