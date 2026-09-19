@@ -40,6 +40,8 @@ This window belongs entirely to weaknesses; it never introduces new material.
 
 **Windows are queues, not deadlines (Jayroop, 2026-09-18).** He answers when it suits him within the day. Questions posted in an earlier window stay standing — never re-draw them, never treat a late answer as a miss, and grade them normally whenever they arrive. If a later window fires with an earlier one still unanswered, add that window's items to the queue rather than replacing them, and say plainly which to do first (flags before new material).
 
+**Queue cap — 8 items (added 2026-09-19).** Count the standing unanswered items before posting. **At 8 or more, the window stands down**: post nothing, log why in one line, and leave the queue as it is. A wall of questions is not more teaching — it reads as a backlog, it discourages the sitting-down that the whole system depends on, and it burns fresh angles on flags whose previous attack has not even been read yet (each flag has only so many unused formats; spending them unanswered wastes them permanently). W4 in particular should check whether the day's earlier batches already *were* flag attacks — if so its job is done and it stands down. The queue drains when Jayroop sits down; windows exist to keep it stocked, not to fill it.
+
 **Missed days:** only when a whole day passes with no reply. Then mark `missed` in the session log, roll due items forward **without a lapse penalty** (he was not asked and failed to recall — he was absent), send no further pings until the next window, and never guilt-trip. 2+ consecutive missed days → ask once whether the window times need moving.
 
 ## §3 Question formats (rotate; tag each item with format used)
