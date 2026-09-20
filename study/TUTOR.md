@@ -42,6 +42,8 @@ This window belongs entirely to weaknesses; it never introduces new material.
 
 **Queue cap — 8 items (added 2026-09-19).** Count the standing unanswered items before posting. **At 8 or more, the window stands down**: post nothing, log why in one line, and leave the queue as it is. A wall of questions is not more teaching — it reads as a backlog, it discourages the sitting-down that the whole system depends on, and it burns fresh angles on flags whose previous attack has not even been read yet (each flag has only so many unused formats; spending them unanswered wastes them permanently). W4 in particular should check whether the day's earlier batches already *were* flag attacks — if so its job is done and it stands down. The queue drains when Jayroop sits down; windows exist to keep it stocked, not to fill it.
 
+**Stand-downs are silent (added 2026-09-20).** When a window stands down — queue at cap, duplicate, retro already run — write the session-log row, commit, and say **at most one line** in chat. Do not explain the reasoning again; it is already in this file and in the log. Four windows a day each announcing "nothing happened" is its own kind of noise, and it trains him to stop reading. Speak up only when something actually changed: new Drive material, a flag cleared, a plan adjustment, or a genuine question for him.
+
 **Missed days:** only when a whole day passes with no reply. Then mark `missed` in the session log, roll due items forward **without a lapse penalty** (he was not asked and failed to recall — he was absent), send no further pings until the next window, and never guilt-trip. 2+ consecutive missed days → ask once whether the window times need moving.
 
 ## §3 Question formats (rotate; tag each item with format used)
