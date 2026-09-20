@@ -15,8 +15,8 @@ Goal: the whole [AUS] syllabus taught once, and DL4H through regularisation. Pac
 
 | Week | Dates | [AUS] IntroML | [OXFORD] DL4H | Weekend |
 |---|---|---|---|---|
-| 1 | Sep 19–25 | 1 Introduction · 2 Data · 3 KNN | L1 Why DL for healthcare · L2 Loss & metrics | Sat: **Mock #1** (calibration) · Sun: retro |
-| 2 | Sep 26 – Oct 2 | 4 Decision Trees · 5 Model Overfitting | L3 Backprop & optimisation · L4 Init & normalisation | Sat: **Mock #2** + **PS1 mining** · Sun: retro |
+| 1 | Sep 19–25 | 1 Introduction ✅ · 2 Data ✅ · ~~3 KNN~~ → wk 2 | L1 Why DL for healthcare ✅ · ~~L2~~ → wk 2 | Mock #1 deferred, available on demand |
+| 2 | Sep 26 – Oct 2 | **3 KNN (carried)** · 4 Decision Trees · 5 Model Overfitting | **L2 Loss & metrics (carried)** · L3 Backprop & optimisation · L4 Init & normalisation | Sat: **Mock #2** + **PS1 mining** · Sun: retro |
 | 3 | Oct 3–9 | 6 Class Imbalance & Evaluation · 7 Naïve Bayes | L5 CNNs · L6 Advanced CNNs | Sat: **Mock #3** + **PS2 mining** · Sun: retro |
 | 4 | Oct 10–16 | 8 Regression I · 9 Regression II | L7-8 Regularisation (both parts) | Sat: **Mock #4** + **PS3 mining** · Sun: retro |
 

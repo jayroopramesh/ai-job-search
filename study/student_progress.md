@@ -5,10 +5,10 @@ Campaign: **2026-09-17 (D1) → 2026-12-25 (D99)** · 🎤 **[AUS] IntroML Mon 1
 State file is authoritative (TUTOR.md §4/§8). Updated at the end of every window; committed and pushed each time.
 
 ## Scoreboard
-- Windows completed: **6** · missed: **0** · cadence now **4/day** (~385 windows across the campaign)
+- Windows completed: **6** · **missed days: 1** (Sun 09-19 — no reply; items rolled with no lapse penalty) · cadence now **4/day** (~385 windows across the campaign)
 - **Review pass rate: 75%** (W1) then **50%** (W4 clinic) — D2 overall **2 ✅ / 7 🟡 / 0 ❌ of 9 re-attacked items**. Zero fails all day: every answer contained correct content.
 - Overall retention incl. cold pre-tests: **40%** (4 ✅ · 12 🟡 · 8 ❌ of 24)
-- Ledger items: 14 · due 09-19: **10** · ladder now uncapped (98 days means 30-day spacing genuinely runs to term)
+- Ledger items: 14 · **5 live in the standing queue**, 7 rolled to 09-21 · ladder now uncapped (98 days means 30-day spacing genuinely runs to term)
 - 🚩 Flag points — open: **9** (6 concept + 3 pattern) · cleared: 0 · **4 now moving** · **FP-9 fired on 5 of 5 clinic items — the dominant flag**
 - Mocks: #0 — · #1 — · #2 — · #3 — · AUS oral — · OXFORD oral — · final —
 
@@ -32,17 +32,17 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | FP sits in precision's denominator only; FN sits in recall's only — so FP cannot move recall | both | both | 3d ✅ | 2026-09-18 | 2026-09-21 | 2 |
 | GINI measures node impurity: max at equal class distribution, min (0) at a pure node | IntroML | [AUS] | 3d ✅ | 2026-09-18 | 2026-09-21 | 1 |
 | Unscaled features let the large-magnitude attribute dominate the distance metric (KNN) | IntroML | [AUS] | 1d 🟡 | 2026-09-18 | 2026-09-19 | 2 |
-| Occam's Razor: given equal generalization error prefer the simpler model (complex models fit accidentally) | IntroML | [AUS] | 1d 🟡 | 2026-09-18 | 2026-09-19 | 2 |
-| Effect of k: too small → noise-sensitive; too large → neighbourhood pulls in other classes | IntroML | [AUS] | 3d ✅ | 2026-09-17 | 2026-09-20 | 0 |
-| Validation set estimates generalization error during model building; test set stays untouched | IntroML | [AUS] | 3d ✅ | 2026-09-17 | 2026-09-20 | 0 |
+| Occam's Razor: given equal generalization error prefer the simpler model (complex models fit accidentally) | IntroML | [AUS] | 1d 🟡 | 2026-09-18 | 2026-09-21 | 2 |
+| Effect of k: too small → noise-sensitive; too large → neighbourhood pulls in other classes | IntroML | [AUS] | 3d ✅ | 2026-09-17 | 2026-09-21 | 0 |
+| Validation set estimates generalization error during model building; test set stays untouched | IntroML | [AUS] | 3d ✅ | 2026-09-17 | 2026-09-21 | 0 |
 | Euclidean counts mismatched positions and ties unrelated doc pairs; cosine measures angle/overlap | IntroML | [AUS] | 1d ❌ | 2026-09-17 | 2026-09-19 | 1 |
 | Training a NN = minimising loss over data = **empirical risk minimisation** (the named principle) | DL4H | [OXFORD] | 1d 🟡 | 2026-09-17 | 2026-09-19 | 1 |
 | Every loss is a noise model: L2 ↔ Gaussian, L1 ↔ Laplace, CE ↔ categorical; squaring makes outliers dominate | DL4H | [OXFORD] | 1d ❌ | 2026-09-17 | 2026-09-19 | 1 |
-| Overlap losses (Dice) address class imbalance: background pixel count dominates pixel-wise CE | DL4H | [OXFORD] | 1d 🟡 | 2026-09-17 | 2026-09-19 | 1 |
-| The two error types are NOT interchangeable — summing FP and FN is accuracy thinking | both | both | 1d 🟡 | 2026-09-17 | 2026-09-19 | 1 |
+| Overlap losses (Dice) address class imbalance: background pixel count dominates pixel-wise CE | DL4H | [OXFORD] | 1d 🟡 | 2026-09-17 | 2026-09-21 | 1 |
+| The two error types are NOT interchangeable — summing FP and FN is accuracy thinking | both | both | 1d 🟡 | 2026-09-17 | 2026-09-21 | 1 |
 | Attribute types: the four properties, and true zero as the interval↔ratio discriminator | IntroML | [AUS] | 1d ❌ | 2026-09-18 | 2026-09-19 | 1 |
-| Data quality problems: noise/outliers, wrong data, fake data, missing values, duplicates | IntroML | [AUS] | 1d ❌ | 2026-09-18 | 2026-09-19 | 1 |
-| DL4H open challenges: bias & fair representation, explainability, privacy/security (GDPR) | DL4H | [OXFORD] | 1d ❌ | 2026-09-18 | 2026-09-19 | 1 |
+| Data quality problems: noise/outliers, wrong data, fake data, missing values, duplicates | IntroML | [AUS] | 1d ❌ | 2026-09-18 | 2026-09-21 | 1 |
+| DL4H open challenges: bias & fair representation, explainability, privacy/security (GDPR) | DL4H | [OXFORD] | 1d ❌ | 2026-09-18 | 2026-09-21 | 1 |
 
 ## Session log
 | Date | Window | Type | Items | Score | Notes |
@@ -55,6 +55,7 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | 2026-09-18 | W1 | D2 review — 4 flag re-attacks from fresh angles | 4 | **3/4 (75%)** | ✅ **FP-4 first clean pass** (reasoned from the denominators — the taught anchor held) · ✅ **FP-3 first clean pass** (inversion corrected) · 🟡 FP-1 (said "scaling", no mechanism) · 🟡 FP-7 (named Occam's Razor correctly — substitution fixed — but no justification). **FP-5 drill 2/2.** Answered in the afternoon, which is fine: windows are queues, not deadlines (see NOTES.md). |
 | 2026-09-18 | W4 | D2 flag clinic — first run of the new window; 5 flags re-attacked from unused angles | 5 | 2.5/5 (50%) | **Zero fails, five 🟡s, all for the same reason — FP-9 fired on 5/5.** ✅-grade content inside every answer: cosine/Euclidean direction right, L2+Gaussian right, all three means sorted right (+ volunteered mode for nominal), **ERM named correctly — the exact item he answered "MLE" to on D1**, both scaling methods described accurately. What was absent every time: the mechanism. Q5 refined the diagnosis — handed the label and asked only for the mechanism, he described **the remedy, not the failure**. He asked to be shown the formula, which reframes the whole teaching approach (see NOTES). FP-7 de-coupled from FP-9 to stop double-counting. FP-5 now 4/4 on the day. |
 | 2026-09-19 | W1 | D3 morning review — 10 items due, first test of symbolic mechanism teaching | 5 posted | awaiting | Drive sync clean (44 files, no change). All five are formula-reading items ("point at the term"), incl. FP-1 on its 4th attempt. Standing in the queue. |
+| 2026-09-20 | W1+retro | D4 — **Week 1 retro**, no questions posted (queue at cap) | 0 | – | D3 logged as a **missed day**: no reply all day, so its 5 unposted due items rolled to 09-21 **without lapse penalty** (absence, not failure to recall). The 5 posted items stay live in the queue. Drive sync clean. Opened **GLOSSARY.md** with the 8 terms he has demonstrated under retrieval; 4 contested terms deliberately excluded. SYLLABUS Week 2 adjusted to carry the 2 undelivered Week 1 topics. |
 | 2026-09-19 | W4 | D3 clinic — **stood down**, nothing posted | 0 | – | Queue already at 8. And the morning batch *was* a flag clinic: all five W1 items were re-attacks on FP-1, FP-2, FP-6, FP-8 and the FP-9/ERM drill, each from an unused angle. A second set tonight would have spent more scarce formats on flags whose first attack is unread. **New rule in TUTOR.md §2: queue cap of 8 — at or above it a window posts nothing and logs why.** Second stand-down today; the system is degrading gracefully rather than piling up, which is the intended behaviour. |
 | 2026-09-19 | W3 | D3 — **Mock #1 DEFERRED**, not run | 0 | – | Queue stood at 8 unanswered (5 flag items + 3 pre-tests) when the mock window fired. Posting 20–25 timed questions on top would have made the mock neither cold nor timed, and turned the queue into a wall. Deferred and offered on demand; rolls to Sunday, where the retro absorbs it if still untaken. **New protocol rule written into TUTOR.md §2: mocks are never queued.** |
 | 2026-09-19 | W2 | D3 new material — [AUS] deck 3 KNN, the parts never yet quizzed | 3 posted | awaiting | Pre-test on lazy learning, KNN-for-regression, and the curse of dimensionality. Queued *behind* W1 per the cadence rule; told him plainly to do the five flag items first. Saturday, so W3 is **Mock #1**. |
@@ -70,6 +71,19 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 - **2026-09-18 — "ordinal" as a catch-all (FP-8).** Star rating → ratio, °C → ordinal, kg → ordinal. The label is being assigned by feel rather than by the deck's four-property test. Note the same annotation paradox again: his margin note on the interval slide reads "I can't say Ali is twice Ahmed cause my ref point is not 0" — he had the true-zero insight in his own handwriting.
 
 - **2026-09-18 — "explain the formula for me also" (the most useful thing he has said).** Asked why cosine and Euclidean disagree, he produced the right direction, then asked to be shown the formula. Read together with Q5 — where, pressed for a mechanism, he described the *fix* rather than the *failure* — the picture is clear: **prose mechanisms are not landing, and he knows it.** He reaches for procedures because procedures are memorable; the failure mode lives in the formula and he has not been shown it symbolically. The no-arithmetic rule was read as no-formulas, which is not what it meant. Correction to the approach: **teach every mechanism symbolically** — write the expression, name each term, point at the term that does the damage — then test by asking him to *read a formula aloud and say which term dominates*. No computing; reading. This is the single biggest change to how this student should be taught.
+
+## Week 1 retro (2026-09-20)
+**Engagement:** 1 day of 4 with answers (D2), and it was a full day — 9 review items across two windows. D1 was the baseline, D3 silent. So the sample is small, and every conclusion below rests on two days.
+
+**The one real finding:** the failure mode changed shape. D1 was dominated by **directional inversion** (wrong pole of a two-pole concept, 4 instances). Once anchors were taught, that stopped dead — **FP-5 went 4/4 on D2 and has not recurred**. What replaced it is **FP-9, missing mechanism**, which fired on 5 of 5 clinic items. That is progress, not stagnation: inverted knowledge is worse than incomplete knowledge, and the trade is a good one.
+
+**What is working:** forced-choice direction items (4/4, his best format) · teaching an *anchor* rather than re-testing a reversed encoding (the P/R fix held next day and he reasoned from denominators unprompted) · decoupling FP-7 from FP-9 so each measures one thing.
+
+**What is not:** prose mechanism explanations (0/7). His own "explain the formula for me also" is the correction, and D3's unanswered batch is the first real test of it.
+
+**Pace vs plan:** Week 1 planned IntroML 1–3 + DL4H L1–L2; delivered IntroML 1–2 + DL4H L1, with KNN pre-tested but untaught. **Two topics carried into Week 2.** With 59 days to AUS this is comfortably inside the buffer the rescope bought — worth naming, not worth worrying about.
+
+**Adjustments made:** two new protocol rules this week (mocks are never queued; queue caps at 8) both came from real failures, and both fired correctly. GLOSSARY.md opened with demonstrated terms only.
 
 ## Format-level weaknesses
 | Format | Rolling pass rate | Drill active? |
