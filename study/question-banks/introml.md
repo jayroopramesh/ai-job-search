@@ -92,3 +92,15 @@ Q: A colleague takes the mean of (a) ZIP codes, (b) pain scores 1–10, (c) weig
 A: (a) meaningless — ZIP is **nominal**, only distinctness holds, so mode is the summary statistic, not mean. (b) dubious — pain is **ordinal**: order holds but differences are not meaningful, so "average pain 4.7" assumes 4→5 is the same step as 8→9. (c) fine — kg is **ratio**: true zero, so sums, means and multiples are all meaningful.
 Asked: 2026-09-18 🟡 (all three sorted correctly and volunteered mode for ZIP; but labelled weight "interval (no absolute zero)" — kg has a true zero and is ratio)
 Linked flag: FP-8, FP-5
+
+### QB-INTROML-0017 · [AUS] · pre-test (lazy learning) · deck 3 KNN p.24 · asked 2026-09-22
+Q: KNN is called a **lazy learner**. Where does the computational work happen, and name one practical cost that follows from that.
+A: There is **no explicit learning step** — building the model is fast because nothing is built; all the work is deferred to **prediction time**, where distances to every training record must be computed. Costs the deck lists: computationally expensive at prediction, scaling with dataset size *and* feature count; sensitive to the proximity measure and to unscaled data; redundant/irrelevant attributes cause problems; missing attributes are hard to handle. Contrast: eager learners do the work once during training. (His own margin note here: *"Prediction you do work → lazy learner → Don't prepare ahead of time. Other Alg, Prepare model during training"*.)
+Asked: 2026-09-22 — standing
+
+### QB-INTROML-0018 · [AUS] · structural reading (curse of dimensionality) · deck 3 KNN p.22 · asked 2026-09-22
+Q: The deck plots the ratio **(distance to the farthest point) / (distance to the nearest point)** as the number of features grows. Low dimensions: the ratio is large. High dimensions: it approaches **1**. Say what a ratio of 1 means for KNN's ability to do its job — no arithmetic, just read the quantity.
+A: A ratio of 1 means the nearest and farthest points are **the same distance away** — every point is roughly equidistant, so "nearest" stops picking anything out. KNN's entire mechanism is ranking neighbours by distance, and at ratio 1 there is no ranking left to read: the distances no longer distinguish, so the k it selects are arbitrary rather than similar. Cause per the deck: volume grows exponentially with dimension, data becomes sparse, and "closeness" degrades. Deck's remedy: feature selection / dimensionality reduction (his margin note: *"with kNN feature Selection"*, *"samples become equidistant"*).
+Asked: 2026-09-22 — standing
+Linked: pairs with FP-1 — both are the distance metric failing, once through **scale** and once through **dimension**.
+
