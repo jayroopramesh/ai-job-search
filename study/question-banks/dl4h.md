@@ -34,7 +34,7 @@ Linked flag: FP-6-adjacent; own ledger item
 ### QB-DL4H-0006 · [OXFORD] · forced choice + pairing (FP-6 new angle) · L2 p.15–16 · asked 2026-09-18
 Q: Regression targets contain large outliers. Which loss treats a big residual as nearly impossible and contorts the fit to chase it — L1 or L2? And which noise distribution is each assuming?
 A: **L2.** It squares the residual, so a point 10× further out contributes 100× the loss and dominates the gradient. The assumption underneath: L2 ↔ **Gaussian** noise, whose tails are thin, so a large residual is treated as near-impossible and worth great effort to remove. L1 ↔ **Laplace** noise, whose heavier tails make a large residual merely unusual — which is exactly why L1 is the robust choice. Cross-entropy ↔ categorical uncertainty.
-Asked: 2026-09-18 🟡 (L2 + Gaussian correct; L1 ↔ Laplace missing, and no account of why thin tails cause the contortion)
+Asked: 2026-09-18 🟡 (L2 + Gaussian correct; L1 ↔ Laplace missing, and no account of why thin tails cause the contortion) · 2026-09-23 🟡 (**L1 ↔ Laplace now correct — pairing table complete**; but the reason inverted: said outliers are penalised *extra* under L1, when L1 penalises them **less**. FP-5 recurrence)
 Linked flag: FP-6, FP-5
 
 ### QB-DL4H-0007 · [OXFORD] · reverse flashcard (FP-7 drill) · L2 p.2 · asked 2026-09-18

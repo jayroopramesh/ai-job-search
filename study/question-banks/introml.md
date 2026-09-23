@@ -96,11 +96,17 @@ Linked flag: FP-8, FP-5
 ### QB-INTROML-0017 · [AUS] · pre-test (lazy learning) · deck 3 KNN p.24 · asked 2026-09-22
 Q: KNN is called a **lazy learner**. Where does the computational work happen, and name one practical cost that follows from that.
 A: There is **no explicit learning step** — building the model is fast because nothing is built; all the work is deferred to **prediction time**, where distances to every training record must be computed. Costs the deck lists: computationally expensive at prediction, scaling with dataset size *and* feature count; sensitive to the proximity measure and to unscaled data; redundant/irrelevant attributes cause problems; missing attributes are hard to handle. Contrast: eager learners do the work once during training. (His own margin note here: *"Prediction you do work → lazy learner → Don't prepare ahead of time. Other Alg, Prepare model during training"*.)
-Asked: 2026-09-22 — standing
+Asked: 2026-09-22 → answered 2026-09-23 ❌ (described what KNN computes and drifted to dimensionality; never reached "prediction time / no training step". **His own margin note on this slide has the answer** — annotation paradox, 4th instance)
 
 ### QB-INTROML-0018 · [AUS] · structural reading (curse of dimensionality) · deck 3 KNN p.22 · asked 2026-09-22
 Q: The deck plots the ratio **(distance to the farthest point) / (distance to the nearest point)** as the number of features grows. Low dimensions: the ratio is large. High dimensions: it approaches **1**. Say what a ratio of 1 means for KNN's ability to do its job — no arithmetic, just read the quantity.
 A: A ratio of 1 means the nearest and farthest points are **the same distance away** — every point is roughly equidistant, so "nearest" stops picking anything out. KNN's entire mechanism is ranking neighbours by distance, and at ratio 1 there is no ranking left to read: the distances no longer distinguish, so the k it selects are arbitrary rather than similar. Cause per the deck: volume grows exponentially with dimension, data becomes sparse, and "closeness" degrades. Deck's remedy: feature selection / dimensionality reduction (his margin note: *"with kNN feature Selection"*, *"samples become equidistant"*).
-Asked: 2026-09-22 — standing
+Asked: 2026-09-22 → answered 2026-09-23 🟡 (*"no difference between the neighbors close or far"* — the reading is right; the consequence for KNN's job, that the ranking then carries no information and the k chosen are arbitrary, was not stated)
 Linked: pairs with FP-1 — both are the distance metric failing, once through **scale** and once through **dimension**.
+
+### QB-INTROML-0019 · [AUS] · **formula-reading (the format that worked)** · deck 3 p.13–17 · asked 2026-09-23
+Q: Given $d^2=(\text{age}_a-\text{age}_b)^2+(\text{income}_a-\text{income}_b)^2$ — point at the term that decides the neighbour ranking, and say why the other cannot compete.
+A: The **income** term. Income differences run to tens of thousands while age differences run to tens, so the income term is orders of magnitude larger and dominates the sum; age contributes a rounding error to the ranking and is effectively invisible. Squaring widens the gap further but is not the cause — even Manhattan distance would be dominated. Fix: min-max scaling, or standardise to mean 0 / sd 1.
+Asked: 2026-09-23 ✅ (*"Income decides, it's several magnitudes higher. Age is too small and will get drowned out without scaling."* — **first complete mechanism after four attempts**)
+Linked flag: FP-1 (1/3) · note: this is the format to reuse for every mechanism from now on
 
