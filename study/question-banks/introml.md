@@ -110,3 +110,8 @@ A: The **income** term. Income differences run to tens of thousands while age di
 Asked: 2026-09-23 ✅ (*"Income decides, it's several magnitudes higher. Age is too small and will get drowned out without scaling."* — **first complete mechanism after four attempts**)
 Linked flag: FP-1 (1/3) · note: this is the format to reuse for every mechanism from now on
 
+### QB-INTROML-0020 · [AUS] · pre-test · deck 3 KNN p.19 · asked 2026-09-23
+Q: KNN for **regression**: which steps are identical to classification, and which one changes?
+A: **Identical:** compute the distance to every training record, then identify the k nearest neighbours. **Changed:** the aggregation step — instead of a majority vote over neighbour *labels*, take the **mean (or median)** of the neighbours' *target values*, and that average is the prediction. Everything upstream of the aggregation is the same algorithm; only how the neighbours are combined differs.
+Asked: 2026-09-23 — standing (third of the three pre-tests withdrawn 09-21; the other two returned 09-22)
+
