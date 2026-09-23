@@ -6,7 +6,7 @@
 
 **Four windows/day** (see TUTOR.md §2): **W1** 08:00 review · **W2** 12:30 new material · **W3** 17:00 interleaved gauntlet · **W4** 21:00 flag clinic + teach-back. Copenhagen times; queues, not deadlines.
 
-**What the extra time buys.** The old plan force-fed two decks a day and capped the spaced-repetition ladder at 28 days. Now: one deck taught properly per day, the full **1→3→7→14→30** ladder actually runs to term, every problem sheet gets mined, and there is room for four mocks per course instead of a scramble. Depth, not more speed.
+**What the extra time buys.** The old plan force-fed two decks a day and capped the spaced-repetition ladder at 28 days. Now: one deck taught properly per day, the full **1→3→7→14→30** ladder actually runs to term, every problem sheet gets mined (for questions — see RESOURCES.md; they are solutions guides, not his attempts), and there is room for four mocks per course instead of a scramble. Depth, not more speed.
 
 ---
 

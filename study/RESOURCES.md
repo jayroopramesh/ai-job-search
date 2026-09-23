@@ -26,7 +26,7 @@ Folder `1s3wQINKpVya6bPmKtnH1c2ZmHAF2L5nr`
 | L15-16 Self-attention & transformers | `1CQglVu-g3aFo1l7_4FDQrOHB1yNIWmcz` |
 | L16 Explainability | `1WTjc7Do5PiKBO0GcqVS02Byf788IzIRu` |
 
-**Problem Sheets** (folder `1OSejaYzU7yc5Zr1ble2mxq5uqH1mQP0v`) — gold for flag-point mining: compare Jayroop's own answers (`*_student_ans`) against official answers to find real historical misconceptions.
+**Problem Sheets** (folder `1OSejaYzU7yc5Zr1ble2mxq5uqH1mQP0v`) — **corrected 2026-09-23.** `*_student_ans` is **not** Jayroop's own work. PS1's opens *"This guide provides key results and concise explanations for each question. Use it to check your own working"* and its content is the official `*_ans` solutions condensed — same numbers, same phrasing, no wrong answers anywhere. It is a **student-facing solutions guide handed out with the sheet**. The original premise (mine these for his historical misconceptions) was wrong and is void: there are no misconceptions in them to mine. What they are instead is **the best DL4H question source in the Drive** — exam-grade problems with authoritative worked answers to grade against, heavy on exactly the structural formula-reading that works for him. Mine them for *questions*, not for *errors*.
 
 | Sheet | Questions | Official answers | Jayroop's answers |
 |---|---|---|---|
