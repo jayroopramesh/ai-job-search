@@ -115,3 +115,9 @@ Q: KNN for **regression**: which steps are identical to classification, and whic
 A: **Identical:** compute the distance to every training record, then identify the k nearest neighbours. **Changed:** the aggregation step — instead of a majority vote over neighbour *labels*, take the **mean (or median)** of the neighbours' *target values*, and that average is the prediction. Everything upstream of the aggregation is the same algorithm; only how the neighbours are combined differs.
 Asked: 2026-09-23 — standing (third of the three pre-tests withdrawn 09-21; the other two returned 09-22)
 
+### QB-INTROML-0021 · [AUS] · contrast (lazy-learner re-frame) · deck 3 KNN p.24 · asked 2026-09-24
+Q: A decision tree and a KNN classifier are both given the same 100,000-row training set. One takes a long time to *train* and is then fast at *prediction*; the other is the reverse. Which is which, and what is each one actually doing during its slow phase?
+A: **Decision tree = eager.** Slow to train: it searches splits over the whole dataset up front and compiles a model. Prediction is then a handful of comparisons down the tree — near-instant. **KNN = lazy.** Training is instant because **there is no training step at all** — it just stores the data. The cost lands entirely at prediction, where it must compute the distance from the query point to every stored record and then rank them, which scales with both n and d. Deck's framing: "no explicit learning step; the work is done during the prediction phase."
+Asked: 2026-09-24 — standing (re-frame after 09-23 ❌, where "where does the work happen" drew a description of what KNN computes)
+Linked flag: FP-9
+
