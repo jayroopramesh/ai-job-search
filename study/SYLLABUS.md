@@ -16,9 +16,12 @@ Goal: the whole [AUS] syllabus taught once, and DL4H through regularisation. Pac
 | Week | Dates | [AUS] IntroML | [OXFORD] DL4H | Weekend |
 |---|---|---|---|---|
 | 1 | Sep 19–25 | 1 Introduction ✅ · 2 Data ✅ · ~~3 KNN~~ → wk 2 | L1 Why DL for healthcare ✅ · ~~L2~~ → wk 2 | Mock #1 deferred, available on demand |
-| 2 | Sep 26 – Oct 2 | **3 KNN (carried)** · 4 Decision Trees · 5 Model Overfitting | **L2 Loss & metrics (carried)** · L3 Backprop & optimisation · L4 Init & normalisation | Sat: **Mock #2** + **PS1 mining** · Sun: retro |
-| 3 | Oct 3–9 | 6 Class Imbalance & Evaluation · 7 Naïve Bayes | L5 CNNs · L6 Advanced CNNs | Sat: **Mock #3** + **PS2 mining** · Sun: retro |
-| 4 | Oct 10–16 | 8 Regression I · 9 Regression II | L7-8 Regularisation (both parts) | Sat: **Mock #4** + **PS3 mining** · Sun: retro |
+| 2 | Sep 21–27 | **3 KNN taught ✅** (lazy learning, dimensionality, regression) · ~~4 Decision Trees~~ · ~~5 Overfitting~~ → wk 3 | ~~L2 carried~~ partly (losses, ERM re-tested) · ~~L3~~ · ~~L4~~ → wk 3 | ~~Mock #2~~ **deferred** · PS1 mined ✅ (as a question source — see RESOURCES) |
+| 3 | Sep 28 – Oct 4 | **4 Decision Trees (carried)** · **5 Overfitting (carried)** | **L3 Backprop (carried)** · **L4 Init & normalisation (carried)** | Sat: **short Mock #1** (10 items, ~8 min — see TUTOR §2) · Sun: retro |
+| 4 | Oct 5–11 | 6 Class Imbalance & Evaluation · 7 Naïve Bayes | L5 CNNs · L6 Advanced CNNs | Sat: **Mock #2** + PS2 mining · Sun: retro |
+| 5 | Oct 12–18 | 8 Regression I · 9 Regression II | L7-8 Regularisation (both parts) | Sat: **Mock #3** + PS3 mining · Sun: retro |
+
+⚠️ **Slipped one week at the 09-27 retro.** Week 2 delivered one deck instead of six; four topics carried. Block 1 now runs to ~23 Oct rather than 16 Oct, which the 98-day campaign still absorbs — but a second slip of this size would start eating Block 3's consolidation, and that is the part there is no slack in.
 
 ## Block 2 — Advanced DL + CV overlap · **Sat 17 Oct → Fri 6 Nov** (3 weeks)
 Goal: DL4H finished; the eight CV decks that overlap DL4H enter as reinforcement, so CV starts Block 4 already half-warm.
