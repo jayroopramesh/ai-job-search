@@ -29,22 +29,22 @@ State file is authoritative (TUTOR.md §4/§8). Updated at the end of every wind
 Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1d + flag.
 | Item (one testable assertion/skill) | Course | Aud. | Interval | Last seen | Next due | Lapses |
 |---|---|---|---|---|---|---|
-| FP sits in precision's denominator only; FN sits in recall's only — so FP cannot move recall | both | both | 3d ✅ | 2026-09-18 | 2026-09-22 | 2 |
-| GINI measures node impurity: max at equal class distribution, min (0) at a pure node | IntroML | [AUS] | 3d ✅ | 2026-09-18 | 2026-09-22 | 1 |
-| Unscaled features let the large-magnitude attribute dominate the distance metric (KNN) | IntroML | [AUS] | **3d ✅** | 2026-09-23 | 2026-09-26 | 2 |
-| Occam's Razor: given equal generalization error prefer the simpler model (complex models fit accidentally) | IntroML | [AUS] | 1d 🟡 | 2026-09-18 | 2026-09-22 | 2 |
-| Effect of k: too small → noise-sensitive; too large → neighbourhood pulls in other classes | IntroML | [AUS] | 3d ✅ | 2026-09-17 | 2026-09-22 | 0 |
-| Validation set estimates generalization error during model building; test set stays untouched | IntroML | [AUS] | 3d ✅ | 2026-09-17 | 2026-09-22 | 0 |
-| Euclidean counts mismatched positions and ties unrelated doc pairs; cosine measures angle/overlap | IntroML | [AUS] | 1d ❌ | 2026-09-17 | 2026-09-22 | 1 |
-| Training a NN = minimising loss over data = **empirical risk minimisation** (the named principle) | DL4H | [OXFORD] | 1d 🟡 | 2026-09-23 | 2026-09-26 | 1 |
-| Every loss is a noise model: L2 ↔ Gaussian, L1 ↔ Laplace, CE ↔ categorical; squaring makes outliers dominate | DL4H | [OXFORD] | 1d 🟡 | 2026-09-23 | 2026-09-24 | 2 |
-| Overlap losses (Dice) address class imbalance: background pixel count dominates pixel-wise CE | DL4H | [OXFORD] | 1d 🟡 | 2026-09-17 | 2026-09-22 | 1 |
-| The two error types are NOT interchangeable — summing FP and FN is accuracy thinking | both | both | 1d 🟡 | 2026-09-17 | 2026-09-22 | 1 |
-| Attribute types: the four properties, and true zero as the interval↔ratio discriminator | IntroML | [AUS] | 1d ❌ | 2026-09-18 | 2026-09-22 | 1 |
-| Data quality problems: noise/outliers, wrong data, fake data, missing values, duplicates | IntroML | [AUS] | 1d ❌ | 2026-09-18 | 2026-09-22 | 1 |
-| DL4H open challenges: bias & fair representation, explainability, privacy/security (GDPR) | DL4H | [OXFORD] | 1d ❌ | 2026-09-18 | 2026-09-22 | 1 |
-| KNN is a **lazy learner**: no training step, all work deferred to prediction time (cost: slow prediction, scales with n and d) | IntroML | [AUS] | 1d ❌ | 2026-09-23 | 2026-09-24 | 1 |
-| Curse of dimensionality: the far/near distance ratio → 1, so neighbours become equidistant and the ranking carries no information | IntroML | [AUS] | 1d 🟡 | 2026-09-23 | 2026-09-26 | 0 |
+| FP sits in precision's denominator only; FN sits in recall's only — so FP cannot move recall | both | both | 3d ✅ | 2026-09-18 | paused  2 |
+| GINI measures node impurity: max at equal class distribution, min (0) at a pure node | IntroML | [AUS] | 3d ✅ | 2026-09-18 | paused  1 |
+| Unscaled features let the large-magnitude attribute dominate the distance metric (KNN) | IntroML | [AUS] | **3d ✅** | 2026-09-23 | paused  2 |
+| Occam's Razor: given equal generalization error prefer the simpler model (complex models fit accidentally) | IntroML | [AUS] | 1d 🟡 | 2026-09-18 | paused  2 |
+| Effect of k: too small → noise-sensitive; too large → neighbourhood pulls in other classes | IntroML | [AUS] | 3d ✅ | 2026-09-17 | paused  0 |
+| Validation set estimates generalization error during model building; test set stays untouched | IntroML | [AUS] | 3d ✅ | 2026-09-17 | paused  0 |
+| Euclidean counts mismatched positions and ties unrelated doc pairs; cosine measures angle/overlap | IntroML | [AUS] | 1d ❌ | 2026-09-17 | paused  1 |
+| Training a NN = minimising loss over data = **empirical risk minimisation** (the named principle) | DL4H | [OXFORD] | 1d 🟡 | 2026-09-23 | paused  1 |
+| Every loss is a noise model: L2 ↔ Gaussian, L1 ↔ Laplace, CE ↔ categorical; squaring makes outliers dominate | DL4H | [OXFORD] | 1d 🟡 | 2026-09-23 | paused  2 |
+| Overlap losses (Dice) address class imbalance: background pixel count dominates pixel-wise CE | DL4H | [OXFORD] | 1d 🟡 | 2026-09-17 | paused  1 |
+| The two error types are NOT interchangeable — summing FP and FN is accuracy thinking | both | both | 1d 🟡 | 2026-09-17 | paused  1 |
+| Attribute types: the four properties, and true zero as the interval↔ratio discriminator | IntroML | [AUS] | 1d ❌ | 2026-09-18 | paused  1 |
+| Data quality problems: noise/outliers, wrong data, fake data, missing values, duplicates | IntroML | [AUS] | 1d ❌ | 2026-09-18 | paused  1 |
+| DL4H open challenges: bias & fair representation, explainability, privacy/security (GDPR) | DL4H | [OXFORD] | 1d ❌ | 2026-09-18 | paused  1 |
+| KNN is a **lazy learner**: no training step, all work deferred to prediction time (cost: slow prediction, scales with n and d) | IntroML | [AUS] | 1d ❌ | 2026-09-23 | paused  1 |
+| Curse of dimensionality: the far/near distance ratio → 1, so neighbours become equidistant and the ranking carries no information | IntroML | [AUS] | 1d 🟡 | 2026-09-23 | paused  0 |
 
 ## Session log
 | Date | Window | Type | Items | Score | Notes |
@@ -59,6 +59,7 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | 2026-09-19 | W1 | D3 morning review — 10 items due, first test of symbolic mechanism teaching | 5 posted | awaiting | Drive sync clean (44 files, no change). All five are formula-reading items ("point at the term"), incl. FP-1 on its 4th attempt. Standing in the queue. |
 | 2026-09-20 | W1+retro | D4 — **Week 1 retro**, no questions posted (queue at cap) | 0 | – | D3 logged as a **missed day**: no reply all day, so its 5 unposted due items rolled to 09-21 **without lapse penalty** (absence, not failure to recall). The 5 posted items stay live in the queue. Drive sync clean. Opened **GLOSSARY.md** with the 8 terms he has demonstrated under retrieval; 4 contested terms deliberately excluded. SYLLABUS Week 2 adjusted to carry the 2 undelivered Week 1 topics. |
 | 2026-09-20 | W3 | D4 afternoon — **stood down** | 0 | – | Queue at cap. Added TUTOR.md rule: stand-downs are logged silently from now on, at most one line in chat — four "nothing happened" messages a day is noise that trains him to stop reading. |
+| 2026-09-28 | W1 | D12 — **Week 3 opens on paper only** | 0 | – | Drive sync clean. Fifth consecutive quiet day; the six still stand. **Deliberately doing nothing new, because last night I said I would stop changing things and a restructure twelve hours later would just be inconsistency.** Week 3's material (Decision Trees, Overfitting, L3, L4) is **ready and gated on the queue moving** — not withheld as leverage, simply un-postable without breaching the cap. One genuine piece of bookkeeping: ledger due-dates are marked **paused** rather than rolled another day, because rolling them daily manufactures a spacing record that does not describe anything. The ladder resumes from the day he next answers. |
 | 2026-09-27 | W4 | D11 night — stood down; retro day closes unanswered | 0 | – | Four consecutive quiet days, and the retro's push went out this morning with no reply. **Recording this plainly rather than reacting to it: the levers on my side are spent.** Delivery is fixed, the queue was pruned once and held small since, mocks are down to 8 minutes, the syllabus has absorbed the slip, and the cadence question has been asked twice — in chat and by push. Nothing further to change without an answer from him, and inventing a fifth mechanism would repeat the week-1 mistake of building protocol in place of teaching. **The system is in good order and waiting.** Week 3 begins tomorrow with the four carried topics; W1 will open it whether or not the six have moved. |
 | 2026-09-27 | W3 | D11 afternoon — **stood down** | 0 | – | Queue 6. Retro was this morning and carried the day's push. |
 | 2026-09-27 | W2 | D11 midday — **stood down** | 0 | – | Sunday's W2 *is* the retro, and it ran this morning. Duplicate per §0.2a. |
