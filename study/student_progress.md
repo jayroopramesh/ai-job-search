@@ -59,6 +59,7 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | 2026-09-19 | W1 | D3 morning review — 10 items due, first test of symbolic mechanism teaching | 5 posted | awaiting | Drive sync clean (44 files, no change). All five are formula-reading items ("point at the term"), incl. FP-1 on its 4th attempt. Standing in the queue. |
 | 2026-09-20 | W1+retro | D4 — **Week 1 retro**, no questions posted (queue at cap) | 0 | – | D3 logged as a **missed day**: no reply all day, so its 5 unposted due items rolled to 09-21 **without lapse penalty** (absence, not failure to recall). The 5 posted items stay live in the queue. Drive sync clean. Opened **GLOSSARY.md** with the 8 terms he has demonstrated under retrieval; 4 contested terms deliberately excluded. SYLLABUS Week 2 adjusted to carry the 2 undelivered Week 1 topics. |
 | 2026-09-20 | W3 | D4 afternoon — **stood down** | 0 | – | Queue at cap. Added TUTOR.md rule: stand-downs are logged silently from now on, at most one line in chat — four "nothing happened" messages a day is noise that trains him to stop reading. |
+| 2026-10-03 | W1 | D17 morning — **stood down** | 0 | – | Drive sync clean. Queue 6, ledger paused, unchanged. |
 | 2026-10-02 | W4 | D16 night — stood down; tenth quiet day | 0 | – | Queue 6, ledger paused. Tomorrow is Saturday: the shortened Mock #1 (10 items, ~8 min) is the Saturday slot and defers again while the queue stands. |
 | 2026-10-02 | W3 | D16 afternoon — **stood down** | 0 | – | Queue 6. |
 | 2026-10-02 | W2 | D16 midday — **stood down** | 0 | – | Queue 6. |
