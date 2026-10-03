@@ -28,12 +28,16 @@ Folder `1s3wQINKpVya6bPmKtnH1c2ZmHAF2L5nr`
 
 **Problem Sheets** (folder `1OSejaYzU7yc5Zr1ble2mxq5uqH1mQP0v`) — **corrected 2026-09-23.** `*_student_ans` is **not** Jayroop's own work. PS1's opens *"This guide provides key results and concise explanations for each question. Use it to check your own working"* and its content is the official `*_ans` solutions condensed — same numbers, same phrasing, no wrong answers anywhere. It is a **student-facing solutions guide handed out with the sheet**. The original premise (mine these for his historical misconceptions) was wrong and is void: there are no misconceptions in them to mine. What they are instead is **the best DL4H question source in the Drive** — exam-grade problems with authoritative worked answers to grade against, heavy on exactly the structural formula-reading that works for him. Mine them for *questions*, not for *errors*.
 
-| Sheet | Questions | Official answers | Jayroop's answers |
-|---|---|---|---|
-| PS1 | `1WYpUwHEUSISQcwhRAEPnpufUwR8Hust_` | `1nFfztScT7a2Hxv8_5lN9GPOyA_sAAajL` | `1h_p6SLCgD9O49cgzgWecnELZQi7hbu_-` |
-| PS2 | `11SWkyTDYZgEp6gw2URoHJBKHd1PJTdVk` (updated) | `10NH8aLQ4kEDBk5WJLeb02fUE3auO56AQ` (updated) | `158nasuCSd8-KGM1CcDovMGTDI5sBulF3` |
-| PS3 | `1aZFONMoE54RL3bksM8IVQ70e6SMJ0Vd4` | `1zFl8uzb6LpSseuAcXeCB91EF7ZkkWMxg` | `1o7lPXYjf4-il_L9EvMBspHkNYwxm6q4u` |
-| PS4 | `1p6MlrVzIyanQW7xj2Ym4_DPtFq6uXUIN` | `1LxUuhSYqxvHJQJos5FqHdpUytfQOanMI` | `1x-VVa6ywD-xiSiMCE15m2it4Eo2gM79X` |
+Third column renamed 2026-10-03: it was labelled "Jayroop's answers", which is the premise the 09-23 correction above voided. It is the student-facing solutions guide.
+
+| Sheet | Topic | Questions | Official answers | Student solutions guide | Mined into bank |
+|---|---|---|---|---|---|
+| PS1 | Gradients, optimisation, normalisation | `1WYpUwHEUSISQcwhRAEPnpufUwR8Hust_` | `1nFfztScT7a2Hxv8_5lN9GPOyA_sAAajL` | `1h_p6SLCgD9O49cgzgWecnELZQi7hbu_-` | ✅ 2026-09-23 → QB-DL4H-0008…0013 |
+| PS2 | Inductive biases, uncertainty, transfer learning | `11SWkyTDYZgEp6gw2URoHJBKHd1PJTdVk` (updated) | `10NH8aLQ4kEDBk5WJLeb02fUE3auO56AQ` (updated) | `158nasuCSd8-KGM1CcDovMGTDI5sBulF3` | ✅ 2026-10-03 → QB-DL4H-0014…0021 |
+| PS3 | — | `1aZFONMoE54RL3bksM8IVQ70e6SMJ0Vd4` | `1zFl8uzb6LpSseuAcXeCB91EF7ZkkWMxg` | `1o7lPXYjf4-il_L9EvMBspHkNYwxm6q4u` | ☐ unmined |
+| PS4 | — | `1p6MlrVzIyanQW7xj2Ym4_DPtFq6uXUIN` | `1LxUuhSYqxvHJQJos5FqHdpUytfQOanMI` | `1x-VVa6ywD-xiSiMCE15m2it4Eo2gM79X` | ☐ unmined |
+
+Mining is **reserve-building, not teaching** — banked items are posted only when the queue has room. It is the standing productive use of a window that has to stand down.
 
 Also: `norm.png` (`1hg6K70jSzCVJ0J2GwAw-8LpVRoZ_M_Ic`), Group 4 submission zip (`1f6RjRvkDN4OHnYTzQjwBUl4_gw3JUktv`).
 
