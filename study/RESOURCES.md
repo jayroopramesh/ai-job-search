@@ -58,7 +58,7 @@ Folder `17ZiUXqIT07A9UHnFc82C22NbnBaU-jzA`
 | 13 Cluster Analysis I | `1aQJqybPZ-k1BN-x5SztbF8iMDgO0dXMx` |
 | 15 Cluster Analysis III | `110dHgTH_DNOJbvgV5XZLO6xBpQ3uz329` |
 
-⚠️ Gap: decks 10–12 and 14 are not in Drive yet — expect uploads; the Drive sync will catch them.
+⚠️ **Gap, re-assessed 2026-10-04 after 18 clean syncs: decks 10–12 and 14 are not in Drive and are not coming on their own.** The original line here said "expect uploads; the Drive sync will catch them" — eighteen consecutive syncs say otherwise, and that expectation is void. What exists is 1–9, 13, 15. The giveaway that this is an incomplete upload rather than a deliberate selection: the folder holds **Cluster Analysis I (13) and III (15) but not II (14)**. Nothing in the current plan is blocked — the syllabus only ever scheduled the eleven decks that exist — but under the Drive-only rule those four sit outside everything that can be taught or tested. **Open question for Jayroop: do they exist, and can they go in the folder?**
 
 ### CV — Computer Vision (20 lectures) · audience **[OXFORD]** · 60-day track
 Folder `1YMEYAPaN-MaBFqd58fgb4kLY2dWYM6oX`

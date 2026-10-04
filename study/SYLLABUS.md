@@ -21,7 +21,22 @@ Goal: the whole [AUS] syllabus taught once, and DL4H through regularisation. Pac
 | 4 | Oct 5–11 | 6 Class Imbalance & Evaluation · 7 Naïve Bayes | L5 CNNs · L6 Advanced CNNs | Sat: **Mock #2** + PS2 mining · Sun: retro |
 | 5 | Oct 12–18 | 8 Regression I · 9 Regression II | L7-8 Regularisation (both parts) | Sat: **Mock #3** + PS3 mining · Sun: retro |
 
-⚠️ **Slipped one week at the 09-27 retro.** Week 2 delivered one deck instead of six; four topics carried. Block 1 now runs to ~23 Oct rather than 16 Oct, which the 98-day campaign still absorbs — but a second slip of this size would start eating Block 3's consolidation, and that is the part there is no slack in.
+⚠️ **The week grid above is now REFERENCE, not schedule — changed at the 2026-10-04 retro.**
+
+It slipped once on 09-27 (Week 2 delivered one deck of six) and again on 10-04 (Week 3 delivered **none** of its four carried topics). Two slips in a row prove the model is wrong, not merely behind. A calendar assumes the constraint is how fast material can be taught; it never was. The constraint is **engaged days**, running at **3 in 18**. With 43 days to [AUS] that projects to roughly **seven more engaged days** against a grid wanting ~30 teaching days for IntroML alone — a gap no amount of slipping closes, and "slipped one week" written every Sunday is bookkeeping fiction.
+
+**What replaces it: a priority-ordered queue, served from the top whenever he engages, regardless of the date.** Ordered by nearest deadline first, then by whether an open flag lives in that deck.
+
+| # | Deck | Aud. | Why here |
+|---|---|---|---|
+| 1 | **4 Decision Trees** | [AUS] | FP-3 (GINI extremes) lives here, at 1/3. Carried twice. |
+| 2 | **5 Overfitting** | [AUS] | Carried twice; core oral material. |
+| 3 | **L3 Backprop** | [OXFORD] | Carried twice. |
+| 4 | **L4 Init & normalisation** | [OXFORD] | Carried twice; adjacent to FP-5/FP-6. |
+| 5 | **6 Class Imbalance & Evaluation** | [AUS] | FP-4 (precision ↔ recall) lives here. |
+| 6+ | 7 Naïve Bayes · 8–9 Regression · L5–L6 CNNs · L7–8 Regularisation · 13/15 Clustering | both | Deadline order thereafter. |
+
+The dates below stay for the deadline arithmetic and the fixed events (mocks, T-1 days, the three assessments). They no longer claim to schedule a given deck on a given day.
 
 ## Block 2 — Advanced DL + CV overlap · **Sat 17 Oct → Fri 6 Nov** (3 weeks)
 Goal: DL4H finished; the eight CV decks that overlap DL4H enter as reinforcement, so CV starts Block 4 already half-warm.
