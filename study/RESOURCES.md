@@ -35,9 +35,9 @@ Third column renamed 2026-10-03: it was labelled "Jayroop's answers", which is t
 | PS1 | Gradients, optimisation, normalisation | `1WYpUwHEUSISQcwhRAEPnpufUwR8Hust_` | `1nFfztScT7a2Hxv8_5lN9GPOyA_sAAajL` | `1h_p6SLCgD9O49cgzgWecnELZQi7hbu_-` | ✅ 2026-09-23 → QB-DL4H-0008…0013 |
 | PS2 | Inductive biases, uncertainty, transfer learning | `11SWkyTDYZgEp6gw2URoHJBKHd1PJTdVk` (updated) | `10NH8aLQ4kEDBk5WJLeb02fUE3auO56AQ` (updated) | `158nasuCSd8-KGM1CcDovMGTDI5sBulF3` | ✅ 2026-10-03 → QB-DL4H-0014…0021 |
 | PS3 | Generative models, self-supervised learning, domain adaptation | `1aZFONMoE54RL3bksM8IVQ70e6SMJ0Vd4` | `1zFl8uzb6LpSseuAcXeCB91EF7ZkkWMxg` | `1o7lPXYjf4-il_L9EvMBspHkNYwxm6q4u` | ✅ 2026-10-05 → QB-DL4H-0022…0029 |
-| PS4 | — | `1p6MlrVzIyanQW7xj2Ym4_DPtFq6uXUIN` | `1LxUuhSYqxvHJQJos5FqHdpUytfQOanMI` | `1x-VVa6ywD-xiSiMCE15m2it4Eo2gM79X` | ☐ unmined |
+| PS4 | Federated learning, privacy, sequence models, transformers | `1p6MlrVzIyanQW7xj2Ym4_DPtFq6uXUIN` | `1LxUuhSYqxvHJQJos5FqHdpUytfQOanMI` | `1x-VVa6ywD-xiSiMCE15m2it4Eo2gM79X` | ✅ 2026-10-06 → QB-DL4H-0030…0037 |
 
-Mining is **reserve-building, not teaching** — banked items are posted only when the queue has room. It is the standing productive use of a window that has to stand down.
+**All four sheets are now mined (2026-10-06).** PS4 was the most arithmetic-heavy and needed the most conversion: FedAvg convergence algebra, Laplace noise scales and softmax-by-hand all became structural or intuition items, per the standing rule that oral interviews do not ask for calculation. Mining is **reserve-building, not teaching** — banked items are posted only when the queue has room. It is the standing productive use of a window that has to stand down.
 
 Also: `norm.png` (`1hg6K70jSzCVJ0J2GwAw-8LpVRoZ_M_Ic`), Group 4 submission zip (`1f6RjRvkDN4OHnYTzQjwBUl4_gw3JUktv`).
 
