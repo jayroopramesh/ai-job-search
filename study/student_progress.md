@@ -59,6 +59,7 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | 2026-09-19 | W1 | D3 morning review — 10 items due, first test of symbolic mechanism teaching | 5 posted | awaiting | Drive sync clean (44 files, no change). All five are formula-reading items ("point at the term"), incl. FP-1 on its 4th attempt. Standing in the queue. |
 | 2026-09-20 | W1+retro | D4 — **Week 1 retro**, no questions posted (queue at cap) | 0 | – | D3 logged as a **missed day**: no reply all day, so its 5 unposted due items rolled to 09-21 **without lapse penalty** (absence, not failure to recall). The 5 posted items stay live in the queue. Drive sync clean. Opened **GLOSSARY.md** with the 8 terms he has demonstrated under retrieval; 4 contested terms deliberately excluded. SYLLABUS Week 2 adjusted to carry the 2 undelivered Week 1 topics. |
 | 2026-09-20 | W3 | D4 afternoon — **stood down** | 0 | – | Queue at cap. Added TUTOR.md rule: stand-downs are logged silently from now on, at most one line in chat — four "nothing happened" messages a day is noise that trains him to stop reading. |
+| 2026-10-11 | W2 | D25 midday — **Week 4 retro** | 0 | – | **0 engaged days in 7 for the second week running; 3 in 25 across the campaign.** Week's output all system-side: PS3 and PS4 mined (all four sheets done, banks at 58), the magnitude-into-saturation through-line identified across three bank items, RESOURCES corrected, one push sent 4 Oct and unanswered for seven days — recorded as *the channel being fixed is not the channel being read*, with no new theory built on it. **Decision: no-op days collapse to one log row** instead of four, since 28 identical rows a week bury the ones that matter; all four windows stay armed because they are how a reply or an upload gets noticed. Cadence question not re-asked. Stated the arithmetic once, without a conclusion: 36 days to [AUS], ~4 more engaged days at the observed rate, against 9 open flags, 5 queued decks and zero mock readings. |
 | 2026-10-11 | W1 | D25 morning — **stood down**; sync clean | 0 | – | No Drive change since 17 Sep. Queue 6. Sunday: Week 4 retro at W2. |
 | 2026-10-10 | W4 | D24 night — **stood down**; D24 closes | 0 | – | Queue 6, flags 9/0. Week 4 ends; tomorrow's W2 is the Week 4 retro. |
 | 2026-10-10 | W3 | D24 Saturday slot — **Mock #1 deferred, 4th Saturday**; no mining left to do | 0 | – | Queue 6. All four problem sheets are mined, so the Saturday slot now has only the mock in it, and the mock needs him present. |
@@ -163,6 +164,34 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 - **2026-09-23 — the format is the intervention, not the effort (FP-1, FP-9).** Four attempts at "why does an unscaled attribute dominate KNN" produced correlation, a bare label, and the remedy. The fifth put $d^2=(\text{age}_a-\text{age}_b)^2+(\text{income}_a-\text{income}_b)^2$ on the screen and asked him to point at a term — and the full mechanism came out first try, unprompted. Nothing about his knowledge changed in between; the question changed. **Generalise hard: any mechanism worth testing gets an expression in front of him.** Prose questions measure his vocabulary, symbolic ones measure his understanding.
 - **2026-09-23 — heavy tail = tolerant (FP-5, FP-6).** He inverted L1's robustness: said outliers are penalised *extra*. The cleanest anchor is the derivative, not the density. $\frac{d}{dr}r^2=2r$ — the pull **grows** with the residual, so a far outlier drags 10× harder. $\frac{d}{dr}|r|=\pm1$ — the pull is **constant**, so a far outlier drags exactly as hard as a near one and cannot hijack the fit. Robustness is a statement about the *gradient*, which is why the density-and-tails framing kept slipping.
 - **2026-09-23 — the annotation paradox, fourth instance (now a settled diagnosis).** Asked where a lazy learner does its work, he described Euclidean distance and drifted to dimensionality. His own margin note on that exact slide reads *"Prediction you do work → lazy learner → Don't prepare ahead of time. Other Alg, Prepare model during training."* With GINI, precision/recall and interval-zero, that is four concepts he annotated correctly and could not retrieve. **Stop treating this as a coincidence:** re-reading the annotated decks will not help him, because annotating is recognition. Only retrieval moves these. See LR-0002.
+
+## Week 4 retro (2026-10-11)
+
+**0 engaged days in 7, for the second week running.** Campaign total: **3 engaged days in 25**. 36 days to [AUS].
+
+### What the week produced
+All of it on the system side, none of it on his:
+- **PS3 and PS4 mined** — all four problem sheets are now done, and the two banks hold **58 questions**. PS4 took the most work: it is the arithmetic-heavy sheet, and under the no-arithmetic rule its FedAvg algebra, Laplace noise scales and softmax-by-hand all had to be rebuilt as structural items.
+- **One through-line found worth more than any single item:** *a magnitude that grows with dimension, fed into something that saturates* now appears three times in the bank — KNN feature scaling (his FP-1), DP-SGD gradient clipping, attention score scaling. One idea in three costumes is a far better thing to carry into an oral than three facts.
+- **RESOURCES corrected again** — the claim that the morning sync would eventually pick up IntroML decks 10–12 and 14 is void after 24 clean syncs.
+- **One push sent** (4 Oct, the missing-decks question). Seven days, no reply. Recording that plainly: the delivery channel being *fixed* is not the same as the channel being *read*, and I am not going to build another theory on top of the silence — that mistake has already been made once in this campaign.
+
+### What the week proves
+**The Week 3 retro was the last decision there was to make.** It retired the teaching calendar for a priority queue, which was right; Week 4 then demonstrated that nothing further on my side was pending. From D21 the reserve ran out and every window since has been a genuine no-op: duplicate check, Drive sync, one log row, push. Four of those a day.
+
+### The one decision this retro takes
+**No-op days collapse to a single log row.** Four identical "stood down, queue 6" rows a day is 28 rows a week that say nothing, and it buries the rows that mean something. From tomorrow a day with no engagement and no Drive change gets **one row covering all four windows**; any window that actually does something still gets its own. **The windows themselves stay armed** — they are how the system notices a reply or a Drive upload, and that costs nothing. This changes the file's signal-to-noise and nothing else.
+
+I am not re-asking the cadence question. It has been put twice and it is his.
+
+### The arithmetic, stated once
+This is the only thing here he does not already have, and it is the only reason to mention the gap at all:
+
+- **36 days to [AUS] IntroML**, 40 to DL4H, 75 to CV.
+- At 3 engaged days in 25, that projects to roughly **four more engaged days before the first interview**.
+- Standing against that: **9 open flags** (none cleared), **5 decks** at the top of the priority queue, **zero mock readings**, and 58 banked questions.
+
+No conclusion attached. Four engaged days is enough to clear some of that and not all of it, and which part gets cleared depends only on when he turns up. **Everything is ready, nothing expires, and a single answer to any of the six standing questions restarts the machine.**
 
 ## Week 3 retro (2026-10-04)
 
