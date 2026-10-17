@@ -36,6 +36,10 @@ It slipped once on 09-27 (Week 2 delivered one deck of six) and again on 10-04 (
 | 5 | **6 Class Imbalance & Evaluation** | [AUS] | FP-4 (precision ↔ recall) lives here. |
 | 6+ | 7 Naïve Bayes · 8–9 Regression · L5–L6 CNNs · L7–8 Regularisation · 13/15 Clustering | both | Deadline order thereafter. |
 
+⚠️ **Weighting changed 2026-10-17, by Jayroop: ~60% [AUS] IntroML / ~40% [OXFORD] DL4H, and CV is PAUSED until 20 Nov.** The queue above already runs 3 AUS to 2 OXFORD, so its order stands — what changes is that **no CV deck is served before 20 Nov**, and when the queue is ambiguous, AUS wins. Rationale, his: the CV interview is 25 Dec, five weeks behind the other two, and spending any of the next 30 days on it costs the two that are close. Resume CV on 20 Nov with the DL4H slot, which frees up the same day.
+
+**On the 25 Dec date:** that is Christmas Day. Flagged once as a possible typo, never confirmed, and still unconfirmed — it does not affect anything until 20 Nov, so it is not worth a question now, but it should be settled before CV work starts.
+
 The dates below stay for the deadline arithmetic and the fixed events (mocks, T-1 days, the three assessments). They no longer claim to schedule a given deck on a given day.
 
 ## Block 2 — Advanced DL + CV overlap · **Sat 17 Oct → Fri 6 Nov** (3 weeks)
