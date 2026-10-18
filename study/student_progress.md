@@ -61,6 +61,7 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | 2026-09-19 | W1 | D3 morning review — 10 items due, first test of symbolic mechanism teaching | 5 posted | awaiting | Drive sync clean (44 files, no change). All five are formula-reading items ("point at the term"), incl. FP-1 on its 4th attempt. Standing in the queue. |
 | 2026-09-20 | W1+retro | D4 — **Week 1 retro**, no questions posted (queue at cap) | 0 | – | D3 logged as a **missed day**: no reply all day, so its 5 unposted due items rolled to 09-21 **without lapse penalty** (absence, not failure to recall). The 5 posted items stay live in the queue. Drive sync clean. Opened **GLOSSARY.md** with the 8 terms he has demonstrated under retrieval; 4 contested terms deliberately excluded. SYLLABUS Week 2 adjusted to carry the 2 undelivered Week 1 topics. |
 | 2026-09-20 | W3 | D4 afternoon — **stood down** | 0 | – | Queue at cap. Added TUTOR.md rule: stand-downs are logged silently from now on, at most one line in chat — four "nothing happened" messages a day is noise that trains him to stop reading. |
+| 2026-10-18 | S2 | D32 midday — **Week 5 retro** | 0 | – | Nothing posted (5 standing), no email. Retro's finding: the engagement statistic that drove the last two retros was measuring a dead channel, and it is the **fifth** load-bearing claim to sit unverified until something forced a look (PS premise, the sync claim, the stale dashboard, the [Page N] markers, the push notifications). **Decision: every Sunday retro now verifies one load-bearing claim end to end.** Next Sunday's: does the ledger ladder's date arithmetic actually work when it unpauses — paused since 25 Sep, never confirmed. |
 | 2026-10-18 | S1 | D32 — **bank rebalanced for the new 60/40**: +15 [AUS], +2 [OXFORD] → **75 banked** | 0 | – | No posting — 5 items standing from yesterday, queue over cap, no email (§0.3 restraint rule). Sync clean (34th). **The finding:** the new weighting is ~60% [AUS] / 40% DL4H, but the bank was **21 AUS / 37 DL4H — 36/64, exactly backwards**, and the thin half is the one with the nearer interview. Mined decks 4/5/6 for 12 new AUS items (ID3-vs-CART, Hunt's identical-attributes stop, binary-vs-multiway cost, why training error is not an estimate, over/under forced choice, F-measure as harmonic mean, the 990/1000 accuracy trap, ROC corner points, why a hard label gives one point not a curve, AUC said precisely, odd-one-out, and an interview chain) plus yesterday's 5 posted. Now **36 AUS / 39 DL4H = 48/52** — better, still short of 60/40; closing it needs ~20 more AUS and is the standing reserve job for quiet windows. |
 | 2026-10-17 | S3 | D31 evening — **stood down**, first run of the new 19:52 window; mock defers a 6th Saturday | 0 | – | Five questions have been live for 80 minutes, unanswered. Adding more tonight is exactly how the queue reached 6 standing in September, and a cold timed mock on top of an unclear queue is barred by the mocks-are-never-queued rule anyway. **No second email either** — the channel was fixed four hours ago and its credibility is the whole asset; one alert per day that has something in it, silence otherwise. New rule written into TUTOR.md §0.3. Sync clean (33rd). |
 | 2026-10-17 | — | **D31 — HE CAME BACK.** First reply in 24 days. Cadence cut to 3 windows; 5 questions posted | 5 | pending | **The campaign's most important day since D1.** Four things in one message: (1) **three windows, not four**, 15 min each — the question asked twice and standing three weeks; (2) **~60% [AUS] / ~40% DL4H**, CV paused to 20 Nov; (3) *"Give me for today"*; (4) **"I also don't see you sending me alerts"** — see below. Posted 5 (3 AUS: Gini extremes/FP-3, precision↔recall/FP-4, overfitting; 2 OXFORD: BatchNorm γ/β + the covariate-shift catch, 1/√d_k). All formula-reading. Earlier today: checkout self-heal, sync clean (32nd). |
@@ -175,6 +176,74 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 - **2026-09-23 — the format is the intervention, not the effort (FP-1, FP-9).** Four attempts at "why does an unscaled attribute dominate KNN" produced correlation, a bare label, and the remedy. The fifth put $d^2=(\text{age}_a-\text{age}_b)^2+(\text{income}_a-\text{income}_b)^2$ on the screen and asked him to point at a term — and the full mechanism came out first try, unprompted. Nothing about his knowledge changed in between; the question changed. **Generalise hard: any mechanism worth testing gets an expression in front of him.** Prose questions measure his vocabulary, symbolic ones measure his understanding.
 - **2026-09-23 — heavy tail = tolerant (FP-5, FP-6).** He inverted L1's robustness: said outliers are penalised *extra*. The cleanest anchor is the derivative, not the density. $\frac{d}{dr}r^2=2r$ — the pull **grows** with the residual, so a far outlier drags 10× harder. $\frac{d}{dr}|r|=\pm1$ — the pull is **constant**, so a far outlier drags exactly as hard as a near one and cannot hijack the fit. Robustness is a statement about the *gradient*, which is why the density-and-tails framing kept slipping.
 - **2026-09-23 — the annotation paradox, fourth instance (now a settled diagnosis).** Asked where a lazy learner does its work, he described Euclidean distance and drifted to dimensionality. His own margin note on that exact slide reads *"Prediction you do work → lazy learner → Don't prepare ahead of time. Other Alg, Prepare model during training."* With GINI, precision/recall and interval-zero, that is four concepts he annotated correctly and could not retrieve. **Stop treating this as a coincidence:** re-reading the annotated decks will not help him, because annotating is recognition. Only retrieval moves these. See LR-0002.
+
+## Week 5 retro (2026-10-18)
+
+**One engaged day in seven — and the first one that counts for anything, because it came with the reason the
+other six were empty.** Campaign total: **4 engaged days in 32**. 29 days to [AUS].
+
+### The thing that undoes four weeks of diagnosis
+
+*"I also don't see you sending me alerts."*
+
+§0.3 has fired a push notification at every window since D1. He has seen none of them. That single clause
+retroactively voids the central statistic of this campaign: **"engaged days" was never measuring his
+engagement, it was measuring a channel that did not work.** Weeks 3 and 4 both opened by stating the rate
+and reasoning from it — the syllabus was retired over it, the log collapsed over it, a push was sent over
+it on 4 Oct and its silence recorded as data. All of that rests on the premise that a question posted was
+a question delivered, which nobody ever tested.
+
+I am not going to overcorrect in the other direction either. The honest statement is narrow: **for an
+unknown share of 28 days, nothing told him there was anything to answer, so the silence cannot be read.**
+It is not evidence he was disengaged and it is not evidence he was keen. It is missing data, and the
+right move is to stop interpreting it and start measuring again from a channel that works.
+
+### The pattern this is the fifth instance of
+
+Five times now a load-bearing claim has sat in this system, unverified, until something forced a look:
+
+| # | The claim | What it actually was | Found |
+|---|---|---|---|
+| 1 | PS table column "Jayroop's answers" | A voided premise, corrected in a note but left live on two surfaces | 23 Sep → 4 Oct |
+| 2 | "The Drive sync will catch them" (decks 10–12, 14) | Wrong after 18 clean syncs; files were never uploaded | 4 Oct |
+| 3 | Dashboard "Day 11" | Six days stale while being described as live | 11 Oct |
+| 4 | Every cache header: "Page markers like [Page N]" | **Not one file contains a single [Page N] marker** | 17 Oct |
+| 5 | Push notifications reaching him | Never arrived, 31 days | 17 Oct |
+
+The common shape: **a statement about the system was written once, believed thereafter, and never
+re-tested.** Items 4 and 5 are the sharpest because both were *self-descriptions* — the extractor claimed
+it had emitted markers, the protocol claimed it had rung a bell. Neither claim cost anything to check and
+neither was checked for a month.
+
+### The one decision this retro takes
+
+**Every Sunday retro verifies one load-bearing claim end to end, and writes down what it found.** Not an
+audit of everything — one claim, chosen because something depends on it, checked by actually looking
+rather than by re-reading the note that asserts it. This week's was forced on me; from now on it is
+scheduled. Next Sunday's: **does the ledger's spaced-repetition ladder actually schedule anything?** It
+has been "paused" since 25 Sep and I have never confirmed the due-date arithmetic works when it unpauses.
+
+### What else moved
+
+- **Cadence is now his, not mine:** three windows (07:48 / 12:41 / 19:52 CPH), 15 min each. The question
+  had been asked twice and left standing three weeks; the answer arrived bundled with his return, not in
+  response to the asking. Worth remembering — **the questions I put to him get answered when he shows up,
+  not when I ask them.** So ask once, record it, and stop re-raising.
+- **Weighting ~60% [AUS] / 40% DL4H, CV paused to 20 Nov.** His call, and the right one: CV's interview is
+  five weeks behind the other two.
+- **The bank was backwards.** 21 AUS / 37 DL4H against a 60/40 AUS target — the thin half carrying the
+  nearer interview. Mined decks 4/5/6 overnight: now **36 / 39**. Needs ~20 more AUS to hit the target;
+  that is the standing job for quiet windows, and it is real work, not reserve-make-work.
+- **Five questions live** since Saturday afternoon, unanswered. Not a miss — queues, not deadlines.
+- **Mock #1 has now deferred six Saturdays.** Still the only instrument with zero readings. 29 days left.
+
+### What next week is actually testing
+
+The first week in which a question posted is a question **delivered**. Everything before it is
+uninterpretable; everything after it is a real measurement. If engagement stays flat with a working
+channel, that is finally information — and then the cadence conversation is a different conversation.
+
+---
 
 ## Week 4 retro (2026-10-11)
 
