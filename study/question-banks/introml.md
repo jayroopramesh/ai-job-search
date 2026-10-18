@@ -121,3 +121,68 @@ A: **Decision tree = eager.** Slow to train: it searches splits over the whole d
 Asked: 2026-09-24 — standing (re-frame after 09-23 ❌, where "where does the work happen" drew a description of what KNN computes)
 Linked flag: FP-9
 
+
+### QB-INTROML-0022 · [AUS] · **formula-reading** · deck 4 Decision Trees — "Measure of Impurity: GINI" · asked 2026-10-17
+Q: $\text{Gini}(t) = 1 - \sum_j [p(j\mid t)]^2$, two-class form $2p(1-p)$. Without computing: which $p$ maximises it, which drives it to zero? Then — when the tree searches for a split, is it pushing this number up or down in the children, and why is that a good split?
+A: **Max at $p=0.5$** (classes equally distributed — the deck's "least beneficial situation for classification"); **zero at $p=0$ or $p=1$** (all records one class — "most beneficial"). The tree pushes it **down**: it scores candidate splits by the weighted Gini of the children and picks the lowest. Low child impurity means each child is closer to a single class, so the path to a leaf resolves the label in fewer questions — the split has bought information.
+Asked: 2026-10-17 — standing
+Linked flag: FP-3 (1/3) · deliberately a different angle from the D2 pass: that one asked where the max sits, this one asks what the tree *does* with it
+
+### QB-INTROML-0023 · [AUS] · **formula-reading + forced choice** · deck 6 Class Imbalance — "Alternative Measures" · asked 2026-10-17
+Q: $P = \frac{TP}{TP+FP}$, $R = \frac{TP}{TP+FN}$. Same numerator. (a) Which denominator is "everything I flagged" and which is "everything that was actually there"? (b) Sepsis screen: a miss is catastrophic, a false alarm costs ten minutes. Which do you protect?
+A: **(a)** $TP+FP$ = everything the model **flagged** (precision — of what I caught, how much was right). $TP+FN$ = everything that **was** positive (recall — of what was there, how much did I catch). The deck's pond: precision is how many of the fish caught are red; recall is how many of the red fish you caught. **(b) Protect recall.** $FN$ is the dead patient; $FP$ is ten minutes. You accept precision falling — more blue fish in the net — because the loss function is wildly asymmetric.
+Asked: 2026-10-17 — standing
+Linked flag: FP-4 (1/3)
+
+### QB-INTROML-0024 · [AUS] · complete the sentence + mechanism · deck 5 Model Overfitting — "Reasons for Model Overfitting" · asked 2026-10-17
+Q: "A model is overfitting when its training error is ______ and its test error is ______." Then: the deck gives **two** reasons. One is about the model. What is the other?
+A: Training error **small**, test error **large** (model too complex). Underfitting is the mirror: too simple, **both** errors large. The two reasons: **high model complexity** and **not enough training data**. The second is the one that gets forgotten — if the training set is under-representative, test error rises while training error falls as you add nodes; doubling the data narrows the train/test gap at the same node count. So "overfitting" is not purely a property of the model, it is a relation between model capacity and how much data you have.
+Asked: 2026-10-17 — standing
+
+### QB-INTROML-0025 · [AUS] · contrast · deck 4 Decision Trees — "ID3 / CART" · first asked 2026-10-18 (banked, unasked)
+Q: ID3 and CART both build trees but score candidate splits differently, and one of them can only build a particular shape of tree. Which is which?
+A: **ID3** uses **information gain** (entropy-based) and allows **multi-way** splits. **CART** uses the **GINI index** and constructs **binary trees only** — every split is two-way. Both sit on Hunt's algorithm; what differs is the impurity measure and the branching factor.
+
+### QB-INTROML-0026 · [AUS] · complete the sentence · deck 4 Decision Trees — "Stopping Criteria of Hunt's Algorithm" · first asked 2026-10-18 (banked, unasked)
+Q: Hunt's algorithm stops splitting a node in two situations. One is obvious. The other is the awkward one — records that are **identical in every attribute** but **differ in class label**. What does the algorithm do there, and why can it not just keep splitting?
+A: It **declares the node a leaf** and labels it with the **majority class** of the records at that node. It cannot split further because splitting requires an attribute test that separates the records, and by assumption no attribute distinguishes them — there is no question left to ask. This is irreducible error: the data itself cannot resolve the label, so the tree stops and accepts the majority.
+
+### QB-INTROML-0027 · [AUS] · forced choice (direction) · deck 4 Decision Trees — "How should training records be split?" · first asked 2026-10-18 (banked, unasked)
+Q: A continuous attribute can be split **binary** ($A < v$ vs $A \ge v$) or **multi-way** by discretising into ranges. Which is the more compute-intensive at training time, and what is the compensating advantage?
+A: **Binary is the more compute-intensive** — the deck's point: it considers **all possible cut points** $v$ and finds the best one, so cost scales with the number of distinct values. The compensation is that the cut is chosen by the data rather than fixed in advance. Multi-way needs ranges decided up front (equal-interval bucketing, equal-frequency/percentiles, or clustering), which is cheap but bakes in a choice the data never got to make.
+
+### QB-INTROML-0028 · [AUS] · **mechanism, interview-style** · deck 5 Model Overfitting — "Notes on Overfitting" · first asked 2026-10-18 (banked, unasked)
+Q: The deck states flatly that "training error does not provide a good estimate of how well the tree will perform on previously unseen records." An interviewer asks: *why not — what exactly is training error measuring instead?*
+A: Training error measures how well the tree has **memorised the records it was fitted on**, and the tree was built by searching splits **chosen to minimise exactly that number**. So it is scored on its own answer key: drive complexity up and training error can be pushed arbitrarily toward zero while the tree fits noise specific to that sample. What you actually need is **generalization error**, estimated either with a **validation set** held out of fitting, or by **incorporating model complexity** into the score so that extra nodes have to pay for themselves.
+
+### QB-INTROML-0029 · [AUS] · forced choice (direction) · deck 5 Model Overfitting · first asked 2026-10-18 (banked, unasked)
+Q: Two failing models. Model A: training error 2%, test error 30%. Model B: training error 28%, test error 31%. Which is overfitting, which is underfitting, and which one would **more training data** help most?
+A: **A overfits** (small training error, large test error — too complex). **B underfits** (both errors large — too simple). **More data helps A**: the deck's experiment shows that doubling the instances narrows the train/test gap at a given number of nodes. More data does **little for B** — its problem is capacity, not sample size; a model too simple to capture the structure stays too simple with twice as much of it.
+
+### QB-INTROML-0030 · [AUS] · **formula-reading** · deck 6 Class Imbalance — "F-measure" · first asked 2026-10-18 (banked, unasked)
+Q: $F = \frac{2rp}{r+p}$, the harmonic mean of recall and precision. Why the **harmonic** mean rather than the ordinary average $\frac{r+p}{2}$? Read it off the expression.
+A: The numerator carries the **product** $rp$, so if either term goes to zero the whole F goes to zero — the arithmetic mean would still read 0.5. That is the point: a model that flags **every** patient has recall 1 and precision near 0, and the ordinary average would reward it handsomely. The harmonic mean refuses to average away a disaster in one component; it sits close to the **smaller** of the two, so a good F requires both to be decent at once.
+
+### QB-INTROML-0031 · [AUS] · **the trap** · deck 6 Class Imbalance — the 990/1000 worked example · first asked 2026-10-18 (banked, unasked)
+Q: 1000 patients, 10 have the disease. A model predicts "healthy" for every single one. Its accuracy is **99%**. Without computing anything further: what are its recall and precision **on the disease class**, and what does this say about accuracy as a metric?
+A: **Recall on the disease class = 0** (it caught none of the 10). **Precision is undefined** — it never made a positive prediction, so the denominator $TP+FP$ is zero. Accuracy is 99% because it is dominated by the 990 negatives it got right for free. Under class imbalance, **accuracy measures the majority class and little else** — which is precisely why the deck introduces precision, recall, F-measure and ROC as "alternative measures".
+
+### QB-INTROML-0032 · [AUS] · identify-the-point · deck 6 Class Imbalance — "ROC Curve" · first asked 2026-10-18 (banked, unasked)
+Q: The ROC plane plots **TPR against FPR**. Name what sits at each of these: **(0,0)**, **(1,1)**, **(1,0)**, and the **diagonal**.
+A: **(0,0)** — declare everything **negative** (catch nothing, raise no alarms). **(1,1)** — declare everything **positive** (catch everything, alarm on everyone). **(1,0)** — the **ideal**: every positive caught, no false alarms. **The diagonal** — **random guessing**; a model on that line carries no information, and anything below it is worse than a coin.
+
+### QB-INTROML-0033 · [AUS] · mechanism · deck 6 Class Imbalance — "ROC Curve" · first asked 2026-10-18 (banked, unasked)
+Q: The deck says a classifier that returns **only the predicted class** gives a **single point** in ROC space, and that to draw a *curve* the classifier must produce **continuous-valued output**. Why — where does the curve actually come from?
+A: The curve is swept out by **varying the decision threshold**. A continuous score (a probability, a distance) can be cut at any threshold, and each threshold yields a different (FPR, TPR) pair — lower the bar and both rise together. A hard class label has already had the threshold applied and thrown the score away, so there is nothing left to vary: one model, one operating point. **The ROC curve is a picture of one model at every threshold**, not of many models.
+
+### QB-INTROML-0034 · [AUS] · say-it-precisely · deck 6 Class Imbalance — "AUC" · first asked 2026-10-18 (banked, unasked)
+Q: AUC = 0.7. Complete the deck's own sentence: "there is a 70% chance that the model will ______". The precise wording matters here — it is a very easy one to say loosely in an oral.
+A: "...a 70% chance that the model will be able to **distinguish between the positive class and the negative class**." Said properly: given one random positive and one random negative, there is a 70% chance the model **scores the positive higher**. It is **not** "70% accurate" and **not** "70% of predictions are right" — AUC is about **ranking**, and it is threshold-free, which is exactly why it survives class imbalance where accuracy does not.
+
+### QB-INTROML-0035 · [AUS] · odd-one-out · decks 4–6 · first asked 2026-10-18 (banked, unasked)
+Q: Four things a tree-builder might do: **(1)** pick the split with the lowest weighted child Gini · **(2)** stop splitting when a node is pure · **(3)** keep splitting until every leaf holds one record · **(4)** hold out a validation set to estimate generalization error. Which is the odd one out, and why?
+A: **(3).** The other three are the algorithm working as intended; (3) is the definition of **overfitting** — a tree grown until it has memorised each record individually has driven training error to zero and learned the noise. It is also what **early stopping criteria** and **model selection** exist to prevent.
+
+### QB-INTROML-0036 · [AUS] · **interview-style, follow-up chain** · decks 5–6 · first asked 2026-10-18 (banked, unasked)
+Q: *"You've built a classifier for a rare condition and it reports 97% accuracy. Walk me through what you'd check before believing it."* Then the follow-up you should expect: *"Suppose precision is high and recall is poor — what do you change?"*
+A: **First:** the base rate. If the condition occurs in 3% of cases, 97% accuracy is exactly what predicting "no" every time achieves — so look at the **confusion matrix**, not the headline, and read **precision and recall on the minority class**. Then **F-measure** for a single number that cannot be gamed by one component, and **ROC/AUC** for threshold-free ranking quality. **Follow-up:** high precision, poor recall means the model is **too conservative** — when it flags, it is right, but it is flagging too little. **Lower the decision threshold** (move up the ROC curve, accepting more FP), and address the imbalance itself in training. Say the direction out loud: you are trading precision away to buy recall, and that trade is only correct because a miss costs more than a false alarm.
