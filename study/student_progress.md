@@ -30,6 +30,8 @@ State file is authoritative (TUTOR.md §4/§8). Updated at the end of every wind
 ## Ledger (spaced repetition)
 Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1d + flag.
 
+⏱️ **Ladder capped to the interview, per audience (2026-10-25, Week 6 retro).** A next-due date may never fall later than **two days before** that item's audience's interview — [AUS] **14 Nov**, [OXFORD] DL4H **18 Nov**, [OXFORD] CV **23 Dec**. If the ladder would push it past that, **clamp it to that date** and keep it in rotation. From 25 Oct the **30d rung lands 24 Nov and is dead for both November courses**; 14d is live for [AUS] only while an item is seen by 2 Nov, and for DL4H by 6 Nov. Advancing an item onto an unreachable rung does not space it, it **deletes it** from the campaign.
+
 ⚠️ **Repaired 2026-10-19 (Sunday claim check, pulled forward).** The table was **malformed**: the header declares 7 columns and every data row had **6**. When the ledger was paused on 25 Sep, the word `paused` was written into the **Next due** cell and the lapse count ran in after it with no separator — so the two columns merged and **every stored due date was destroyed**. Nothing flagged it because a 6-cell row under a 7-cell header still renders, just wrongly. The dates above are **reconstructed** as `last seen + interval`, which the surviving columns make exact. **All 16 items are overdue**, the oldest by a month.
 
 **Resume rule (set here):** when the ledger unpauses, it does **not** dump 16 overdue items. Serve **at most 3 per window, oldest due date first**, and treat the long gap as **absence, not failure** — no lapse penalty on the first pass of any item. A pile of overdue cards is the single most reliable way to make someone close the tab, and the whole point of the ladder is that it bends to the student rather than the other way round.
@@ -65,6 +67,7 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | 2026-09-19 | W1 | D3 morning review — 10 items due, first test of symbolic mechanism teaching | 5 posted | awaiting | Drive sync clean (44 files, no change). All five are formula-reading items ("point at the term"), incl. FP-1 on its 4th attempt. Standing in the queue. |
 | 2026-09-20 | W1+retro | D4 — **Week 1 retro**, no questions posted (queue at cap) | 0 | – | D3 logged as a **missed day**: no reply all day, so its 5 unposted due items rolled to 09-21 **without lapse penalty** (absence, not failure to recall). The 5 posted items stay live in the queue. Drive sync clean. Opened **GLOSSARY.md** with the 8 terms he has demonstrated under retrieval; 4 contested terms deliberately excluded. SYLLABUS Week 2 adjusted to carry the 2 undelivered Week 1 topics. |
 | 2026-09-20 | W3 | D4 afternoon — **stood down** | 0 | – | Queue at cap. Added TUTOR.md rule: stand-downs are logged silently from now on, at most one line in chat — four "nothing happened" messages a day is noise that trains him to stop reading. |
+| 2026-10-25 | S2 | D39 midday — **Week 6 retro**; claim check caps the ladder | 0 | – | Nothing posted, no email. **The measurement came back:** first full week with a working channel — 3 emails, 0 replies — so fixing delivery did not change engagement, and I am not replacing that theory with another. **Claim check on the repaired ledger: passes narrowly, fails widely.** The date arithmetic is sound, but the **30-day rung now lands 24 Nov — after both interviews**, so advancing an item onto it silently deletes it from the campaign. The note justifying an uncapped ladder cited "98 days"; there are 22. **Decision: the ladder is clamped to two days before each audience's interview.** |
 | 2026-10-25 | S1 | D39 — **no-op**; clocks went back and the schedule held | 0 | – | Sync clean (52nd). Queue 10 live / 6 archived, banks 92, 22 days to [AUS]. **Copenhagen left CEST for CET overnight** — the wake fired at **06:49 UTC = 07:49 CET**, where all previous ones fired ~05:49 UTC. The UTC time moved by exactly an hour and the **local time held at 07:48**, which is what `CRON_TZ=Europe/Copenhagen` is for; a UTC-pinned schedule would have silently slid an hour earlier into his morning twice a year. Checked rather than assumed — that is the whole point of the Sunday practice, and it cost one `date` call. Week 6 retro runs at S2. |
 | 2026-10-24 | all three | D38 — **no-op day**; 6th mock Saturday, Mock #1 deferred again | 0 | – | Sync clean (49th). Queue 10 live / 6 archived, flags 9/0, banks 92. 23 days to [AUS]. Serving still paused at the cap. |
 | 2026-10-23 | all three | D37 — **no-op day**; serving still paused at the cap | 0 | – | Sync clean (46th). Queue 10 live / 6 archived, flags 9/0, banks 92. 24 days to [AUS]. Container rebuilt overnight; checkout verified intact at D36 this time — §0 content check, not the branch name. Tomorrow is the 6th mock Saturday. |
@@ -189,6 +192,84 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 - **2026-09-23 — the format is the intervention, not the effort (FP-1, FP-9).** Four attempts at "why does an unscaled attribute dominate KNN" produced correlation, a bare label, and the remedy. The fifth put $d^2=(\text{age}_a-\text{age}_b)^2+(\text{income}_a-\text{income}_b)^2$ on the screen and asked him to point at a term — and the full mechanism came out first try, unprompted. Nothing about his knowledge changed in between; the question changed. **Generalise hard: any mechanism worth testing gets an expression in front of him.** Prose questions measure his vocabulary, symbolic ones measure his understanding.
 - **2026-09-23 — heavy tail = tolerant (FP-5, FP-6).** He inverted L1's robustness: said outliers are penalised *extra*. The cleanest anchor is the derivative, not the density. $\frac{d}{dr}r^2=2r$ — the pull **grows** with the residual, so a far outlier drags 10× harder. $\frac{d}{dr}|r|=\pm1$ — the pull is **constant**, so a far outlier drags exactly as hard as a near one and cannot hijack the fit. Robustness is a statement about the *gradient*, which is why the density-and-tails framing kept slipping.
 - **2026-09-23 — the annotation paradox, fourth instance (now a settled diagnosis).** Asked where a lazy learner does its work, he described Euclidean distance and drifted to dimensionality. His own margin note on that exact slide reads *"Prediction you do work → lazy learner → Don't prepare ahead of time. Other Alg, Prepare model during training."* With GINI, precision/recall and interval-zero, that is four concepts he annotated correctly and could not retrieve. **Stop treating this as a coincidence:** re-reading the annotated decks will not help him, because annotating is recognition. Only retrieval moves these. See LR-0002.
+
+## Week 6 retro (2026-10-25)
+
+**Zero engaged days — and this is the week that was supposed to settle something.** Campaign total: **4 engaged
+days in 39**. 22 days to [AUS].
+
+### The measurement the last retro was waiting for
+
+Week 5 said: *"The first week in which a question posted is a question **delivered**. Everything before it is
+uninterpretable; everything after it is a real measurement."*
+
+That week has now run. **Three emails sent** — 17, 20 and 21 October, each with questions and a link straight
+into the session. **Zero replies.** Ten questions are standing.
+
+So the channel theory is tested, and it was wrong, or at least badly incomplete: **fixing the delivery did not
+change the engagement.** I cannot see opens, so I cannot say whether the mail is read. What I can say is that
+the explanation I reached for on D31 — the bell wasn't ringing — does not account for this week, because the
+bell rang three times.
+
+What I am **not** going to do is replace it with the next theory. That mistake has been made once in this
+campaign already (D25: *"I am not going to build another theory on top of the silence"*), and the honest
+position is the uncomfortable one: **I do not know why, and guessing has a bad record here.** The work is
+ready, the channel works, the queue is visible in one place, and the next move is his.
+
+### The claim check: the repaired ledger (booked last Sunday)
+
+**Narrow question — passes.** `3d ✅` is unambiguous: the item currently sits on a 3-day interval and last
+passed, so next due = last seen + 3d. That is exactly what the D33 repair computed. `1d 🟡` and `1d ❌` both give
+last seen + 1d. The reconstruction was right, and the next step is recoverable from the ladder.
+
+**Wider question — fails, and it matters.** I checked where each rung actually lands:
+
+| Rung | Lands | [AUS] 16 Nov | [OXFORD] DL4H 20 Nov |
+|---|---|---|---|
+| 1d | 26 Oct | ✅ | ✅ |
+| 3d | 28 Oct | ✅ | ✅ |
+| 7d | 1 Nov | ✅ | ✅ |
+| 14d | 8 Nov | ✅ **but only if seen by 2 Nov** | ✅ if seen by 6 Nov |
+| 30d | **24 Nov** | ❌ **dead** | ❌ **dead** |
+
+**The 30-day rung is now dead for both courses.** An item that advances onto it is scheduled for a re-test that
+happens *after* the interview it was being prepared for — which means advancing it quietly removes it from the
+campaign. And the note justifying the uncapped ladder says *"98 days means 30-day spacing genuinely runs to
+term"*. That was true when it was written. **There are 22 days left, not 98.** The claim aged out and nobody
+re-read it — the same failure mode as the other five, which is why this practice exists.
+
+### The one decision this retro takes
+
+**The ladder is capped to the interview, per audience.** An item's next due date may never fall later than
+**two days before** its audience's interview; if the ladder would push it past that, it is **clamped to that
+date** instead and stays in rotation. After an audience's interview its items leave the ladder entirely
+(IntroML to maintenance after 16 Nov, DL4H after 20 Nov, and CV re-enters on 20 Nov with its own 25 Dec
+horizon — where 30d is still live). Spacing exists to survive to the test; a rung that lands after the test is
+not spacing, it is deletion.
+
+### What else moved
+
+- **The bank finished.** 58 → **92 questions**, 53 [AUS] / 39 DL4H = **58/42**, hitting the 60/40 split asked
+  for on the 17th. All eleven IntroML decks and all four problem sheets are mined. Reserve work is genuinely
+  done, and I stopped rather than mining past the goal.
+- **Five questions served** (2 on Tuesday, 3 on Wednesday), then **serving paused at the cap on Thursday** with
+  10 live. Two of my own rules changed in the process: the queue cap stopped counting month-old debt as live
+  pressure, then the cap re-bound honestly once ten fresh items were standing. Both changes were right; the
+  second is not a reversal of the first.
+- **The live-queue card** went on the dashboard — ten items, one view, quickest first. The friction was never
+  the count, it was that they were scattered across three chat posts and three emails.
+- **The ledger was repaired** (D33) after the claim check found every stored due date destroyed by a malformed
+  table.
+- **DST verified** (D39): clocks went back, the wake held at 07:48 local. `CRON_TZ` did its job.
+- **Mock #1 deferred a sixth Saturday.** Zero readings in 39 days.
+
+### What next week is testing
+
+Nothing, on my side. Everything that can be prepared is prepared, the ladder is now honest about the runway,
+and the queue is one click away. **22 days to [AUS], ten questions standing, and the cheapest of them is a
+fill-in-the-blank.**
+
+---
 
 ## Week 5 retro (2026-10-18)
 
