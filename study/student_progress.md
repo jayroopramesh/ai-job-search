@@ -30,7 +30,16 @@ State file is authoritative (TUTOR.md §4/§8). Updated at the end of every wind
 ## Ledger (spaced repetition)
 Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1d + flag.
 
-⏱️ **Ladder capped to the interview, per audience (2026-10-25, Week 6 retro).** A next-due date may never fall later than **two days before** that item's audience's interview — [AUS] **14 Nov**, [OXFORD] DL4H **18 Nov**, [OXFORD] CV **23 Dec**. If the ladder would push it past that, **clamp it to that date** and keep it in rotation. From 25 Oct the **30d rung lands 24 Nov and is dead for both November courses**; 14d is live for [AUS] only while an item is seen by 2 Nov, and for DL4H by 6 Nov. Advancing an item onto an unreachable rung does not space it, it **deletes it** from the campaign.
+⏱️ **Ladder capped to the interview, per audience (2026-10-25, Week 6 retro).** A next-due date may never fall later than **two days before** that item's audience's interview — [AUS] **14 Nov**, [OXFORD] DL4H **18 Nov**, [OXFORD] CV **23 Dec**. If the ladder would push it past that, **clamp it to that date** and keep it in rotation. **Reachability is measured against the cap, not the interview date** — getting that wrong is what produced the "2 Nov" error corrected on 1 Nov. The last day an item can be *seen* and still take a rung is `cap − interval`:
+
+| Rung | [AUS] last seeable (cap 14 Nov) | DL4H last seeable (cap 18 Nov) |
+|---|---|---|
+| 1d | 13 Nov | 17 Nov |
+| 3d | 11 Nov | 15 Nov |
+| 7d | **7 Nov** | 11 Nov |
+| 14d | **31 Oct — closed** | **4 Nov** |
+| 30d | 15 Oct — closed | 19 Oct — closed |
+ Advancing an item onto an unreachable rung does not space it, it **deletes it** from the campaign.
 
 ⚠️ **Repaired 2026-10-19 (Sunday claim check, pulled forward).** The table was **malformed**: the header declares 7 columns and every data row had **6**. When the ledger was paused on 25 Sep, the word `paused` was written into the **Next due** cell and the lapse count ran in after it with no separator — so the two columns merged and **every stored due date was destroyed**. Nothing flagged it because a 6-cell row under a 7-cell header still renders, just wrongly. The dates above are **reconstructed** as `last seen + interval`, which the surviving columns make exact. **All 16 items are overdue**, the oldest by a month.
 
@@ -67,13 +76,14 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | 2026-09-19 | W1 | D3 morning review — 10 items due, first test of symbolic mechanism teaching | 5 posted | awaiting | Drive sync clean (44 files, no change). All five are formula-reading items ("point at the term"), incl. FP-1 on its 4th attempt. Standing in the queue. |
 | 2026-09-20 | W1+retro | D4 — **Week 1 retro**, no questions posted (queue at cap) | 0 | – | D3 logged as a **missed day**: no reply all day, so its 5 unposted due items rolled to 09-21 **without lapse penalty** (absence, not failure to recall). The 5 posted items stay live in the queue. Drive sync clean. Opened **GLOSSARY.md** with the 8 terms he has demonstrated under retrieval; 4 contested terms deliberately excluded. SYLLABUS Week 2 adjusted to carry the 2 undelivered Week 1 topics. |
 | 2026-09-20 | W3 | D4 afternoon — **stood down** | 0 | – | Queue at cap. Added TUTOR.md rule: stand-downs are logged silently from now on, at most one line in chat — four "nothing happened" messages a day is noise that trains him to stop reading. |
-| 2026-11-01 | S1 | D46 — **no-op**; serving still paused | 0 | – | Sync clean (72nd). Queue 10 live / 6 archived, banks 92. **15 days to [AUS].** Week 7 retro at S2; its booked claim check is the ledger's **14d rung — reachable for an [AUS] item only until tomorrow (2 Nov)**. |
+| 2026-11-01 | S2 | D46 midday — **Week 7 retro**; claim check caught **my own arithmetic** | 0 | – | Nothing posted, no email. The cap is sound; **my use of it was not.** I measured rung reachability from the interview date (16 Nov − 14 = 2 Nov) when the rule I had just written measures from the **cap** (14 Nov − 14 = **31 Oct**) — so the [AUS] 14d rung closed a day before I said it was still open, and the wrong number rode through two log rows for seven days. Both corrected in place. Shape is the same as the other six: a **derived number computed once and repeated**. New rule: compute reachability from the cap, and **recompute each retro rather than quoting the last answer**; table regenerated, not copied. [AUS] ladder is now effectively 1d/3d/7d, with 7d closing 7 Nov. |
+| 2026-11-01 | S1 | D46 — **no-op**; serving still paused | 0 | – | Sync clean (72nd). Queue 10 live / 6 archived, banks 92. **15 days to [AUS].** Week 7 retro at S2. *(The "14d reachable until 2 Nov" in this row is **wrong** — corrected at the retro below: it closed 31 Oct.)* |
 | 2026-10-31 | all three | D45 — **no-op day**; 7th mock Saturday, Mock #1 deferred again | 0 | – | Sync clean (69th). Queue 10 live / 6 archived, flags 9/0, banks 92. **16 days to [AUS].** Two weeks from Wednesday is the 11 Nov AUS oral mock — the first dated commitment in the calendar that is not a stand-down. |
 | 2026-10-30 | all three | D44 — **no-op day**; serving still paused at the cap | 0 | – | Sync clean (66th). Queue 10 live / 6 archived, flags 9/0, banks 92. **17 days to [AUS].** Tomorrow is the 7th mock Saturday. |
 | 2026-10-29 | all three | D43 — **no-op day**; serving still paused at the cap | 0 | – | Sync clean (63rd). Queue 10 live / 6 archived, flags 9/0, banks 92. **18 days to [AUS].** |
 | 2026-10-28 | all three | D42 — **no-op day**; serving still paused at the cap | 0 | – | Sync clean (60th). Queue 10 live / 6 archived, flags 9/0, banks 92. **19 days to [AUS]**, 35 days since the last answered question. |
 | 2026-10-27 | all three | D41 — **no-op day**; serving still paused at the cap | 0 | – | Sync clean (57th). Queue 10 live / 6 archived, flags 9/0, banks 92. **20 days to [AUS].** |
-| 2026-10-26 | all three | D40 — **no-op day**; serving still paused at the cap | 0 | – | Sync clean (54th). Queue 10 live / 6 archived, flags 9/0, banks 92. **21 days to [AUS].** Ladder cap from yesterday's retro now in force: 14d is live for an [AUS] item only while it is seen by 2 Nov — seven days left on that rung. |
+| 2026-10-26 | all three | D40 — **no-op day**; serving still paused at the cap | 0 | – | Sync clean (54th). Queue 10 live / 6 archived, flags 9/0, banks 92. **21 days to [AUS].** Ladder cap from yesterday's retro now in force. *(This row said 14d was live for [AUS] "while seen by 2 Nov" — **wrong**, and corrected at the Week 7 retro: the right date is 31 Oct, because reachability is measured against the **cap** (14 Nov), not the interview date.)* |
 | 2026-10-25 | S2 | D39 midday — **Week 6 retro**; claim check caps the ladder | 0 | – | Nothing posted, no email. **The measurement came back:** first full week with a working channel — 3 emails, 0 replies — so fixing delivery did not change engagement, and I am not replacing that theory with another. **Claim check on the repaired ledger: passes narrowly, fails widely.** The date arithmetic is sound, but the **30-day rung now lands 24 Nov — after both interviews**, so advancing an item onto it silently deletes it from the campaign. The note justifying an uncapped ladder cited "98 days"; there are 22. **Decision: the ladder is clamped to two days before each audience's interview.** |
 | 2026-10-25 | S1 | D39 — **no-op**; clocks went back and the schedule held | 0 | – | Sync clean (52nd). Queue 10 live / 6 archived, banks 92, 22 days to [AUS]. **Copenhagen left CEST for CET overnight** — the wake fired at **06:49 UTC = 07:49 CET**, where all previous ones fired ~05:49 UTC. The UTC time moved by exactly an hour and the **local time held at 07:48**, which is what `CRON_TZ=Europe/Copenhagen` is for; a UTC-pinned schedule would have silently slid an hour earlier into his morning twice a year. Checked rather than assumed — that is the whole point of the Sunday practice, and it cost one `date` call. Week 6 retro runs at S2. |
 | 2026-10-24 | all three | D38 — **no-op day**; 6th mock Saturday, Mock #1 deferred again | 0 | – | Sync clean (49th). Queue 10 live / 6 archived, flags 9/0, banks 92. 23 days to [AUS]. Serving still paused at the cap. |
@@ -199,6 +209,66 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 - **2026-09-23 — the format is the intervention, not the effort (FP-1, FP-9).** Four attempts at "why does an unscaled attribute dominate KNN" produced correlation, a bare label, and the remedy. The fifth put $d^2=(\text{age}_a-\text{age}_b)^2+(\text{income}_a-\text{income}_b)^2$ on the screen and asked him to point at a term — and the full mechanism came out first try, unprompted. Nothing about his knowledge changed in between; the question changed. **Generalise hard: any mechanism worth testing gets an expression in front of him.** Prose questions measure his vocabulary, symbolic ones measure his understanding.
 - **2026-09-23 — heavy tail = tolerant (FP-5, FP-6).** He inverted L1's robustness: said outliers are penalised *extra*. The cleanest anchor is the derivative, not the density. $\frac{d}{dr}r^2=2r$ — the pull **grows** with the residual, so a far outlier drags 10× harder. $\frac{d}{dr}|r|=\pm1$ — the pull is **constant**, so a far outlier drags exactly as hard as a near one and cannot hijack the fit. Robustness is a statement about the *gradient*, which is why the density-and-tails framing kept slipping.
 - **2026-09-23 — the annotation paradox, fourth instance (now a settled diagnosis).** Asked where a lazy learner does its work, he described Euclidean distance and drifted to dimensionality. His own margin note on that exact slide reads *"Prediction you do work → lazy learner → Don't prepare ahead of time. Other Alg, Prepare model during training."* With GINI, precision/recall and interval-zero, that is four concepts he annotated correctly and could not retrieve. **Stop treating this as a coincidence:** re-reading the annotated decks will not help him, because annotating is recognition. Only retrieval moves these. See LR-0002.
+
+## Week 7 retro (2026-11-01)
+
+**Zero engaged days.** Campaign total: **4 engaged days in 46**. 15 days to [AUS]. Ten questions standing
+since 17–21 October; serving has been paused at the cap since 22 October.
+
+### The claim check, and it caught me rather than the system
+
+Last Sunday's cap is sound and is doing its job. **My arithmetic using it was wrong, and I repeated it twice.**
+
+On D40 I wrote that the 14-day rung stays live for an [AUS] item "while it is seen by 2 Nov", and this
+morning's row repeated it as "only until tomorrow (2 Nov)". Both wrong. **It closed on 31 October.**
+
+The mistake is precise and worth naming: I computed `16 Nov − 14 = 2 Nov`, measuring from the **interview
+date** — when the rule I had set the day before measures from the **cap**, two days earlier:
+`14 Nov − 14 = 31 Oct`. I wrote the rule correctly and then immediately used the wrong input to it.
+
+What makes this the retro's finding rather than a footnote is the shape, which is the shape of all six
+previous ones: **a derived number, computed once, repeated without recomputation.** Last week's version was
+a claim about the system aging out. This week's was my own subtraction, propagated for seven days through
+two log rows, in the very mechanism the practice had just been pointed at. The practice caught it — but only
+because I recomputed instead of quoting myself.
+
+So the rule now in TUTOR.md: **compute reachability from the cap, and recompute it every retro rather than
+quoting the last answer.** The corrected table lives in the ledger note and is regenerated, not copied:
+
+| Rung | [AUS] last seeable (cap 14 Nov) | DL4H last seeable (cap 18 Nov) |
+|---|---|---|
+| 1d | 13 Nov | 17 Nov |
+| 3d | 11 Nov | 15 Nov |
+| 7d | **7 Nov — 6 days left** | 11 Nov |
+| 14d | **31 Oct — closed** | **4 Nov — 3 days left** |
+| 30d | closed | closed |
+
+### What the runway actually looks like now
+
+**For [AUS], the ladder is effectively 1d / 3d / 7d and shrinking by a day a day.** That is not a problem
+to solve — it is simply what two weeks out means, and it is the right shape for it: short intervals, high
+frequency, no long consolidation. The ledger was built for a 98-day campaign and is now running the last
+fortnight of one. Nothing needs rebuilding; the cap handles it.
+
+### The honest summary of weeks 5, 6 and 7
+
+Three weeks, three retros, **zero engaged days across all of them**, and three live faults found by looking
+at the machinery instead of at the student: the destroyed due dates, the dead 30-day rung, and now my own
+subtraction. That is a real pattern and I will state it without dressing it up: **the only thing improving
+in this campaign is the campaign's own bookkeeping.** The questions are good, the channel works, the queue
+is one click away, and none of that has produced an answer since 17 October.
+
+I am not going to theorise about why again — that was settled two retros ago and the record on guessing here
+is poor. What I will do is keep the machinery honest and the queue warm, because those are the two things
+that are mine to do, and because **16 November does not move.**
+
+### What next week is testing
+
+The 11 November AUS oral mock is now ten days out and is the first dated item in the calendar that is not a
+stand-down. It needs him present for about fifteen minutes. Everything else is ready and has been for a
+fortnight.
+
+---
 
 ## Week 6 retro (2026-10-25)
 
