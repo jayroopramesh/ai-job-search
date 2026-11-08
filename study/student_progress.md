@@ -1,6 +1,7 @@
 # Student Progress — Jayroop
 
 Campaign: **2026-09-17 (D1) → 2026-12-25 (D99)** · 🎤 **[AUS] IntroML Mon 16 Nov** · 🎤 **[OXFORD] DL4H Fri 20 Nov** · 🎤 **[OXFORD] CV Fri 25 Dec**
+⚠️ **Which course is on the 16th is INFERRED, not stated** (he wrote "November 16th and 20th" without saying which). Asked once, 8 Nov. It is no longer a harmless inference — the caps are 4 days apart and the AUS-first weighting assumes [AUS] is the nearer date. 25 Dec (Christmas Day) is also unconfirmed.
 *Rescoped 2026-09-18: dates moved out ~5 weeks, CV decoupled into its own assessment, 4th daily window added.*
 *Rescoped 2026-10-17 by Jayroop: **4 windows → 3**, 15 min each · **~60% [AUS] / ~40% DL4H**, CV paused until 20 Nov · **alerts moved from push to email**.*
 State file is authoritative (TUTOR.md §4/§8). Updated at the end of every window; committed and pushed each time.
@@ -76,6 +77,7 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 | 2026-09-19 | W1 | D3 morning review — 10 items due, first test of symbolic mechanism teaching | 5 posted | awaiting | Drive sync clean (44 files, no change). All five are formula-reading items ("point at the term"), incl. FP-1 on its 4th attempt. Standing in the queue. |
 | 2026-09-20 | W1+retro | D4 — **Week 1 retro**, no questions posted (queue at cap) | 0 | – | D3 logged as a **missed day**: no reply all day, so its 5 unposted due items rolled to 09-21 **without lapse penalty** (absence, not failure to recall). The 5 posted items stay live in the queue. Drive sync clean. Opened **GLOSSARY.md** with the 8 terms he has demonstrated under retrieval; 4 contested terms deliberately excluded. SYLLABUS Week 2 adjusted to carry the 2 undelivered Week 1 topics. |
 | 2026-09-20 | W3 | D4 afternoon — **stood down** | 0 | – | Queue at cap. Added TUTOR.md rule: stand-downs are logged silently from now on, at most one line in chat — four "nothing happened" messages a day is noise that trains him to stop reading. |
+| 2026-11-08 | S2 | D53 midday — **Week 8 retro**; claim check hits the dates, and **one question asked** | 0 | – | Reachability recomputed from the cap: **[AUS] is down to 1d/3d**, its 7d rung closed yesterday. **Claim check:** which course sits on 16 Nov is an **inference** from "November 16th and 20th" — recorded honestly in NOTES.md on 18 Sep, *with an escape clause that has since expired*: "the plan is insensitive to the swap" was true at 98 days and parallel teaching; it is false now that the caps differ by 4 days, the AUS-first weighting assumes [AUS] is nearer, and the 11 Nov mock is labelled AUS. **Fourth instance of the same shape** — a mitigating statement true when written, never re-read as conditions moved — and the first I cannot settle by computing. Labelled the inference on the header and dashboard (where it *operates*, not just where it was noted), and **sent one email asking which course is on the 16th**: the Week 6 "ask once" policy gets an exception for a question whose answer changes the work within days. |
 | 2026-11-08 | S1 | D53 — **no-op**; serving still paused | 0 | – | Sync clean (92nd). Queue 10 live / 6 archived, banks 92. **8 days to [AUS]**, 3 to the oral mock. Week 8 retro at S2. |
 | 2026-11-07 | all three | D52 — **no-op day**; 8th mock Saturday, Mock #1 deferred again | 0 | – | Sync clean (89th). Queue 10 live / 6 archived, banks 92. **9 days to [AUS]**, 4 to the oral mock. **[AUS] 7d rung closes today** — from tomorrow only 1d and 3d still land before 16 Nov. |
 | 2026-11-06 | all three | D51 — **no-op day**; serving still paused | 0 | – | Sync clean (86th). Queue 10 live / 6 archived, banks 92. **10 days to [AUS]**, 5 to the oral mock. Tomorrow the [AUS] 7d rung closes — after 7 Nov only 1d and 3d reach the interview. |
@@ -216,6 +218,68 @@ Intervals 1→3→7→14→30 days. ✅ advance · 🟡 repeat · ❌ reset to 1
 - **2026-09-23 — the format is the intervention, not the effort (FP-1, FP-9).** Four attempts at "why does an unscaled attribute dominate KNN" produced correlation, a bare label, and the remedy. The fifth put $d^2=(\text{age}_a-\text{age}_b)^2+(\text{income}_a-\text{income}_b)^2$ on the screen and asked him to point at a term — and the full mechanism came out first try, unprompted. Nothing about his knowledge changed in between; the question changed. **Generalise hard: any mechanism worth testing gets an expression in front of him.** Prose questions measure his vocabulary, symbolic ones measure his understanding.
 - **2026-09-23 — heavy tail = tolerant (FP-5, FP-6).** He inverted L1's robustness: said outliers are penalised *extra*. The cleanest anchor is the derivative, not the density. $\frac{d}{dr}r^2=2r$ — the pull **grows** with the residual, so a far outlier drags 10× harder. $\frac{d}{dr}|r|=\pm1$ — the pull is **constant**, so a far outlier drags exactly as hard as a near one and cannot hijack the fit. Robustness is a statement about the *gradient*, which is why the density-and-tails framing kept slipping.
 - **2026-09-23 — the annotation paradox, fourth instance (now a settled diagnosis).** Asked where a lazy learner does its work, he described Euclidean distance and drifted to dimensionality. His own margin note on that exact slide reads *"Prediction you do work → lazy learner → Don't prepare ahead of time. Other Alg, Prepare model during training."* With GINI, precision/recall and interval-zero, that is four concepts he annotated correctly and could not retrieve. **Stop treating this as a coincidence:** re-reading the annotated decks will not help him, because annotating is recognition. Only retrieval moves these. See LR-0002.
+
+## Week 8 retro (2026-11-08)
+
+**Zero engaged days.** Campaign total: **4 in 53**. 8 days to [AUS]. Ten questions standing since 17–21 Oct.
+
+### Reachability, recomputed (not copied)
+
+| Rung | [AUS] last seeable (cap 14 Nov) | DL4H last seeable (cap 18 Nov) |
+|---|---|---|
+| 1d | 13 Nov — 5 days left | 17 Nov — 9 days left |
+| 3d | 11 Nov — 3 days left | 15 Nov — 7 days left |
+| 7d | **7 Nov — closed yesterday** | 11 Nov — 3 days left |
+| 14d / 30d | closed | closed |
+
+**[AUS] is down to 1d and 3d.** That is correct for eight days out, not a problem to fix.
+
+### The claim check: the interview dates themselves
+
+This week I checked the claim everything else rests on — **which course is on which date** — and the result
+is mixed in an instructive way.
+
+**What was done right:** it *is* labelled as an inference. NOTES.md, 18 Sep: *"he wrote 'November 16th and
+20th' without naming which is which, so AUS=16th / Oxford=20th was inferred from the order he has used
+consistently."* The 25 Dec / Christmas Day oddity is flagged in two places too. Good record-keeping, made at
+the time.
+
+**What has gone wrong since:** that same note carries an escape clause — *"the plan is otherwise insensitive
+to the swap since the dates are 4 days apart."* **That clause has expired, and nobody re-read it.** It was
+true on 18 September, when there were 98 days and both courses were being taught in parallel. It is not true
+now:
+
+- The two caps are **4 days apart** (14 Nov vs 18 Nov), and [AUS]'s ladder has already lost its 7d rung
+  while DL4H's has 3 days left on it. A swap moves which course is in the tighter funnel.
+- The **~60/40 AUS-first weighting**, set on 17 Oct, exists *because* [AUS] is the nearer interview. If the
+  assignment is reversed, that weighting is aimed at the **later** one.
+- The **11 Nov oral mock is in three days** and is labelled AUS. Under a swap it should be the DL4H mock.
+
+So the same failure mode as the last three retros, in a new costume: **a mitigating statement that was true
+when written, never re-examined as the conditions under it changed.** The 30d rung died that way. The
+"98 days" justification died that way. This one is the first where the stale clause is *mine covering an
+inference about his own words*, and the first I cannot settle by computing — it needs one word from him.
+
+### The one decision this retro takes
+
+**Two things, and the second is the unusual one.**
+
+1. **The inference gets labelled where it operates, not only where it was noted.** It was recorded honestly
+   in NOTES.md and then stated as flat fact on every surface that actually uses it — the progress header, the
+   dashboard countdowns, the three scheduled-task prompts. That is the D24 lesson again: *correcting the note
+   is not correcting the system.* Fixed on the header and the dashboard today.
+2. **I am asking him — once.** Standing policy since the Week 6 retro is to ask once and stop re-raising,
+   and I have held to that for three weeks of silence. This question earns an exception on its own terms:
+   **its answer changes what I do**, within days, and it cannot be derived from anything I hold. One line,
+   one email, no other content: *which course is on the 16th?* If no answer comes, the plan continues on the
+   inference, which remains the better-supported reading of his wording — and that is stated plainly rather
+   than quietly assumed.
+
+### What next week is
+
+16 November. The campaign's first dated commitment, and the last Sunday retro before it.
+
+---
 
 ## Week 7 retro (2026-11-01)
 
