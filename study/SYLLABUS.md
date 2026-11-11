@@ -67,7 +67,7 @@ No new material. Everything now points at the two interviews.
 | Thu 12 | AUS re-attack on everything the mock exposed — **all [AUS] flags close today** | |
 | Fri 13 | **🎤 OXFORD ORAL MOCK** — Namburete framing, clinical-deployment pressure | |
 | Sat 14 | Oxford re-attack — **all [OXFORD] DL4H flags close today** | |
-| Sun 15 | **T-1 AUS:** light confidence pass, anchors only, stop early | |
+| Sun 15 | **T-1 AUS:** light confidence pass, **`study/ANCHORS.md`** only, stop early | |
 
 ## 🎤 **Mon 16 Nov — AUS INTERVIEW (D60)**
 W1 short warm-up (anchors and one-liners, nothing new, no new flags) · W2 skipped · W3 **debrief** — what was asked, what felt shaky, what surprised you. The debrief reshapes 17–19 Nov.
