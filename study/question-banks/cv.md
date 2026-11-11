@@ -1,2 +1,4 @@
 # Question Bank — Computer Vision · [OXFORD]
 <!-- Appended by tutor sessions. Sprint: overlap decks only (02, 06, 07, 08, 09, 16, 17, 18); full course in phase 2. -->
+
+> ⚠️ **EMPTY as of 2026-11-11 (D56) — flagged, not forgotten.** 20 CV decks are cached in `study/cache/cv/`; **zero questions are banked here.** The campaign is scheduled to turn CV-only on **20 Nov** and the assessment is **25 Dec (T-44)**, so this is not yet late — but it is the one genuinely hollow artefact on the board, and it was found by an audit that initially *passed* it, because the file exists. Mining starts 20 Nov per SYLLABUS Block 5; the eight overlap decks (02, 06, 07, 08, 09, 16, 17, 18) are the first targets since they were taught in Blocks 1–2 and are half-warm. Recorded here so that the first CV window does not arrive expecting a bank that was never written.
