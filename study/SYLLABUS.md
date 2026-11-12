@@ -1,10 +1,10 @@
 # SYLLABUS — 98-Day Campaign to Three Assessments
 
-> **🎤 HARD DATES** — **[AUS] IntroML: Mon 16 Nov 2026** (D60) · **[OXFORD] DL4H: Fri 20 Nov 2026** (D64) · **[OXFORD] CV: Fri 25 Dec 2026** (D99)
+> **🎤 HARD DATES** — **[AUS] IntroML: Mon 16 Nov 2026** (D61) · **[OXFORD] DL4H: Fri 20 Nov 2026** (D65) · **[OXFORD] CV: Fri 25 Dec 2026** (D100) *(all three corrected 2026-11-12 — they read D60/D64/D99, an off-by-one from differencing the dates instead of counting inclusively from D1 = 17 Sep. The same error set the dashboard progress bar's denominator to 99.)*
 > D1 = 17 Sep 2026. Everything below is built backwards from those three dates.
 > This replaces the old 28-day sprint: the dates moved out by ~5 weeks on 2026-09-18, and CV decoupled from the DL4H panel into its own assessment.
 
-**Four windows/day** (see TUTOR.md §2): **W1** 08:00 review · **W2** 12:30 new material · **W3** 17:00 interleaved gauntlet · **W4** 21:00 flag clinic + teach-back. Copenhagen times; queues, not deadlines.
+**THREE windows/day** (see TUTOR.md §2), set by Jayroop on 2026-10-17: **S1** 07:48 review + flag attack · **S2** 12:41 new material · **S3** 19:52 gauntlet + interview drill, which absorbed the retired W4 clinic. 15 min hard cap each. Copenhagen times; queues, not deadlines. *(Corrected 2026-11-12: this line still described **four** windows at 08:00/12:30/17:00/21:00 — stale for 26 days, on the file that is the schedule.)*
 
 **What the extra time buys.** The old plan force-fed two decks a day and capped the spaced-repetition ladder at 28 days. Now: one deck taught properly per day, the full **1→3→7→14→30** ladder actually runs to term, every problem sheet gets mined (for questions — see RESOURCES.md; they are solutions guides, not his attempts), and there is room for four mocks per course instead of a scramble. Depth, not more speed.
 
@@ -38,7 +38,7 @@ It slipped once on 09-27 (Week 2 delivered one deck of six) and again on 10-04 (
 
 ⚠️ **Weighting changed 2026-10-17, by Jayroop: ~60% [AUS] IntroML / ~40% [OXFORD] DL4H, and CV is PAUSED until 20 Nov.** The queue above already runs 3 AUS to 2 OXFORD, so its order stands — what changes is that **no CV deck is served before 20 Nov**, and when the queue is ambiguous, AUS wins. Rationale, his: the CV interview is 25 Dec, five weeks behind the other two, and spending any of the next 30 days on it costs the two that are close. Resume CV on 20 Nov with the DL4H slot, which frees up the same day.
 
-**On the 25 Dec date:** that is Christmas Day. Flagged once as a possible typo, never confirmed, and still unconfirmed — it does not affect anything until 20 Nov, so it is not worth a question now, but it should be settled before CV work starts.
+**On the 25 Dec date:** that is Christmas Day. Flagged once as a possible typo, never confirmed, still unconfirmed. ⚠️ **The escape clause in this line is about to expire — caught 2026-11-12.** It read *"it does not affect anything until 20 Nov, so it is not worth a question now"*, which was true when written and is **8 days from false**: 20 Nov is when CV work starts, and `question-banks/cv.md` is empty, so that date is already carrying load. **Exactly the same shape as the 11-08 finding on which course sits on the 16th** — a mitigating statement, true at the time, never re-read as its own trigger approached. **Queued to go out with the next email rather than burning one today**, alongside the still-open question about the 16th.
 
 The dates below stay for the deadline arithmetic and the fixed events (mocks, T-1 days, the three assessments). They no longer claim to schedule a given deck on a given day.
 
