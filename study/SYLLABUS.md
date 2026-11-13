@@ -69,13 +69,13 @@ No new material. Everything now points at the two interviews.
 | Sat 14 | Oxford re-attack — **all [OXFORD] DL4H flags close today** | |
 | Sun 15 | **T-1 AUS:** light confidence pass, **`study/ANCHORS.md`** only, stop early | |
 
-## 🎤 **Mon 16 Nov — AUS INTERVIEW (D60)**
+## 🎤 **Mon 16 Nov — AUS INTERVIEW (D61)**
 W1 short warm-up (anchors and one-liners, nothing new, no new flags) · W2 skipped · W3 **debrief** — what was asked, what felt shaky, what surprised you. The debrief reshapes 17–19 Nov.
 
 ## Block 4 — Oxford final push · **Tue 17 Nov → Thu 19 Nov**
 IntroML drops to maintenance. Three days of DL4H only, steered by the AUS debrief (the panels probe similarly; whatever caught you out on Monday gets hunted here). Thu 19 is **T-1**: light pass, stop early.
 
-## 🎤 **Fri 20 Nov — OXFORD DL4H INTERVIEW (D64)**
+## 🎤 **Fri 20 Nov — OXFORD DL4H INTERVIEW (D65)**
 W1 warm-up · W3 **debrief** → then the campaign turns entirely to CV.
 
 ## Block 5 — Computer Vision · **Sat 21 Nov → Thu 24 Dec** (34 days)
@@ -89,6 +89,6 @@ The eight overlap decks (02, 06, 07, 08, 09, 16, 17, 18) are already taught — 
 | 4 | Dec 12–18 | 14 Camera Models · 15 MVG · 19 Vision-Language |
 | 5 | Dec 19–24 | 20 Ethics/Privacy · full-syllabus sweep · **🎤 CV ORAL MOCK Tue 22 Dec** · Thu 24 **T-1 light pass** |
 
-## 🎤 **Fri 25 Dec — CV ASSESSMENT (D99)**
+## 🎤 **Fri 25 Dec — CV ASSESSMENT (D100)**
 W1 warm-up · W3 debrief + **full campaign retro → final readiness report → wind-down (TUTOR.md §9)**.
 ⚠️ *25 Dec is Christmas Day — worth double-checking that date.*
