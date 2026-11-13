@@ -5,7 +5,7 @@ For the night before DL4H (20 Nov) — or for Monday, if Monday turns out to be 
 
 > ⚠️ **Read this caveat, it changes how much to trust the sheet.** `ANCHORS.md` is built from **errors you actually made** — nine flags, measured. This sheet mostly isn't, because only **one** of those nine flags is DL4H-specific (the loss/noise-model one). So these are not your measured weak points; they are **the things most likely to be asked and most likely to come out as a label instead of a mechanism**, drawn from the decks and problem sheets. Weaker evidence, honestly flagged. The one measured item is marked ✅MEASURED.
 >
-> Related and worth knowing: **32 of the 39 DL4H questions I've prepared have never been put to you.** DL4H is the course with the most material ready and the least of it delivered.
+> Related and worth knowing: **30 of the 39 DL4H questions I've prepared have never been put to you.** *(Corrected 13 Nov — I wrote 32 here yesterday, from glancing at a truncated search result instead of counting. The real number is 30.)* DL4H is the course with the most material ready and the least of it delivered.
 
 ---
 
