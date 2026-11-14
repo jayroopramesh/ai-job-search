@@ -52,7 +52,7 @@ Goal: DL4H finished; the eight CV decks that overlap DL4H enter as reinforcement
 | 7 | Oct 31 – Nov 6 | *maintenance review only* | L14-15 Sequence models · L15-16 Transformers · L16 Explainability | 07 CNNs · 08 Transformers · 09 Visualization · 06 Classification |
 
 Sat 24 Oct **Mock #5** + **PS4 mining** · Sat 31 Oct **Mock #6** · Sun retros throughout.
-If IntroML decks 10–12/14 appear in Drive, slot them into week 5–6 W2 and shift clustering right.
+If IntroML decks 10–12/14 appear in Drive, serve them at the next **S2** and shift clustering right. *(Was "week 5–6 W2" — both the week numbers and the window name are from retired schemes.)*
 
 ## Block 3 — Consolidation & mocks · **Sat 7 Nov → Sun 15 Nov** (9 days)
 No new material. Everything now points at the two interviews.
@@ -70,13 +70,13 @@ No new material. Everything now points at the two interviews.
 | Sun 15 | **T-1 AUS:** light confidence pass, **`study/ANCHORS.md`** only, stop early | |
 
 ## 🎤 **Mon 16 Nov — AUS INTERVIEW (D61)**
-W1 short warm-up (anchors and one-liners, nothing new, no new flags) · W2 skipped · W3 **debrief** — what was asked, what felt shaky, what surprised you. The debrief reshapes 17–19 Nov.
+**S1** short warm-up (read from `ANCHORS.md`, nothing new, no new flags) · **S2** skipped · **S3** **debrief** — what was asked, what felt shaky, what surprised you. The debrief reshapes 17–19 Nov.
 
 ## Block 4 — Oxford final push · **Tue 17 Nov → Thu 19 Nov**
 IntroML drops to maintenance. Three days of DL4H only, steered by the AUS debrief (the panels probe similarly; whatever caught you out on Monday gets hunted here). Thu 19 is **T-1**: light pass, stop early.
 
 ## 🎤 **Fri 20 Nov — OXFORD DL4H INTERVIEW (D65)**
-W1 warm-up · W3 **debrief** → then the campaign turns entirely to CV.
+**S1** warm-up (`ANCHORS-DL4H.md`) · **S2** skipped · **S3** **debrief** → then the campaign turns entirely to CV.
 
 ## Block 5 — Computer Vision · **Sat 21 Nov → Thu 24 Dec** (34 days)
 The eight overlap decks (02, 06, 07, 08, 09, 16, 17, 18) are already taught — they enter as review. Twelve genuinely new decks over five weeks, one per ~2.5 days, DL4H and IntroML kept alive by the spaced ladder only.
@@ -90,5 +90,5 @@ The eight overlap decks (02, 06, 07, 08, 09, 16, 17, 18) are already taught — 
 | 5 | Dec 19–24 | 20 Ethics/Privacy · full-syllabus sweep · **🎤 CV ORAL MOCK Tue 22 Dec** · Thu 24 **T-1 light pass** |
 
 ## 🎤 **Fri 25 Dec — CV ASSESSMENT (D100)**
-W1 warm-up · W3 debrief + **full campaign retro → final readiness report → wind-down (TUTOR.md §9)**.
+**S1** warm-up · **S2** skipped · **S3** debrief + **full campaign retro → final readiness report → wind-down (TUTOR.md §9)**.
 ⚠️ *25 Dec is Christmas Day — worth double-checking that date.*
