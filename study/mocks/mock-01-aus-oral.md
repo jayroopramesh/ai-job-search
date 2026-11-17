@@ -82,4 +82,4 @@ Log the total, and log **how many 6s** separately: the 6-count is the direct FP-
 10. Distances **concentrate** — nearest and farthest neighbours become nearly equidistant, so the contrast that ranking depends on collapses. "Nearest neighbour" stops being meaningfully nearer than anything else.
 
 ## Result
-*(unrun — record total /100, the 6-count, and per-item scores here)*
+**WITHDRAWN UNRUN, 2026-11-17.** Posted self-timed 11 Nov, open 6 days, never answered. The [AUS] IntroML interview took place **16 Nov**, so every item here became preparation for an exam that has happened. Retired rather than left standing: it was worth nothing to him from the 17th onward, and leaving it on the plate would have been debt with no upside. Kept on disk — if 16 Nov turns out to have been the Oxford interview rather than IntroML (the inference never confirmed), this is the live one and `mock-02` is the spent one.
