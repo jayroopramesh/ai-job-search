@@ -82,3 +82,40 @@ A convolution looks at a **fixed local window**; attention lets every token look
 **(a)** What does attention buy that stacking more conv layers does not?
 **(b)** Name the price, and say which quantity it scales with.
 > **(a)** A **constant-length path** between any two positions — a conv net needs depth to connect distant pixels, and each extra hop is another factor in the gradient product, which is the vanishing-gradient story. Attention reaches across the image in one step. **(b)** Cost is **quadratic in the number of tokens** (every token attends to every token), which is precisely why ViT patches first. *Pairs with the DL4H residual/vanishing-gradient anchor: both are about path length between distant things.*
+
+## Mined 2026-11-18 (D63) — overlap decks, batch 3
+
+*`18_Unsupervised` names its own **Failure Cases** and **Inherent Ambiguity**, which is what an examiner probes — a deck that admits where its method breaks is handing you the question. And one of those failures turns out to be the **L1/L2 noise-model anchor (FP-6, FP-5) in disguise**, which makes it a fourth measured flag re-attackable in CV.*
+
+### QB-CV-0013 · [OXFORD] · mechanism, "why is this a design requirement" · `18_Unsupervised` — "What we need to do" · not yet asked
+The deck's list of what self-supervision has to do ends on a blunt one: *"Often: **prevent trivial solutions and cheating**."*
+**(a)** Why is that a *design requirement* rather than a bug to fix later?
+**(b)** Give a concrete trivial solution for a pretext task of your choice.
+> **(a)** Because the pretext task is a **proxy** — you only care about the representation it forces the network to build, so any shortcut that solves the pretext *without* building that representation defeats the entire point while still minimising the loss. The loss cannot tell you this happened. **(b)** E.g. inpainting where the mask boundary leaks colour statistics, so the model interpolates edges rather than learning objects; or a rotation-prediction task on images with visible watermarks or sky-at-top priors.
+
+### QB-CV-0014 · [OXFORD] · mechanism, **FP-6/FP-5 re-attack in a third setting** · `18_Unsupervised` — "Inherent Ambiguity" / "Failure Cases" · not yet asked
+Colorization from greyscale. The deck shows **Prediction** beside **Ground Truth** under the heading *Inherent Ambiguity*, and the predictions come out **washed out**.
+**(a)** A grey car could plausibly have been red or blue. What does that make the ground-truth colour, statistically?
+**(b)** Train this with a squared-error loss. What colour does the model produce for that car, and **why is that the loss's fault rather than the model's?**
+> **(a)** One **sample** from a multimodal distribution over plausible colours — not *the* answer. **(b)** Squared error is minimised by the **conditional mean**, so averaging red and blue gives a desaturated grey-brown: the model outputs the mean of the modes, which is a colour nobody would ever paint a car. **A model that is right about the distribution scores badly under a loss that assumes one answer.** *This is the L2-assumes-a-single-peaked-target point from DL4H, arriving as a picture — and the reason the real fix is to change the loss (classification over colour bins) rather than the network.*
+
+### QB-CV-0015 · [OXFORD] · forced-choice direction · `18_Unsupervised` — "Learning Signal Toolbox" · not yet asked
+The deck: *"Learning signals are general ideas to incorporate **priors**"*, and *"priors model general assumptions about the world/task."*
+You need features for **segmentation** (dense, per-pixel) and separately for **retrieval** (one vector per image). Which way does the choice of pretext task push, and why?
+> Toward pretext tasks whose output shape matches the downstream need: **dense reconstruction-style tasks** (inpainting, colorization) build per-pixel features useful for segmentation; **instance-level tasks** (contrastive, matching whole images) build a single discriminative vector useful for retrieval. The prior you inject is the assumption you are making about the world, so it should be the assumption the downstream task actually relies on.
+
+### QB-CV-0016 · [OXFORD] · mechanism, FP-9 bait · `17_RepresentationLearning` — "Handcrafting Representations" · not yet asked
+Handcrafted features *"(almost) worked"* for image retrieval, structure-from-motion and face detection. The deck then lists why alternatives were needed — and the last reason is the interesting one: *"Fusion non-trivial. Rule-based fusion outruled. **Fusion of contributing factors itself a comparably complex representation problem.**"*
+**Say what that sentence means.** The lazy answer is "deep learning is better" — that is a label, not a mechanism.
+> Finding individual discriminative cues by hand was often possible; **combining** them was not. Any rule you write to weigh cue A against cue B is itself a representation of the problem, of roughly the same difficulty as the one you were trying to avoid — so hand-design just relocates the hard part instead of removing it. **Learning wins because it learns the fusion**, not because any single learned feature beats a hand-designed one.
+
+### QB-CV-0017 · [OXFORD] · structural · `17_RepresentationLearning` — "Representation Mathematical Model" / "Representations" · not yet asked
+The deck pairs an image with a vector of numbers and calls the vector a *"transcript"*, then feeds it to e.g. a classifier.
+**(a)** What is the representation's job, stated so that it does not mention neural networks?
+**(b)** Two different images of the same cat should give what, and two images of different animals should give what?
+> **(a)** To map the raw signal into a space where the **downstream decision becomes easy** — ideally linearly separable — by discarding what is irrelevant and keeping what distinguishes. **(b)** Same cat → **nearby** vectors (invariance to pose, lighting, scale); different animals → **distant** vectors (discriminativeness). Those two demands pull against each other, and that tension *is* the representation-learning problem.
+
+### QB-CV-0018 · [OXFORD] · compare, "when is the old way still right" · `17_RepresentationLearning` — "Correspondences" (SIFT) · not yet asked
+The deck shows point correspondences from **SIFT**, a classic hand-designed algorithm, in a lecture arguing for learned representations.
+**Why is it still there?** Name a situation where you would reach for SIFT over a learned descriptor.
+> Because hand-designed is not the same as obsolete: SIFT needs **no training data**, is **deterministic and inspectable**, and its invariances (scale, rotation) are *guaranteed by construction* rather than hoped for from data. Reach for it with **no labels and no time to train**, on a geometric task like structure-from-motion where correspondence accuracy matters more than semantics, or where you must be able to explain why two points matched. *Knowing when the classic tool is the right one is a better answer than "learned is better".*
