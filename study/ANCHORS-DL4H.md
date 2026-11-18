@@ -21,6 +21,10 @@ This is the whole game in an oral. Namburete works in medical imaging — so the
 **✅MEASURED — L1 vs L2, and the tails.** You once wrote that L1 penalises outliers *extra*. It penalises them **less**, which is exactly why it's the robust one.
 > **Say it via the derivative:** `d(e²)/de = 2e` — pull grows with the residual. `d|e|/de = ±1` — pull is flat. So one far-out point drags an L2 fit much further.
 > **Anchor: heavy tail = tolerant.** Laplace/L1 expects big residuals and shrugs; Gaussian/L2 treats a big residual as near-impossible and contorts to kill it.
+>
+> **And a second handle on the same fact, added 18 Nov — this one is a picture, and it is the better answer in a medical-imaging room.** Colorising a greyscale photo: a grey car could have been red *or* blue, so the ground-truth colour is **one sample from a multimodal distribution**, not *the* answer. Train it with squared error and the model returns the **conditional mean** — it averages red and blue and paints a desaturated grey-brown that nobody would ever choose. The CV course shows exactly this under its own heading *"Inherent Ambiguity"*, and the washed-out output is the deck's own illustration.
+>
+> **Say it like this:** *"L2 assumes a single-peaked target. When the truth is multimodal, minimising it returns the average of the modes — which can be a value that is never correct. So a model that is right about the distribution scores badly, and the fix is to change the loss, not the network."* That last clause is the whole thing: **the loss encodes an assumption about the noise, and when the assumption is wrong the loss punishes correctness.** It is the same fact as the derivative story above, but it survives being asked about in a clinical setting, where "heavy tail = tolerant" can sound like a slogan.
 
 **Dice vs accuracy under imbalance.** A tumour is a tiny fraction of the voxels.
 > Accuracy and pixel-wise cross-entropy are dominated by background — predicting "all background" scores superbly and segments nothing. **Dice measures overlap on the positive class**, so background isn't in the numerator and can't game it.
@@ -81,8 +85,9 @@ This is the whole game in an oral. Namburete works in medical imaging — so the
 1. **Say the "because"** — then say what it does to a model trained on one hospital's scans.
 2. **Heavy tail = tolerant.** L1 is robust.
 3. **The `I` in `I + ∂f/∂h`** is why residual nets train.
-4. **Magnitude → saturation → dead gradient.** That's `√d_k`, and it's the KNN scaling story again.
-5. **Federated: updates move, data don't — and heterogeneity is a separate, statistical problem.**
-6. **Saliency shows where, not why.**
+4. **L2 returns the mean of the modes.** When the truth is multimodal, minimising squared error gives an answer that is never right — change the loss, not the network.
+5. **Magnitude → saturation → dead gradient.** That's `√d_k`, and it's the KNN scaling story again.
+6. **Federated: updates move, data don't — and heterogeneity is a separate, statistical problem.**
+7. **Saliency shows where, not why.**
 
 *Measured-error anchors: `ANCHORS.md`. Flag history: `study/student_progress.md`.*
