@@ -119,3 +119,41 @@ The deck pairs an image with a vector of numbers and calls the vector a *"transc
 The deck shows point correspondences from **SIFT**, a classic hand-designed algorithm, in a lecture arguing for learned representations.
 **Why is it still there?** Name a situation where you would reach for SIFT over a learned descriptor.
 > Because hand-designed is not the same as obsolete: SIFT needs **no training data**, is **deterministic and inspectable**, and its invariances (scale, rotation) are *guaranteed by construction* rather than hoped for from data. Reach for it with **no labels and no time to train**, on a geometric task like structure-from-motion where correspondence accuracy matters more than semantics, or where you must be able to explain why two points matched. *Knowing when the classic tool is the right one is a better answer than "learned is better".*
+
+## Mined 2026-11-21 (D66) — first non-overlap decks, batch 4
+
+*Two findings worth more than the items. **(1) The aliasing through-line is the lecturer's own, not mine:** `03_FourierTransforms` opens with *"Observation 1 — From lecture 02: down-sampling leads to aliasing"* and shows 512×512 → 64×64 → 16×16. So QB-CV-0005/0010 are testing a link the course itself draws, which makes it examinable rather than merely true. And `03` supplies the **tool** that the chain was missing. **(2) `11_Segmentation`'s own caveat explains the DL4H tumour problem** — *"IoU is favourable to large objects (harder to intersect small objects)"* — a fifth cross-course link.*
+
+### QB-CV-0019 · [OXFORD] · formula-reading, completes the chain · `03_FourierTransforms` — "Convolution theorem" · not yet asked
+`ℱ{f ∗ g} = ℱ{f} · ℱ{g}` — convolution in space is **multiplication** in frequency, and vice versa.
+**(a)** Deck 02 said: before subsampling, remove frequencies above half the new sampling rate. Using this theorem, say what "remove" means **mechanically**.
+**(b)** So why is a blur the right tool for the job?
+> **(a)** You multiply the image's spectrum by a mask that is 1 below the cutoff and 0 above it — the unwanted frequencies are **multiplied by zero**, i.e. genuinely deleted rather than hidden. **(b)** Because by this theorem, multiplying the spectrum by a low-pass mask *is* convolving the image with the mask's inverse transform — and that spatial kernel is a blur. **A blur is a low-pass filter; those are two descriptions of one operation.**
+
+### QB-CV-0020 · [OXFORD] · forced choice, "why bother with the other domain" · `03_FourierTransforms` — "Convolution theorem" / "2D convolution theorem example" · not yet asked
+You need to convolve a large image with a large kernel.
+**Which domain, and what decides it?**
+> Frequency. Spatial convolution costs roughly (image pixels × kernel pixels); in frequency it is **two transforms, one elementwise multiply, one inverse transform**. The crossover is kernel size: tiny kernels are cheaper convolved directly, large ones are far cheaper multiplied. **The theorem is not just an identity, it is a performance decision** — and saying which way it goes *and why* is the mechanism.
+
+### QB-CV-0021 · [OXFORD] · interview-style, the four-deck chain · `03_FourierTransforms` — "Observation 1" · not yet asked
+The deck opens by pointing back: *"From lecture 02: down-sampling leads to aliasing."*
+**Tell the whole story across the course in four steps**, naming where each piece comes from.
+> **02** states the constraint (Nyquist: sample at ≥ 2× the max frequency, or high content masquerades as low — aliasing). **03** supplies the tool (convolution theorem: a blur *is* a low-pass, so you can delete the offending frequencies before sampling). **07** performs the operation without naming it (stride > 1 **is** subsampling — so stride without a blur aliases). **08** performs it again at a coarser grain (ViT patching is subsampling with stride = patch size, and detail below patch scale is unrecoverable). **One constraint, one tool, two silent applications.** *This is the single most reusable answer in the CV material, and the lecturer draws the first link himself.*
+
+### QB-CV-0022 · [OXFORD] · structural, the ladder · `11_Segmentation` — "Granularity" · not yet asked
+The deck lays out a granularity ladder: **image classification → object detection → pixel-level segmentation**, labelled *image-scale*, *localization / spatial (regions)*, and *labelling*.
+**(a)** What is the output of each, concretely?
+**(b)** Semantic segmentation *"does not differentiate instances, only cares about pixels."* What question can it therefore not answer?
+> **(a)** One label for the whole image → a set of boxes with labels → one label per pixel. The axis is **how finely the answer is localised in space**. **(b)** "How many?" Two touching cats are one undifferentiated cat-coloured region, so counting, tracking individuals, or per-object measurement all need **instance** segmentation.
+
+### QB-CV-0023 · [OXFORD] · mechanism, **and the DL4H link** · `11_Segmentation` — "Evaluation" · not yet asked
+The deck: *"Per-class IoU… compare the binary masks of prediction and GT for each class, average over classes."* And then its own warning: ***"IoU is favourable to large objects (harder to intersect small objects)."***
+**(a)** Why is overlap harder to achieve on something small? Answer geometrically.
+**(b)** Your DL4H course segments a tumour occupying a tiny fraction of the voxels. What does (a) say about reading its score?
+> **(a)** IoU is intersection over union, and a fixed boundary error costs a far larger *fraction* of a small object than a large one — a two-pixel miss around a ten-pixel lesion is catastrophic, around a thousand-pixel organ it is noise. **Perimeter-to-area scales against you as objects shrink.** **(b)** A low Dice/IoU on a small tumour may reflect its **size**, not the model's quality — so compare like with like, and never read a single averaged overlap score as "how good is this model". *The DL4H item says Dice survives imbalance where accuracy does not; this one says Dice is still size-biased. Both are true and the pair is the complete answer.*
+
+### QB-CV-0024 · [OXFORD] · mechanism, "what is wasteful" · `11_Segmentation` — "Sliding Window" · not yet asked
+The naive approach: *"Slide a window over the whole image. Classify the centre pixel of the window."*
+**(a)** Name what is wasted, precisely.
+**(b)** What is the fix, and why does it work?
+> **(a)** Neighbouring windows overlap almost entirely, so nearly every convolution is **recomputed** for each pixel — the same features are extracted thousands of times. **(b)** Make the network **fully convolutional**: run it once over the whole image and let the conv layers produce a dense output map. It works because convolution is **already sliding** — the redundancy was in the loop around the network, not in the network. *The window never needed to move; the computation already did.*
