@@ -157,3 +157,40 @@ The naive approach: *"Slide a window over the whole image. Classify the centre p
 **(a)** Name what is wasted, precisely.
 **(b)** What is the fix, and why does it work?
 > **(a)** Neighbouring windows overlap almost entirely, so nearly every convolution is **recomputed** for each pixel — the same features are extracted thousands of times. **(b)** Make the network **fully convolutional**: run it once over the whole image and let the conv layers produce a dense output map. It works because convolution is **already sliding** — the redundancy was in the loop around the network, not in the network. *The window never needed to move; the computation already did.*
+
+## Mined 2026-11-23 (D68) — batch 5
+
+*`04_Restoration` is the **fifth deck in the Fourier chain** and the one that shows why the chain has a limit. `20_EthicsPrivacy` turns out to be **FP-4 with stakes** — it recaps the same confusion matrix he has twice swapped, in a case where a false positive is a longer prison sentence. That is the sixth cross-course link, and the most likely thing an examiner opens an ethics question with.*
+
+### QB-CV-0025 · [OXFORD] · formula-reading, extends the chain · `04_Restoration` — "Modelling Degradation" / "Degradation Model" · not yet asked
+The deck models an observed image as `g(x,y) = ∫∫ f(x−u, y−v) h(u,v) du dv + n(x,y)` — i.e. **`g = f ∗ h + n`**: the true image convolved with `h`, plus noise.
+**(a)** Name each of the four symbols.
+**(b)** By the convolution theorem (`03`), `ℱ{g} = ℱ{f}·ℱ{h} + ℱ{n}`. So restoring `f` looks like simple division. **Why is that a trap?**
+> **(a)** `g` observed, `f` true scene, `h` the blur kernel, `n` additive noise. **(b)** Because dividing by `ℱ{h}` also divides the **noise** by it — and `ℱ{h}` is near zero at high frequencies, exactly where a blur has destroyed information. Dividing a noise term by something near zero **amplifies it without bound**, so naive inverse filtering returns a picture of amplified noise. *This is the limit of the chain: `03`'s theorem says restoration is division, and `04` says the noise term is why you cannot just do it.*
+
+### QB-CV-0026 · [OXFORD] · definition + "why it matters" · `04_Restoration` — "Degradation Model" (PSF) · not yet asked
+The deck: *"`h(x,y)` is called the **impulse response** or **point spread function** of the imaging system."*
+**(a)** What does the name *point spread function* literally describe?
+**(b)** Why does knowing `h` decide whether restoration is possible at all?
+> **(a)** Feed the system a single point of light and `h` is the blob that comes out — **how a point gets spread.** Since any image is a sum of points, convolving with `h` is the whole degradation. **(b)** Restoration is undoing a known operation; if `h` is unknown you are solving for `f` **and** `h` from one equation (blind deconvolution), which is underdetermined. **Knowing the PSF converts an ill-posed problem into a merely difficult one.**
+
+### QB-CV-0027 · [OXFORD] · assumptions, same family as Naive Bayes · `04_Restoration` — "Degradation Model" · not yet asked
+The deck adds its own hedge: *"This is only one way of modelling degradation. Others are possible too."*
+**What is this model assuming?** Name two assumptions and say what each buys.
+> **Linearity and shift-invariance** (the same blur everywhere, so degradation is a convolution) and **additive, signal-independent noise.** They buy you the convolution theorem and therefore a frequency-domain solution. They fail for **spatially varying blur** (motion in part of the frame, depth-dependent defocus) and for **multiplicative or Poisson noise**, which is what low-light and medical imaging actually have. *Same shape as the Naive Bayes item in IntroML: an assumption that is obviously false, kept because of what it makes computable — and the answer is always what it buys versus where it breaks.*
+
+### QB-CV-0028 · [OXFORD] · **FP-4 re-attack, with stakes** · `20_EthicsPrivacy` — "Case Study: COMPAS" / "Recap: Error Metrics" · not yet asked
+COMPAS predicts recidivism, and the deck notes its scores **influenced criminal sentences** in New York, Wisconsin, California and Florida.
+**(a)** For this classifier, say in plain words what a **false positive** and a **false negative** each mean *to the person*.
+**(b)** Which error does a longer sentence follow from, and which denominator is it in?
+> **(a)** False positive: predicted to re-offend, **did not** — a person punished for a crime they were never going to commit. False negative: predicted safe, did re-offend. **(b)** The harm from the sentencing decision follows the **false positive**, which sits in precision's denominator (TP+FP, "everything I flagged"). *Third course, same two denominators he swapped twice on D1 — and here naming the wrong one gets the ethics of the case backwards, which is why this is the version worth remembering.*
+
+### QB-CV-0029 · [OXFORD] · interview-style, the impossibility · `20_EthicsPrivacy` — "Case Study: COMPAS" (ProPublica, >7000 people, Broward County) · not yet asked
+ProPublica analysed COMPAS scores for over 7,000 arrests and found the error rates fell differently across groups; the vendor replied that the scores were **calibrated** — a given score meant the same re-offence probability for everyone.
+**Both claims were true. How?**
+> Because they are **different fairness criteria, and when base rates differ between groups they cannot both hold.** Calibration fixes *what a score means*; equal false-positive rates fix *who bears the cost of being wrong*. Satisfy one and the other must break. **So "is this model fair?" has no answer until you say which definition you mean** — and the choice is a decision about who absorbs the error, which is a question for the people affected, not a hyperparameter. *If an examiner asks one ethics question, it is likely to be this one, and the answer that scores is naming the trade-off rather than picking a side.*
+
+### QB-CV-0030 · [OXFORD] · mechanism, FP-9 bait · `20_EthicsPrivacy` — "Case Study: COMPAS" · not yet asked
+A common defence: *"the model isn't biased, it just learns from the data."*
+**Say precisely why that is not a defence.** The lazy answer is "but the data is biased" — that is a label, not a mechanism.
+> Because the **label itself is a measurement, not the truth.** "Recidivism" in the training data means *re-arrested*, which is a record of policing as much as of offending — so a group policed more heavily generates more positive labels at the same underlying rate. The model faithfully reproduces **the measurement process**, and faithfulness to a biased measurement is exactly how a statistically correct model produces unjust decisions. **"Learning from the data" is the mechanism of the problem, not an alibi for it.** *Note the shape: this is the same move as the colorization item — the model is right about what it was trained on, and what it was trained on was the wrong target.*
