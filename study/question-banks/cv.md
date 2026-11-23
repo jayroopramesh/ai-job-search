@@ -194,3 +194,57 @@ ProPublica analysed COMPAS scores for over 7,000 arrests and found the error rat
 A common defence: *"the model isn't biased, it just learns from the data."*
 **Say precisely why that is not a defence.** The lazy answer is "but the data is biased" — that is a label, not a mechanism.
 > Because the **label itself is a measurement, not the truth.** "Recidivism" in the training data means *re-arrested*, which is a record of policing as much as of offending — so a group policed more heavily generates more positive labels at the same underlying rate. The model faithfully reproduces **the measurement process**, and faithfulness to a biased measurement is exactly how a statistically correct model produces unjust decisions. **"Learning from the data" is the mechanism of the problem, not an alibi for it.** *Note the shape: this is the same move as the colorization item — the model is right about what it was trained on, and what it was trained on was the wrong target.*
+
+## Mined 2026-11-23 (D68, S3) — batch 6: the two decks that were claimed as mined and were not
+
+*`09_VisualizationUnderstanding` and `16_GenerativeModels` are **overlap** decks — they were named in "all 8 overlap decks mined" on 18 Nov and have produced zero items until now. Both are among the most valuable in the course. 09 is **FP-9 pointed at a model**; 16 contains the item that reads the L1/L2 anchor from the other side, which is the **seventh cross-course link**.*
+
+### QB-CV-0031 · [OXFORD] · mechanism, **FP-9 in a mirror** · `09_VisualizationUnderstanding` — "Clever Hans" / "Does the model know what a horse is?" · not yet asked
+The deck tells the story of **Clever Hans** (a German horse, 1895–1916, that appeared to do arithmetic) and then shows a PASCAL VOC horse classifier with high accuracy whose average heatmap lights up **a copyright notice**.
+**(a)** What was actually wrong with the Clever Hans conclusion?
+**(b)** What does the heatmap say about the classifier?
+**(c)** The deck lists explainability as *"an additional tool beyond test set evaluation."* **Why is test accuracy structurally unable to catch this?**
+> **(a)** The horse was not computing — it was reading involuntary cues from its trainer, **who did not know he was giving them.** Performance on the task was real; the mechanism was not the one everyone assumed. **(b)** Many horse images in that dataset carry a watermark, so the model learned **the watermark**, not the horse. **(c)** Because the test set is drawn from the **same distribution** as the training set, so the spurious feature is in the test images too — **the shortcut scores exactly as well as the real mechanism.** A held-out set can only catch failures it happens to contain.
+> *Say this one out loud: **a number without a mechanism is Clever Hans.** That is FP-9 — his own dominant flag — stated about a model instead of a candidate, which is why it is the version worth remembering.*
+
+### QB-CV-0032 · [OXFORD] · structural, three-way trade-off · `09_VisualizationUnderstanding` — "Taxonomy – Approaches" · not yet asked
+The deck splits explainability into **post-hoc analysis**, **transparent models** and **learned explanations**.
+**Which costs nothing at training time, and what do you pay instead?** Then name the cost of each of the other two.
+> **Post-hoc** is free at training time — the model is already fixed, so there is **no impact on performance**. You pay in scope: the explanations are **local around individual predictions**, so you learn *"why this one"* and not *"what the model does in general."* **Transparent models** build semantics into the mechanism, but need a **task-specific architecture** and can cost performance. **Learned explanations** come out alongside predictions with no post-hoc step, can cost performance, and **might need meta-explanations** — you now have to explain the explainer.
+> *The shape to notice: none of the three is free. Each moves the cost to a different place, and naming which place is the answer.*
+
+### QB-CV-0033 · [OXFORD] · **interview-style with a follow-up chain** · `09_VisualizationUnderstanding` — "Explainability" (GDPR Art. 13/14/22) + "Explanations: Recipient" · links to `20_EthicsPrivacy` · not yet asked
+The deck lists among explainability's purposes *"it is in the law: (GDPR Art. 13,14,22) the right for explanation"*, and separately insists explanations must **adapt to the recipient** — developers, domain experts, users — and to the **content**: representations, individual predictions, behaviour, examples.
+A model you deployed declines loan applications.
+**(a)** Who are the recipients, and what content does each need?
+**(b)** *Follow-up:* your post-hoc saliency map says which input features mattered. Why might that satisfy a developer and **fail the applicant**?
+**(c)** *Follow-up:* connect this to COMPAS.
+> **(a)** The **developer** needs representations and behaviour — is the model using the feature I think it is, across the population. The **domain expert** needs individual predictions they can sanity-check against their own judgement. The **applicant** needs a reason that is **actionable and contestable**: what about my case, and what would change it. **(b)** Because saliency answers *where the model looked*, and the applicant is owed *why the decision went against them.* **Saliency shows where, not why** — a highlighted feature is not a reason, and "your postcode mattered" is an explanation that makes things worse rather than better. **(c)** COMPAS is the same gap with the stakes raised: a risk score influenced sentences, and a defendant cannot contest a number whose basis they cannot see. **`20` gives the harm; `09` gives the response — and the response only works if it is aimed at the right recipient.**
+
+### QB-CV-0034 · [OXFORD] · formula-reading · `16_GenerativeModels` — "Autoregressive Models" · not yet asked
+The deck decomposes an image's likelihood by the chain rule: **`p(x) = Π_i p(x_i | x_1, …, x_{i−1})`**, calls it an **explicit** model, and notes it is the main generative model in NLP.
+**(a)** Why is this an *exact* likelihood rather than an approximation or a bound?
+**(b)** What does it cost you at sampling time?
+> **(a)** Because the chain rule is an **identity** — every joint distribution factorises this way, with no assumption added. So modelling each conditional gives the exact likelihood, which you can maximise directly and, crucially, **evaluate on a test set**. **(b)** Generation is **sequential**: each pixel is conditioned on all the ones before it, so producing one image costs as many forward passes as there are pixels, and none of them can be done in parallel.
+> *Pair this with QB-CV-0036: both autoregressive models and diffusion buy quality by spending many passes per sample. Different reason, same bill.*
+
+### QB-CV-0035 · [OXFORD] · **the seventh cross-course link — the L2 anchor read from the other side** · `16_GenerativeModels` — "Training a diffusion model" · re-attacks FP-6 · not yet asked
+Diffusion trains with what the deck calls a **"simple L2 loss"**: `‖ε_θ(x_t, t) − ε_t‖²`.
+But the colorization anchor (QB-CV-0014, and FP-6 on the flag sheet) says squared error **fails exactly when the target is ambiguous**, returning the mean of the modes and painting a colour nobody would choose.
+**Both statements are true. So why doesn't diffusion suffer the colorization problem?**
+> Because the regression target is **not an ambiguous image** — it is **the specific noise sample that was actually added** to make `x_t`. That is one known value, not one draw from a distribution over plausible answers, so **the conditional mean is the right thing to return.** The multimodality has not gone away; it lives in the **iteration**. Each reverse step is a small, nearly single-peaked correction, and the many plausible final images come from the chain of fresh samples (`z ~ N(0,I)` injected at each step), not from any one regression target.
+> **So the rule was never "L2 is bad."** It is: **L2 returns the conditional mean, which is correct precisely when the target is single-peaked.** Diffusion *engineered its target to be single-peaked*; colorization did not. **Same principle, opposite verdict** — and being able to say that is the difference between having memorised the anchor and understanding it.
+
+### QB-CV-0036 · [OXFORD] · structural, "name the axis" · `16_GenerativeModels` — "Sampling from a diffusion model" / "Latent diffusion" · not yet asked
+The sampling loop runs `for t = T, …, 1`, and the deck states plainly: *"Evaluate diffusion model T times to generate one sample."* It then offers **latent diffusion** — compress the image first with a VQ-VAE and diffuse in a `3 × H × W` latent space — as the way to make it **cheaper**.
+**Which cost does latent diffusion reduce, and which does it leave untouched?**
+> It reduces the **cost per evaluation**: each of the T passes now runs on a small latent grid instead of full-resolution pixels. It does **not reduce T**, so the number of **sequential, un-parallelisable steps is unchanged** — the latency floor is still T model calls deep.
+> *"It's faster" is the FP-9 answer here. **Name which axis the trick moves**, and say which one it does not.*
+
+### QB-CV-0037 · [OXFORD] · mechanism + the deck's own picture · `16_GenerativeModels` — "Evaluation" / "Fréchet Distance" / "FID" · not yet asked
+The deck: *"Evaluation of explicit generative models is easy — measure `log p(x)` on a test set; whichever model has higher probability wins. Evaluation of implicit models is very difficult: we can only sample from the model, and we do not know how to measure the quality/probability of a sample."*
+**(a)** Say why likelihood is simply unavailable for a GAN.
+**(b)** The deck's picture for Fréchet distance: *a dog and its owner walk separate paths, can only go forward, and the distance is the **shortest leash** that lets both finish.* In **FID**, what two things are on the two paths?
+**(c)** Why is asking people which images they prefer not the fallback?
+> **(a)** A GAN gives you a **sampler, not a density**. There is no tractable `p(x)` to evaluate, so there is nothing to measure on a test set — the thing the explicit models are scored on does not exist. **(b)** Two **distributions**, not two images: real images and generated images, each summarised by Inception features. The leash measures how far apart the two *paths* stay, so FID scores **the population you generate**, not any individual sample. **(c)** Because preference is **vague and confounded** — it mixes realism with faithfulness to the prompt — and it does not scale or give you a signal you can optimise against.
+> *This is the metric-choice family one more time: accuracy, then precision/recall, then Dice, then IoU, now FID. **Every one of them exists because the previous one could not see something.** Being able to say what a metric cannot see is the answer that scores.*
