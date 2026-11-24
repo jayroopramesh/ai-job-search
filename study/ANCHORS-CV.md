@@ -4,7 +4,7 @@
 Built 2026-11-24 (D69), a month ahead, because the thing this campaign gets wrong most reliably is writing the artefact on the day it is needed instead of before it.
 
 **What the evidence here is, stated plainly — this sheet is stronger than the DL4H one and weaker than the AUS one.**
-The **flags are measured**: all nine come from answers you actually gave in IntroML and DL4H. The **handles are new**: each is a picture or formula from your own CV decks, chosen because it attacks a flag from an angle that course has never used. So the diagnosis is evidence; the delivery is mined, not tested. **Seven of the nine flags have a CV handle. Two do not** — FP-3 (GINI extremes) and FP-8 (attribute-type taxonomy) are IntroML-only, that assessment is past, and inventing CV versions of them would be padding. They are left out on purpose.
+The **flags are measured**: all nine come from answers you actually gave in IntroML and DL4H. The **handles are new**: each is a picture or formula from your own CV decks, chosen because it attacks a flag from an angle that course has never used. So the diagnosis is evidence; the delivery is mined, not tested. **Which flags this sheet covers, listed rather than counted** — so you can check it instead of trusting a total. **Covered:** FP-9, FP-1, FP-2, FP-4, FP-5, FP-6, FP-7. **Deliberately not covered:** FP-3 (GINI impurity extremes) and FP-8 (attribute-type taxonomy) — both IntroML-only, that assessment is past, and inventing CV versions would be padding.
 
 Everything below is cited to a deck you have. Where the lecturer makes the link himself, it says so — that upgrades an answer from *true* to *examinable*.
 
@@ -55,6 +55,22 @@ Being able to say what a metric **cannot** see is the answer that scores. Naming
 
 ---
 
+## Direction or magnitude — which one should decide
+
+**FP-2 (cosine vs Euclidean, 0/3).** In IntroML this was about **text documents**. CV gives you the same thing back, and the deck makes the link itself.
+
+`05_MatchingIndexingSearch` builds **Bag of Visual Words**: SIFT features over a big dataset, K-means them into `K` classes, then describe an image by a **histogram of which classes it contains**. The deck then says, in its own words:
+
+> *"When computing the histogram, it does not matter where each feature comes from in the image. **This is similar to classic text-based retrieval systems: count how often each word appears in a document.** Documents on similar topics have similar statistics."* And: *"with large `K` the image descriptor is usually **sparse** (most entries are 0)."*
+
+**So this is not an analogy you are drawing — it is his.** That matters: it makes the transfer examinable rather than merely true.
+
+> **Say it like this:** *"A heavily-textured photo yields more keypoints, so its histogram counts are larger across the board. Under Euclidean distance that makes **how textured the image is** decide retrieval — the same way document **length** would. Cosine compares direction only: the mix of visual words, with magnitude normalised away. And since the vectors are sparse, two images sharing a zero is not evidence they are alike — the dot product only sums over words that actually co-occur, so cosine scores agreement on what is **present**."*
+
+**The one-line version:** *Euclidean lets size decide; cosine asks only about the mix.* Pick by whether magnitude is information or nuisance.
+
+---
+
 ## Denominators — say the formula, not the name
 
 **FP-4 (precision ↔ recall, 1/3).** You have swapped these three times. **Stop naming them and say the denominator.**
@@ -90,6 +106,20 @@ Naming the wrong denominator here does not cost a mark. **It gets the ethics of 
 
 ---
 
+## Two more worth having from `05`
+
+**Equivariance → invariance, and you can now name both routes.** SIFT edge directions are *"invariant to brightness changes, **equivariant** to rotation"* — and the next step is *"rotate all edges so that the global orientation is 'up'."*
+
+> **Say it like this:** *"Equivariant means rotate the image and the descriptor rotates correspondingly — predictable, not unchanged. Aligning every patch to its own dominant orientation turns that equivariance into **invariance** by **canonicalisation**. Global average pooling reaches the same place by the opposite route: it averages the equivariant thing away instead of aligning it first."*
+
+**And why appearance distance is never enough.** Matching takes the lowest Euclidean distance and the top N — then does **geometric verification** against a homography.
+
+> **Say it like this:** *"A descriptor sees one local patch, and real scenes repeat — windows, bricks, leaves — so the nearest descriptor can be the wrong instance of a correct-looking pattern, with a genuinely small distance. **A better descriptor cannot fix that**, because the ambiguity is in the image, not the descriptor. Geometric verification adds a global constraint: the right matches all agree on one transformation and the wrong ones have no reason to agree. It is evidence of a different kind, not more of the same."*
+
+*Note the shape — it is Clever Hans again. Every individual number was fine and the mechanism was still wrong, and the fix was an independent check rather than a better score.*
+
+---
+
 ## Naming versus mechanism
 
 **FP-7 (adjacent-concept substitution, 1/3)** — reaching for the neighbouring concept's name.
@@ -107,5 +137,6 @@ Two CV items are built as bait for it, so expect them:
 3. **Say the denominator, not the name.** Precision = what I flagged. Recall = what was there.
 4. **L2 returns the conditional mean** — right when the target is single-peaked, wrong when it is not. Change the loss, not the network.
 5. **Stride is subsampling, and subsampling without a low-pass is aliasing.** One constraint, one tool, two silent applications.
+6. **Euclidean lets size decide; cosine asks only about the mix.** Bag of Visual Words *is* text retrieval — the deck says so itself.
 
 **And in the room:** take a breath before answering — a pause reads as thinking, not blanking. Say what you would **do** rather than guessing a name. Give the half you know and name which half; examiners listen for whether you know where your own edges are.

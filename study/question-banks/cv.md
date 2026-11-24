@@ -248,3 +248,37 @@ The deck: *"Evaluation of explicit generative models is easy — measure `log p(
 **(c)** Why is asking people which images they prefer not the fallback?
 > **(a)** A GAN gives you a **sampler, not a density**. There is no tractable `p(x)` to evaluate, so there is nothing to measure on a test set — the thing the explicit models are scored on does not exist. **(b)** Two **distributions**, not two images: real images and generated images, each summarised by Inception features. The leash measures how far apart the two *paths* stay, so FID scores **the population you generate**, not any individual sample. **(c)** Because preference is **vague and confounded** — it mixes realism with faithfulness to the prompt — and it does not scale or give you a signal you can optimise against.
 > *This is the metric-choice family one more time: accuracy, then precision/recall, then Dice, then IoU, now FID. **Every one of them exists because the previous one could not see something.** Being able to say what a metric cannot see is the answer that scores.*
+
+## Mined 2026-11-24 (D69, S3) — batch 7: the deck that gives FP-2 a handle
+
+*Mined because verifying `ANCHORS-CV.md` against the flag table showed its headline claim — "seven of the nine flags have a CV handle" — was **false when written**: FP-2 (cosine vs Euclidean) appeared nowhere in it, and had fallen through silently rather than being named as an omission. `05_MatchingIndexingSearch` turns out to hold the best possible handle for it, because **the lecturer makes the text-retrieval link himself.** Doing the work made the claim true rather than editing the number down.*
+
+### QB-CV-0038 · [OXFORD] · **FP-2 re-attack — and the lecturer's own framing** · `05_MatchingIndexingSearch` — "Visual Words" / "Bag of Visual Words" · not yet asked
+The deck builds a global image descriptor: run SIFT over a large dataset, **K-means the descriptors into K "classes"**, then describe an image by a **histogram of which feature classes it contains**. Then, in its own words:
+> *"When computing the histogram, it does not matter where each feature comes from in the image. **This is similar to classic text-based retrieval systems: count how often each word appears in a document.** Documents on similar topics have similar statistics."* And: *"With large K the image descriptor is usually **sparse** (most entries are 0)."*
+**(a)** A richly-textured photo yields far more keypoints than a plain one, so its histogram counts are larger across the board. Under **Euclidean** distance, what ends up deciding retrieval?
+**(b)** What does **cosine** similarity change, and which quantity does it remove from the decision?
+**(c)** What does the sparsity remark add to the argument?
+> **(a)** The **total number of detected features** — i.e. how textured the image is. A dense image sits far from everything in Euclidean terms regardless of *what* it contains, exactly as a long document does. **(b)** Cosine compares **direction only**: the *mix* of visual words, normalised by magnitude. It removes **count** — the one quantity you do not want deciding whether two images show the same thing. **(c)** Most entries are zero, and **two images sharing a zero is not evidence they are alike.** The dot product only sums over visual words that actually co-occur, so cosine scores agreement on what is *present* rather than on a vast shared absence.
+> *This is FP-2 exactly — his IntroML flag was cosine-vs-Euclidean on **text documents**, and the deck says BoW **is** classic text retrieval. So the transfer is the lecturer's, not an analogy, which makes it examinable rather than merely true. **Eighth cross-course link, and the cleanest: same model, new domain.***
+
+### QB-CV-0039 · [OXFORD] · mechanism, cross-course · `05_MatchingIndexingSearch` — "SIFT Descriptor" · not yet asked
+The deck: edge directions are *"invariant to brightness changes, **equivariant to rotation**"* — and then the very next step is *"**rotate all edges so that the global orientation is 'up'**."*
+**(a)** What does *equivariant to rotation* mean for this descriptor, as distinct from *invariant*?
+**(b)** What does the rotate-to-'up' step accomplish, and what is that manoeuvre called in general?
+**(c)** Name the DL4H operation that achieves the same end by the opposite route.
+> **(a)** Rotate the image and the descriptor's contents **rotate correspondingly** — the response is predictable, not unchanged. Invariant would mean *identical*. **(b)** By always measuring from the patch's own dominant orientation, two rotated copies of the same patch produce the **same** descriptor: it **converts equivariance into invariance**, by **canonicalisation** — align to a reference frame, then describe. **(c)** **Global average pooling.** A conv feature map is equivariant to translation; averaging it to one number per channel makes it invariant.
+> *Two courses, one goal, two routes: **average the equivariant thing away, or align to a canonical frame first.** Being able to name both is a much better answer than defining equivariance.*
+
+### QB-CV-0040 · [OXFORD] · structural, "why this shape" · `05_MatchingIndexingSearch` — "SIFT Descriptor" (the 128) · not yet asked
+SIFT splits the neighbourhood into **4×4 = 16 regions**, computes an **8-direction** edge histogram in each, and concatenates: a **128-dimensional** vector.
+**Why a grid of local histograms rather than one histogram over the whole patch?**
+> Because a single histogram over the patch throws away **where inside the patch** each edge direction sits — two quite different structures with the same edge statistics would be indistinguishable. The 4×4 grid **keeps coarse spatial layout**; the histogram inside each cell **tolerates small shifts** of an edge within that cell. **So the grid buys discriminative power and the per-cell histogram buys tolerance, and 128 is where that trade was struck.** *Say the trade, not the number.*
+
+### QB-CV-0041 · [OXFORD] · **interview-style with a follow-up chain** · `05_MatchingIndexingSearch` — "Feature Matching" · not yet asked
+Brute-force matching: *"for each descriptor in the first image, return the one with the lowest distance (e.g. Euclidean distance); sort all matches by their distance and take the top N."* Then: *"check if matches are consistent with a transformation, e.g. a homography. **This is geometric verification.**"*
+**(a)** The top-N matches are the closest in appearance. Why is that not enough?
+**(b)** *Follow-up:* could a better descriptor fix it?
+**(c)** *Follow-up:* so what is geometric verification actually supplying?
+> **(a)** Because a descriptor sees only a **local patch**, and real scenes are full of **repeated structure** — windows on a facade, bricks, leaves. The nearest descriptor can be the **wrong instance of a correct-looking pattern**, and its distance will be genuinely small. **(b)** **No.** The ambiguity is in the image, not in the descriptor: the patches really do look the same, so no amount of descriptor quality distinguishes them. *That is the point worth making out loud.* **(c)** A **global constraint**. Correct matches must all agree on **one** transformation; wrong ones have no reason to agree with each other. So it is **evidence of a different kind, not more of the same kind.**
+> *Same family as Clever Hans: every individual score was fine and the mechanism was still wrong, and the fix was an independent check rather than a better number.*
