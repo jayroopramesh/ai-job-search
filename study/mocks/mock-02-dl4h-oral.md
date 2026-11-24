@@ -1,6 +1,8 @@
 # Mock #2 — [OXFORD] DL4H oral dress rehearsal
 
-**Built 2026-11-10 (D55), unattended. Ready to run on "go".**
+**⛔ WITHDRAWN UNRUN 2026-11-24 (D69).** Posted self-timed on 17 Nov; the DL4H interview was sat on **20 Nov**, so from that date this mock could not inform the thing it was built for. **This is the identical reasoning that withdrew `mock-01-aus-oral.md` on 17 Nov, and it should have been applied here on 20 Nov** — instead it stood for four more days as the campaign's entire live queue, blocking CV serving under a cap it no longer had any business occupying. Kept in the repo; available on request; **not owed.**
+
+*Built 2026-11-10 (D55), unattended.*
 Target date: Fri 13 Nov · Real interview: Fri 20 Nov (DL4H, Ana Namburete, Oxford)
 
 ## Protocol
