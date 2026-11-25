@@ -23,7 +23,8 @@ Day numbers are computed against D1, never stored. **The 25 Dec date is the one 
 
 | Date | Item | State |
 |---|---|---|
-| **~Tue 22 Dec** | **CV oral mock** — must be **BUILT** in advance, not on the day | **does not exist yet** |
+| **Sun 13 Dec (BUILD BY)** | **CV oral mock — written and verified by this date.** *A concrete date, because "before 22 Dec, not on it" is the same under-specified instruction that nearly sent the anchor sheet a month early on 25 Nov.* | **does not exist yet** |
+| **~Tue 22 Dec** | CV oral mock **POSTED** self-timed (honour system; say plainly that unsupervised means softer evidence) | — |
 | **~Mon 21 – Tue 22 Dec** | **Deliver `ANCHORS-CV.md`** in the **email body** (no link, no attachment) | **written 24 Nov · verified 24 Nov · HELD on purpose** |
 | **Thu 24 Dec** | **T-1** — light confidence pass, no grilling, stop early, read **only** from `ANCHORS-CV.md` | — |
 | **Fri 25 Dec** | Assessment · then debrief ask | — |
@@ -35,6 +36,12 @@ Day numbers are computed against D1, never stored. **The 25 Dec date is the one 
 - **So: `ANCHORS-CV.md` is finished and must NOT be sent before ~21 Dec.** Sending it early is not keenness, it is burying it.
 
 ---
+
+## Bank integrity — audited 2026-11-25, first time
+
+`study/question-banks/cv.md`: **IDs contiguous and unique** (no gaps, no duplicates, monotonic) · **every item has an answer block** · **audience tags all `[OXFORD]`**, correct for a CV course. Re-run with the ID/answer checks in the log row for D70 S3.
+
+**One real defect found, and it needed reading rather than a script:** QB-CV-0010 and QB-CV-0012 ask different questions but **share an answer** — the quadratic-cost-is-why-ViT-patches sentence serves 0010(a) and 0012(b). Both are now cross-annotated. **Two items that share an answer are one measurement, not two**, which matters because flag closure needs *independent* passes.
 
 ## Artefact states
 

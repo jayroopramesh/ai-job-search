@@ -70,6 +70,7 @@ The paper title the deck leads with: ***"An image is worth 16×16 words."***
 **(a)** Why cut the image into patches at all, rather than feeding pixels as tokens?
 **(b)** Connect this to `QB-CV-0005`. What have you done to the spatial sampling rate, and what is the standing warning?
 > **(a)** Attention cost grows quadratically in the number of tokens, so pixels-as-tokens is intractable; a patch is a token-sized unit that keeps the sequence short enough. **(b)** Patching is **subsampling with a stride equal to the patch size** — so the aliasing warning from the filtering deck applies here too, and fine detail smaller than a patch cannot be recovered downstream. **That makes three decks saying one thing: stride, patching and subsampling are the same operation under different names.**
+> ⚠️ **Shares an answer with QB-CV-0012.** *"Attention cost is quadratic in the number of tokens, which is why ViT patches first"* answers **0010(a)** and **0012(b)**. They are different questions, but a pass on both is **one measurement, not two** — do not log them as independent evidence, and serve them well apart.
 
 ### QB-CV-0011 · [OXFORD] · structural, the asymmetry · `08_Transformers` — "Attention" (q/K/V) · not yet asked
 The deck introduces three functions: a **query** `q : ℝ^d → ℝ^k`, a **key** `K : ℝ^d → ℝ^k`, a **value** `V : ℝ^d → ℝ^v`. Intuition given: *x_i looks at all z_j and decides what is relevant.*
@@ -82,6 +83,7 @@ A convolution looks at a **fixed local window**; attention lets every token look
 **(a)** What does attention buy that stacking more conv layers does not?
 **(b)** Name the price, and say which quantity it scales with.
 > **(a)** A **constant-length path** between any two positions — a conv net needs depth to connect distant pixels, and each extra hop is another factor in the gradient product, which is the vanishing-gradient story. Attention reaches across the image in one step. **(b)** Cost is **quadratic in the number of tokens** (every token attends to every token), which is precisely why ViT patches first. *Pairs with the DL4H residual/vanishing-gradient anchor: both are about path length between distant things.*
+> ⚠️ **Shares an answer with QB-CV-0010** — see the note there. Different question, same sentence for the quadratic-cost half; count the pair as one measurement.
 
 ## Mined 2026-11-18 (D63) — overlap decks, batch 3
 
