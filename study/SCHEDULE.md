@@ -65,6 +65,14 @@ Every file in `study/cache/` carries this header, from September: *"lossy text e
 
 **Standing rule: an item may not quote a formula as the deck's until it carries a ✅ VERIFIED marker.** Clearing the three rows above is background work, never urgent.
 
+## Queued to send — next window with an unspent email
+
+**QB-CV-0042, the first picture question of the campaign.** Figure: `study/figures/qb-cv-0042-horse-heatmap.png` — send with `SendUserFile` **and** in the email body. Prepared at D71 S3, held only because that day's email was already spent. *Built early, delivered near: here "near" means the next window that can actually ring the bell, not a month out.*
+
+It is the horse-watermark slide from `09`, **cropped above the deck's own answer line** so the question is not given away. The figure was rendered and **looked at** before use. **Why this one first:** it attacks FP-9, the dominant flag, and it is the one item where the picture is load-bearing rather than decorative — the accuracy number cannot show the failure and the average heatmap can. It is also a **ten-second look rather than a paragraph**, which is the best shape to offer someone who has been silent a long time.
+
+**How to make more:** `pdftoppm -f N -l N -r 150 -png -x X -y Y -W W -H H <pdf> <out>` crops at render time, which is how the answer line was removed. **Always render the full page, read it yourself, then crop** — the crop box cannot be guessed from the text layer.
+
 ## Artefact states
 
 | Artefact | State |
