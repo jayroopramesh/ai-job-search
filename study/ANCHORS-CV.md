@@ -31,7 +31,7 @@ That sentence is your own dominant failure, stated about a model. If you remembe
 > **02** states the constraint (sampling theorem) · **03** supplies the tool (**convolution theorem**, `ℱ{f ∗ g} = ℱ{f}·ℱ{g}` — *a blur **is** a low-pass; multiplying the spectrum by a mask and convolving with a blur are two descriptions of one operation*) · **07** performs it as **stride** · **08** performs it again as **ViT patching**.
 > **Say it like this:** *"One constraint, one tool, two silent applications. Stride > 1 is subsampling, and subsampling without a low-pass first is aliasing."*
 
-And `04_Restoration` is where the chain hits its limit: the degradation model is `g = f ∗ h + n`, so by the convolution theorem restoration looks like dividing spectra — **except dividing by `ℱ{h}` divides the noise by something near zero exactly where the blur destroyed the signal.** *03 says a blur is a low-pass; 04 says that is why you cannot simply invert one.*
+And `04_Restoration` is where the chain hits its limit: the degradation model is `g = f ∗ d + n` (**the deck names the kernel `d`**), so by the convolution theorem restoration looks like dividing spectra — **except dividing by `ℱ{d}` divides the noise by something near zero exactly where the blur destroyed the signal.** *03 says a blur is a low-pass; 04 says that is why you cannot simply invert one.*
 
 **2. The metric-choice family.** Accuracy → precision/recall → Dice → IoU → FID. **Every one of them exists because the previous one could not see something.**
 
@@ -125,7 +125,7 @@ Naming the wrong denominator here does not cost a mark. **It gets the ethics of 
 **FP-7 (adjacent-concept substitution, 1/3)** — reaching for the neighbouring concept's name.
 
 Two CV items are built as bait for it, so expect them:
-- **`08_Transformers`, q/K/V.** Naming the three is not the answer. *Query and key share a dimension **because they are compared**; value's dimension is free **because it is only mixed**.* The asymmetry is the answer.
+- **`08_Transformers`, q/K/V.** Naming the three is not the answer, and **mind the detail**: your slide writes all three as `ℝ^d → ℝ^d`, which is a simple *instance*, not a requirement. The real structure is *"query and key **must** share a width, because their dot product is the relevance score and a dot product needs equal lengths. The value is never compared — only weighted and summed — so its width is free and just sets the output width."* **Say which of the three you could change without touching anything else.** (The original Transformer gives value its own `d_v` for exactly that reason.)
 - **"Learned beats hand-designed."** `17_RepresentationLearning` says the honest version: *fusing hand-designed factors is itself a comparably complex representation problem.* So **hand-design relocated the hard part rather than removing it, and learning wins because it learns the fusion.** And know when SIFT is still right — a classic tool's guarantees beat a vague preference for learning.
 
 ---

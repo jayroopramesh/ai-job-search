@@ -43,6 +43,28 @@ Day numbers are computed against D1, never stored. **The 25 Dec date is the one 
 
 **One real defect found, and it needed reading rather than a script:** QB-CV-0010 and QB-CV-0012 ask different questions but **share an answer** — the quadratic-cost-is-why-ViT-patches sentence serves 0010(a) and 0012(b). Both are now cross-annotated. **Two items that share an answer are one measurement, not two**, which matters because flag closure needs *independent* passes.
 
+## Formula verification — the cache is NOT the source of truth
+
+Every file in `study/cache/` carries this header, from September: *"lossy text extraction — math glyphs may be mangled; **verify formulas visually in the PDF before quizzing them**."* **It was never acted on until 2026-11-26, and three of the four formula attributions then checked were wrong.** The extraction collapses every superscript and many symbols to one glyph (`ð`), and each gap had been filled from standard convention and then written as the deck's own.
+
+**The method, which costs about a minute per deck and beats the cache outright:**
+1. deck's Drive id: `head -2 study/cache/cv/<deck>.md | tail -1`
+2. `mcp__Google_Drive__download_file_content` with `exportMimeType: application/pdf`
+3. `pdftotext -f <page> -l <page> <file> -` — **it preserves the maths the cache destroys** (`pymupdf` is not importable here; `pdftotext` and `pdfinfo` are)
+4. for superscripts, print codepoints: a mathematical-italic `d` is U+1D451
+
+| item | checked | result |
+|---|---|---|
+| QB-CV-0011 | 2026-11-26 | **was wrong, and its whole premise did not exist in the deck.** Deck writes all three as `ℝ^d → ℝ^d`; `ℝ^d→ℝ^k`/`ℝ^v` was invented. Rewritten, and the new version is a better question. |
+| QB-CV-0025 / 0026 | 2026-11-26 | **wrong symbol** — the kernel is `d`, not `h`. Maths unaffected (convolution commutes). Fixed. |
+| QB-CV-0034 | 2026-11-26 | **verified exactly** — `p(x) = ∏ p(xᵢ \| x₁ … xᵢ₋₁)`, wording and all. |
+| QB-CV-0035 | 2026-11-26 | **wrong symbol** — the deck's network is `f`, not `ε_θ`. Substance unaffected. Fixed. |
+| QB-CV-0019 (`ℱ{f ∗ g} = ℱ{f}·ℱ{g}`) | **not yet** | standard identity, low risk, but **unverified** |
+| QB-CV-0007 (`f : ℝ^(H×W×3) → ℝ²`) | **not yet** | written as a derivation (*"so…"*), not a quotation, so lower risk |
+| QB-CV-0036 (`for t = T … 1`) | **not yet** | prose claim verified earlier; the loop body is not quoted |
+
+**Standing rule: an item may not quote a formula as the deck's until it carries a ✅ VERIFIED marker.** Clearing the three rows above is background work, never urgent.
+
 ## Artefact states
 
 | Artefact | State |
