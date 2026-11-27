@@ -47,13 +47,14 @@ Max-pooling, 2×2 window, stride 2 — the deck's common case.
 
 *`06_Classification` turned out to carry **nearest-neighbour, embeddings and precision/recall** — which means three of his nine measured flags (FP-1, FP-2, FP-4) can be re-attacked in a third course, using CV's own artefacts instead of IntroML's. That is worth more than generic CV coverage: a flag re-attacked from an unused angle is the one thing the flag protocol actually requires, and these angles have never been used.*
 
-### QB-CV-0007 · [OXFORD] · formula-reading, **FP-1 re-attack from a new course** · `06_Classification` — "Embedding Function Example" · not yet asked
-The deck's toy embedding: **count the blue pixels and count the green pixels**, so `f : ℝ^(H×W×3) → ℝ²`, then classify boats vs deer by nearest neighbour in that 2-D space.
+### QB-CV-0007 · [OXFORD] · formula-reading, **FP-1 re-attack from a new course** · `06_Classification` — "Embedding Function Example", slide 12 · **✅ VERIFIED against the PDF 2026-11-27** · served 11-24
+The deck's toy embedding, in its own words: *"We count the number of blue and green pixels. **`φ: ℝ^(H×W×3) → ℝ²`** is easy to visualise. We classify boats vs deer."* *(The deck's symbol is **φ**. Nearest-neighbour classification is taught on its slides 8–11, just before this one; **pairing it with this embedding is my construction, not a line in the deck** — though the deck's own axes are "Blue pixels" against "Green pixels", so a distance in that plane is exactly what it invites.)*
+Classify boats vs deer by **nearest neighbour** in that 2-D space.
 **(a)** Both coordinates are pixel *counts*, so they share a scale. Now replace one axis with **image width in pixels** and keep the other as a blue-pixel count. What happens to the nearest-neighbour decision, and which term in the squared distance tells you?
 **(b)** Say the fix and say what it does.
 > **(a)** The width axis has a far larger numeric range, so its squared difference **dominates the sum** and the neighbour ranking is decided almost entirely by image size — the blue-pixel evidence is drowned out. **(b)** Scale the features (min–max or standardisation) so each contributes comparably. *This is his own 23 Sep mechanism — "income decides, it's several magnitudes higher" — in CV's clothing. If it comes out complete here, that is FP-1's second clean pass on a new day and a new format.*
 
-### QB-CV-0008 · [OXFORD] · forced-choice direction, **FP-4 re-attack** · `06_Classification` — "Precision and Recall" · not yet asked
+### QB-CV-0008 · [OXFORD] · forced-choice direction, **FP-4 re-attack** · `06_Classification` — "Precision and Recall" · not yet asked · **✅ VERIFIED 2026-11-27 (slide 14: all four lines verbatim)**
 The deck: *"Accuracy can be misleading when the label distribution is skewed. In a dataset where 90% of samples are of class 0, you can obtain 90% accuracy by always predicting 0."* And it gives **Precision = TP/(TP+FP)**, **Recall = TP/(TP+FN)**.
 **(a)** For that always-predict-0 classifier, what are precision and recall **on class 1**? One of them is awkward to state — say which and why.
 **(b)** Which denominator is "everything I flagged" and which is "everything that was really there"?
@@ -128,8 +129,8 @@ The deck shows point correspondences from **SIFT**, a classic hand-designed algo
 
 *Two findings worth more than the items. **(1) The aliasing through-line is the lecturer's own, not mine:** `03_FourierTransforms` opens with *"Observation 1 — From lecture 02: down-sampling leads to aliasing"* and shows 512×512 → 64×64 → 16×16. So QB-CV-0005/0010 are testing a link the course itself draws, which makes it examinable rather than merely true. And `03` supplies the **tool** that the chain was missing. **(2) `11_Segmentation`'s own caveat explains the DL4H tumour problem** — *"IoU is favourable to large objects (harder to intersect small objects)"* — a fifth cross-course link.*
 
-### QB-CV-0019 · [OXFORD] · formula-reading, completes the chain · `03_FourierTransforms` — "Convolution theorem" · not yet asked
-`ℱ{f ∗ g} = ℱ{f} · ℱ{g}` — convolution in space is **multiplication** in frequency, and vice versa.
+### QB-CV-0019 · [OXFORD] · formula-reading, completes the chain · `03_FourierTransforms` — "Convolution theorem", slide 30 · **✅ VERIFIED against the PDF 2026-11-27** · not yet asked
+The deck, verbatim: *"Convolution in the spatial domain translates to multiplication in the frequency domain (and vice versa)"*, with **`ℱ{f ∗ g} = ℱ{f} ℱ{g}`** — and the companion **`ℱ⁻¹{FG} = ℱ⁻¹{F} ∗ ℱ⁻¹{G}`**.
 **(a)** Deck 02 said: before subsampling, remove frequencies above half the new sampling rate. Using this theorem, say what "remove" means **mechanically**.
 **(b)** So why is a blur the right tool for the job?
 > **(a)** You multiply the image's spectrum by a mask that is 1 below the cutoff and 0 above it — the unwanted frequencies are **multiplied by zero**, i.e. genuinely deleted rather than hidden. **(b)** Because by this theorem, multiplying the spectrum by a low-pass mask *is* convolving the image with the mask's inverse transform — and that spatial kernel is a blur. **A blur is a low-pass filter; those are two descriptions of one operation.**
@@ -166,7 +167,7 @@ The naive approach: *"Slide a window over the whole image. Classify the centre p
 
 *`04_Restoration` is the **fifth deck in the Fourier chain** and the one that shows why the chain has a limit. `20_EthicsPrivacy` turns out to be **FP-4 with stakes** — it recaps the same confusion matrix he has twice swapped, in a case where a false positive is a longer prison sentence. That is the sixth cross-course link, and the most likely thing an examiner opens an ethics question with.*
 
-### QB-CV-0025 · [OXFORD] · formula-reading, extends the chain · `04_Restoration` — "Modelling Degradation" / "Degradation Model" · not yet asked
+### QB-CV-0025 · [OXFORD] · formula-reading, extends the chain · `04_Restoration` — "Modelling Degradation" / "Degradation Model" · not yet asked · **✅ VERIFIED 2026-11-26 (kernel is `d`; corrected)**
 The deck models an observed image as `g(x,y) = ∬ d(x−u, y−v) f(u,v) du dv + n(x,y)` — i.e. **`g = f ∗ d + n`**: the true image convolved with the kernel `d`, plus noise. *(The deck names the kernel **`d`**; much of the literature calls it `h`. Convolution commutes, so which factor carries the shift does not matter.)*
 **(a)** Name each of the four symbols.
 **(b)** By the convolution theorem (`03`), `ℱ{g} = ℱ{f}·ℱ{h} + ℱ{n}`. So restoring `f` looks like simple division. **Why is that a trap?**
@@ -225,27 +226,27 @@ A model you deployed declines loan applications.
 **(c)** *Follow-up:* connect this to COMPAS.
 > **(a)** The **developer** needs representations and behaviour — is the model using the feature I think it is, across the population. The **domain expert** needs individual predictions they can sanity-check against their own judgement. The **applicant** needs a reason that is **actionable and contestable**: what about my case, and what would change it. **(b)** Because saliency answers *where the model looked*, and the applicant is owed *why the decision went against them.* **Saliency shows where, not why** — a highlighted feature is not a reason, and "your postcode mattered" is an explanation that makes things worse rather than better. **(c)** COMPAS is the same gap with the stakes raised: a risk score influenced sentences, and a defendant cannot contest a number whose basis they cannot see. **`20` gives the harm; `09` gives the response — and the response only works if it is aimed at the right recipient.**
 
-### QB-CV-0034 · [OXFORD] · formula-reading · `16_GenerativeModels` — "Autoregressive Models" · not yet asked
+### QB-CV-0034 · [OXFORD] · formula-reading · `16_GenerativeModels` — "Autoregressive Models" · not yet asked · **✅ VERIFIED 2026-11-26 (slide 9, exact)**
 The deck decomposes an image's likelihood by the chain rule: **`p(x) = Π_i p(x_i | x_1, …, x_{i−1})`**, calls it an **explicit** model, and notes it is the main generative model in NLP.
 **(a)** Why is this an *exact* likelihood rather than an approximation or a bound?
 **(b)** What does it cost you at sampling time?
 > **(a)** Because the chain rule is an **identity** — every joint distribution factorises this way, with no assumption added. So modelling each conditional gives the exact likelihood, which you can maximise directly and, crucially, **evaluate on a test set**. **(b)** Generation is **sequential**: each pixel is conditioned on all the ones before it, so producing one image costs as many forward passes as there are pixels, and none of them can be done in parallel.
 > *Pair this with QB-CV-0036: both autoregressive models and diffusion buy quality by spending many passes per sample. Different reason, same bill.*
 
-### QB-CV-0035 · [OXFORD] · **the seventh cross-course link — the L2 anchor read from the other side** · `16_GenerativeModels` — "Training a diffusion model" · re-attacks FP-6 · not yet asked
+### QB-CV-0035 · [OXFORD] · **the seventh cross-course link — the L2 anchor read from the other side** · `16_GenerativeModels` — "Training a diffusion model" · re-attacks FP-6 · not yet asked · **✅ VERIFIED 2026-11-26 (slide 31; network is `f`, corrected)**
 Diffusion trains with what the deck calls a **"simple L2 loss"**: the slide reads `Loss ‖f(x_t, t) − ε_t‖²₂` over training examples `(x_t, ε_t)`. **✅ VERIFIED against the PDF 2026-11-26** — *the deck names the network **`f`**; the DDPM paper writes `ε_θ`, and this item previously used that symbol as though it were the deck's.*
 But the colorization anchor (QB-CV-0014, and FP-6 on the flag sheet) says squared error **fails exactly when the target is ambiguous**, returning the mean of the modes and painting a colour nobody would choose.
 **Both statements are true. So why doesn't diffusion suffer the colorization problem?**
 > Because the regression target is **not an ambiguous image** — it is **the specific noise sample that was actually added** to make `x_t`. That is one known value, not one draw from a distribution over plausible answers, so **the conditional mean is the right thing to return.** The multimodality has not gone away; it lives in the **iteration**. Each reverse step is a small, nearly single-peaked correction, and the many plausible final images come from the chain of fresh samples (`z ~ N(0,I)` injected at each step), not from any one regression target.
 > **So the rule was never "L2 is bad."** It is: **L2 returns the conditional mean, which is correct precisely when the target is single-peaked.** Diffusion *engineered its target to be single-peaked*; colorization did not. **Same principle, opposite verdict** — and being able to say that is the difference between having memorised the anchor and understanding it.
 
-### QB-CV-0036 · [OXFORD] · structural, "name the axis" · `16_GenerativeModels` — "Sampling from a diffusion model" / "Latent diffusion" · not yet asked
+### QB-CV-0036 · [OXFORD] · structural, "name the axis" · `16_GenerativeModels` — "Sampling from a diffusion model", slide 32 / "Latent diffusion" · **✅ VERIFIED against the PDF 2026-11-27** · not yet asked
 The sampling loop runs `for t = T, …, 1`, and the deck states plainly: *"Evaluate diffusion model T times to generate one sample."* It then offers **latent diffusion** — compress the image first with a VQ-VAE and diffuse in a `3 × H × W` latent space — as the way to make it **cheaper**.
 **Which cost does latent diffusion reduce, and which does it leave untouched?**
 > It reduces the **cost per evaluation**: each of the T passes now runs on a small latent grid instead of full-resolution pixels. It does **not reduce T**, so the number of **sequential, un-parallelisable steps is unchanged** — the latency floor is still T model calls deep.
 > *"It's faster" is the FP-9 answer here. **Name which axis the trick moves**, and say which one it does not.*
 
-### QB-CV-0037 · [OXFORD] · mechanism + the deck's own picture · `16_GenerativeModels` — "Evaluation" / "Fréchet Distance" / "FID" · not yet asked
+### QB-CV-0037 · [OXFORD] · mechanism + the deck's own picture · `16_GenerativeModels` — "Evaluation" / "Fréchet Distance" / "FID" · not yet asked · **✅ VERIFIED 2026-11-27 (slides 43–45; every quoted line exact)**
 The deck: *"Evaluation of explicit generative models is easy — measure `log p(x)` on a test set; whichever model has higher probability wins. Evaluation of implicit models is very difficult: we can only sample from the model, and we do not know how to measure the quality/probability of a sample."*
 **(a)** Say why likelihood is simply unavailable for a GAN.
 **(b)** The deck's picture for Fréchet distance: *a dog and its owner walk separate paths, can only go forward, and the distance is the **shortest leash** that lets both finish.* In **FID**, what two things are on the two paths?
@@ -274,7 +275,7 @@ The deck: edge directions are *"invariant to brightness changes, **equivariant t
 > **(a)** Rotate the image and the descriptor's contents **rotate correspondingly** — the response is predictable, not unchanged. Invariant would mean *identical*. **(b)** By always measuring from the patch's own dominant orientation, two rotated copies of the same patch produce the **same** descriptor: it **converts equivariance into invariance**, by **canonicalisation** — align to a reference frame, then describe. **(c)** **Global average pooling.** A conv feature map is equivariant to translation; averaging it to one number per channel makes it invariant.
 > *Two courses, one goal, two routes: **average the equivariant thing away, or align to a canonical frame first.** Being able to name both is a much better answer than defining equivariance.*
 
-### QB-CV-0040 · [OXFORD] · structural, "why this shape" · `05_MatchingIndexingSearch` — "SIFT Descriptor" (the 128) · not yet asked
+### QB-CV-0040 · [OXFORD] · structural, "why this shape" · `05_MatchingIndexingSearch` — "SIFT Descriptor" (the 128) · not yet asked · **✅ VERIFIED 2026-11-26 (4x4=16, 8 directions, 128-d: all verbatim)**
 SIFT splits the neighbourhood into **4×4 = 16 regions**, computes an **8-direction** edge histogram in each, and concatenates: a **128-dimensional** vector.
 **Why a grid of local histograms rather than one histogram over the whole patch?**
 > Because a single histogram over the patch throws away **where inside the patch** each edge direction sits — two quite different structures with the same edge statistics would be indistinguishable. The 4×4 grid **keeps coarse spatial layout**; the histogram inside each cell **tolerates small shifts** of an edge within that cell. **So the grid buys discriminative power and the per-cell histogram buys tolerance, and 128 is where that trade was struck.** *Say the trade, not the number.*

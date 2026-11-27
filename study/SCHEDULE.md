@@ -59,11 +59,17 @@ Every file in `study/cache/` carries this header, from September: *"lossy text e
 | QB-CV-0025 / 0026 | 2026-11-26 | **wrong symbol** — the kernel is `d`, not `h`. Maths unaffected (convolution commutes). Fixed. |
 | QB-CV-0034 | 2026-11-26 | **verified exactly** — `p(x) = ∏ p(xᵢ \| x₁ … xᵢ₋₁)`, wording and all. |
 | QB-CV-0035 | 2026-11-26 | **wrong symbol** — the deck's network is `f`, not `ε_θ`. Substance unaffected. Fixed. |
-| QB-CV-0019 (`ℱ{f ∗ g} = ℱ{f}·ℱ{g}`) | **not yet** | standard identity, low risk, but **unverified** |
-| QB-CV-0007 (`f : ℝ^(H×W×3) → ℝ²`) | **not yet** | written as a derivation (*"so…"*), not a quotation, so lower risk |
-| QB-CV-0036 (`for t = T … 1`) | **not yet** | prose claim verified earlier; the loop body is not quoted |
+| QB-CV-0019 | 2026-11-27 | **verified exactly** — the deck states the theorem in words and gives both directions. |
+| QB-CV-0007 | 2026-11-27 | **wrong symbol** — the deck writes **`φ`**, not `f`, and the signature `ℝ^(H×W×3) → ℝ²` is verbatim its own. Also: nearest-neighbour is taught on slides 8–11 and the embedding on 12; **pairing them was my construction** and is now flagged as such. Fixed. |
+| QB-CV-0036 | 2026-11-27 | **verified** — `for t = T, …, 1` with `x_T ~ N(0,I)`, and the update uses `f(x_t,t)`, consistent with the deck naming the network `f`. |
 
-**Standing rule: an item may not quote a formula as the deck's until it carries a ✅ VERIFIED marker.** Clearing the three rows above is background work, never urgent.
+**Status: every item that quotes a deck formula, signature or numeric structure now carries a ✅ marker.** **Tally: nine such items; four carried a wrong symbol** (0007 `φ`→`f`, 0011 the invented `ℝ^k`/`ℝ^v`, 0025/0026 `d`→`h`, 0035 `f`→`ε_θ`), **five were exact** (0008, 0019, 0034, 0036, 0040).
+
+**And a third false completion claim, made the same hour as the rule against them.** Twenty minutes after writing *"verification is exhaustive over a bounded set, never sampled by judgement"*, this section said **"all formula rows are now closed"** — built from the three items I had *flagged* rather than from a sweep. A grep for formula characters then found **0008, already served to him, never checked** (it verified clean). *The curated list is the same instrument as the felt-risk rating: both are memory standing in for a scan.* The sweep that caught it was also over-broad, flagging five items whose only "formula" was an arrow in prose — and **an over-broad sweep you then dismiss by hand is triage-by-judgement wearing a script.** So the rule is now precise about its own scope, which is what makes the grep and the rule agree:
+
+> **A ✅ marker is required on any item that quotes a formula, a function signature, or a numeric structure (like `4×4×8 = 128`) and attributes it to the deck.** Arrows or `×` inside ordinary prose do not need one. And the triage was wrong too — 0007 was rated *"lower risk, written as a derivation"* on 26 Nov and turned out to hold the deck's verbatim signature under a substituted letter. **Do not rank items by how risky they feel: that estimate comes from the same memory that produced the error.**
+
+**Standing rule: an item may not quote a formula as the deck's until it carries a ✅ VERIFIED marker.** Every formula-bearing CV item now carries one.
 
 ## Picture questions — the first one has shipped
 
