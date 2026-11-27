@@ -23,7 +23,7 @@ Day numbers are computed against D1, never stored. **The 25 Dec date is the one 
 
 | Date | Item | State |
 |---|---|---|
-| **Sun 13 Dec (BUILD BY)** | **CV oral mock — written and verified by this date.** *A concrete date, because "before 22 Dec, not on it" is the same under-specified instruction that nearly sent the anchor sheet a month early on 25 Nov.* | **does not exist yet** |
+| ~~Sun 13 Dec (BUILD BY)~~ | **CV oral mock — BUILT 27 Nov, 16 days early.** `study/mocks/mock-03-cv-oral.md` — 10 items, 8 minutes, every formula ✅ verified, avoids all six served items. | **DONE** |
 | **~Tue 22 Dec** | CV oral mock **POSTED** self-timed (honour system; say plainly that unsupervised means softer evidence) | — |
 | **~Mon 21 – Tue 22 Dec** | **Deliver `ANCHORS-CV.md`** in the **email body** (no link, no attachment) | **written 24 Nov · verified 24 Nov · HELD on purpose** |
 | **Thu 24 Dec** | **T-1** — light confidence pass, no grilling, stop early, read **only** from `ANCHORS-CV.md` | — |
@@ -90,7 +90,7 @@ It is the horse-watermark slide from `09`, **cropped above the deck's own answer
 | `ANCHORS-CV.md` | **live.** Coverage is an explicit list on its face: covered FP-9/1/2/4/5/6/7 · omitted on purpose FP-3, FP-8 (IntroML-only, assessment past). **Not delivered — see the date above.** |
 | `mocks/mock-01-aus-oral.md` | **WITHDRAWN UNRUN 17 Nov** (assessment had passed). Available on request, **not owed, not to be re-offered.** |
 | `mocks/mock-02-dl4h-oral.md` | **WITHDRAWN UNRUN 24 Nov** (same reasoning, applied four days late, during which it was the whole live queue and blocked all CV serving). Same terms. |
-| CV mock | **does not exist.** Build before 22 Dec. |
+| `mocks/mock-03-cv-oral.md` | **BUILT 27 Nov (D72), unrun, held.** Post self-timed ~22 Dec on the honour system. Cold-set verified against the served list; item 9 shares the COMPAS case with served QB-CV-0029 and is flagged on its face as weaker evidence. |
 
 ---
 
