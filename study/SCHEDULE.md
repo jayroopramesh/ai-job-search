@@ -65,9 +65,11 @@ Every file in `study/cache/` carries this header, from September: *"lossy text e
 
 **Standing rule: an item may not quote a formula as the deck's until it carries a ✅ VERIFIED marker.** Clearing the three rows above is background work, never urgent.
 
-## Queued to send — next window with an unspent email
+## Picture questions — the first one has shipped
 
-**QB-CV-0042, the first picture question of the campaign.** Figure: `study/figures/qb-cv-0042-horse-heatmap.png` — send with `SendUserFile` **and** in the email body. Prepared at D71 S3, held only because that day's email was already spent. *Built early, delivered near: here "near" means the next window that can actually ring the bell, not a month out.*
+**QB-CV-0042 was sent 2026-11-27 (D72), inline in the email body.** Figure: `study/figures/qb-cv-0042-horse-heatmap.png` — send with `SendUserFile` **and** in the email body. Prepared at D71 S3 and held one window because that day's email was spent. *Built early, delivered near: "near" meant the next window that could ring the bell, not a month out.* **Make more of these** — it is the cheapest instrument in the campaign for a student who has gone quiet, and the only format where the figure carries the question.
+
+**Gmail gotcha, two failed sends:** attaching a file *by reference* requires **`replyToMessageId` + an explicit `to`**, never `replyThreadId`, or the call refuses and sends nothing. It still threads correctly. The reference is `sha256:<64 hex>:<absolute path>` with the digest actually computed (`sha256sum`).
 
 It is the horse-watermark slide from `09`, **cropped above the deck's own answer line** so the question is not given away. The figure was rendered and **looked at** before use. **Why this one first:** it attacks FP-9, the dominant flag, and it is the one item where the picture is load-bearing rather than decorative — the accuracy number cannot show the failure and the average heatmap can. It is also a **ten-second look rather than a paragraph**, which is the best shape to offer someone who has been silent a long time.
 
