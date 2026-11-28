@@ -35,7 +35,11 @@ And `04_Restoration` is where the chain hits its limit: the degradation model is
 
 **2. The metric-choice family.** Accuracy → precision/recall → Dice → IoU → FID. **Every one of them exists because the previous one could not see something.**
 
-> **Say it like this:** *"Pick the metric by what it is blind to."* Accuracy is blind to class imbalance · precision/recall split the two ways of being wrong · Dice survives imbalance but **IoU is size-biased** (`11`'s own warning: *"favourable to large objects"*, since a fixed boundary error costs a far bigger fraction of a small lesion) · FID exists because **a GAN gives you a sampler, not a density**, so there is no `p(x)` to score.
+> **Say it like this:** *"Pick the metric by what it is blind to."* Accuracy is blind to class imbalance · precision/recall split the two ways of being wrong **but depend on a threshold** · Dice survives imbalance, yet **IoU is size-biased** (`11`'s own warning: *"favourable to large objects"*, since a fixed boundary error costs a far bigger fraction of a small lesion) · FID exists because **a GAN gives you a sampler, not a density**, so there is no `p(x)` to score.
+
+**And `10_ObjectDetection` gives the family its keystone, in the lecturer's own words: *"AP is an average, average, average precision."*** Each average deletes one arbitrary choice — the **area under the PR curve** removes the *confidence threshold*, averaging over **IoU thresholds** removes *how tight you demanded the boxes be*, and averaging over **classes** removes *which class you happened to look at*.
+
+> **The sentence that generalises all of it:** *"A metric is a number you are willing to be judged by, so a good one deletes the knobs the reporter could otherwise have turned."* And in detection, note the deeper point: **IoU is not only a score, it is the threshold that decides whether a true positive exists at all** — so the same detector on the same image scores differently at 50% and 90%. **Say the denominator, then say what defines a TP.**
 
 Being able to say what a metric **cannot** see is the answer that scores. Naming metrics is not.
 
@@ -138,5 +142,6 @@ Two CV items are built as bait for it, so expect them:
 4. **L2 returns the conditional mean** — right when the target is single-peaked, wrong when it is not. Change the loss, not the network.
 5. **Stride is subsampling, and subsampling without a low-pass is aliasing.** One constraint, one tool, two silent applications.
 6. **Euclidean lets size decide; cosine asks only about the mix.** Bag of Visual Words *is* text retrieval — the deck says so itself.
+7. **A good metric deletes the knobs you could otherwise have turned.** *"AP is an average, average, average precision"* — over confidence thresholds, IoU thresholds, and classes.
 
 **And in the room:** take a breath before answering — a pause reads as thinking, not blanking. Say what you would **do** rather than guessing a name. Give the half you know and name which half; examiners listen for whether you know where your own edges are.

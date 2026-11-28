@@ -300,3 +300,34 @@ The classifier scores **high accuracy** on this dataset. The deck asks: *"Evalua
 **(c)** So what has the model actually learned, and **why did the test set fail to catch it?**
 > **(a)** The attention is a warm band along the **bottom edge**, with its hottest point in the **bottom-left corner**. Averaged over the whole class there is **no horse-shaped structure at all** — whatever the model keys on is not the animal. **(b)** A **copyright watermark** (*"© Lothar Lenz / www.pferdefoto-archiv.de"*), in small grey text. Many images in this dataset carry one. **(c)** It learned **the watermark**. And the test set cannot catch it because the test images are drawn from **the same distribution** — they carry the watermark too — so **the shortcut scores exactly as well as the real mechanism would.** A held-out set only catches failures that the held-out set happens to contain.
 > *This is **FP-9 pointed at a model**, and the picture is doing the work: the accuracy number cannot show you this, and the average heatmap can. **A number without a mechanism is Clever Hans** — the deck opens with that horse too, the one that appeared to do arithmetic while reading its trainer's unconscious cues.*
+
+## Mined 2026-11-28 (D73) — batch 9: `10_ObjectDetection` closes the metric-choice family
+
+*The metric through-line has run the whole course — accuracy, precision/recall, Dice, IoU, FID. `10` supplies its keystone, and the deck states it in its own words: **"AP is an average, average, average precision."** Each of those averages removes one arbitrary choice, which is the general shape of why any metric exists. Every formula below is **✅ verified against the PDF 2026-11-28**; the cache had mangled the IoU ratio into `Area( Area( GT GT ∩ ∪ Pred Pred ) )`.*
+
+### QB-CV-0043 · [OXFORD] · **FP-4 re-attack, third setting** · `10_ObjectDetection` — "Intersection over Union", slide 16 · **✅ VERIFIED 2026-11-28** · not yet asked
+The deck: **`IoU = Area(GT ∩ Pred) / Area(GT ∪ Pred)`**, which *"is 1 for perfect overlap and 0 for no overlap"*, and then — *"often: threshold (e.g. 50% IoU)"*.
+**(a)** In classification you were handed TP, FP and FN. In detection, where do they come from?
+**(b)** So what job is the IoU threshold doing that IoU-as-a-score is not?
+**(c)** Precision and recall are unchanged here: `TP/(TP+FP)` and `TP/(TP+FN)`. What has changed underneath them?
+> **(a)** You have to **manufacture** them. A detector outputs boxes with confidences, not labels, so something must decide whether a predicted box *is* the ground-truth box — and that something is **IoU against a threshold.** **(b)** IoU as a score measures how good a box is; **the threshold converts a continuous overlap into a binary verdict**, and only then does a "true positive" exist at all. **(c)** **The denominators are the same; what counts as a TP has become a choice.** At 50% IoU a loose box is a hit, at 90% it is a miss *and* a false alarm — the same detector, the same image, different numbers.
+> *Third course, same two denominators — and the sharpest version yet, because here you can change the score without touching the model. **Say the denominator, then say what defines a TP.***
+
+### QB-CV-0044 · [OXFORD] · structural, **the keystone of the whole metric through-line** · `10_ObjectDetection` — "Average Precision" / "Overall Precision", slides 23–25 · **✅ VERIFIED 2026-11-28** · not yet asked
+The deck builds up and then says it outright: ***"AP is an average, average, average precision."***
+Its three steps: **AP** is the *area under the precision–recall curve*; then `AP(class) = (1/#thresholds) · Σ_{iou} AP(class, iou)`; then `AP = (1/#classes) · Σ_{class} AP(class)`.
+**Each average removes one arbitrary choice. Name all three.**
+> **1.** Area under the PR curve removes the **confidence threshold** — you no longer report a number that depends on where you set the detector's knob. **2.** Averaging over IoU thresholds removes the **IoU threshold** — no longer a number that depends on how tight you demanded the boxes be. **3.** Averaging over classes removes **which class you happened to look at** — no longer a number dominated by the easy category.
+> *This is the whole metric through-line in one slide. **A metric is a number you are willing to be judged by, so every step here deletes a knob the reporter could otherwise have turned.** Accuracy was blind to imbalance; precision and recall split the errors but depend on a threshold; AP integrates the thresholds away. **Being able to say what each averaging buys is a far better answer than reciting "mean average precision."*** (The deck calls the final quantity **AP**; most of the literature calls it **mAP**.)
+
+### QB-CV-0045 · [OXFORD] · mechanism, "why the extra step" · `10_ObjectDetection` — "Multiple Objects", slide 20 · **✅ VERIFIED 2026-11-28** · not yet asked
+The deck's evaluation procedure, per class: *"For each GT box, find the best match in the predictions (IoU) and score it. **Remove this box from predictions.** Continue with next GT box."*
+**Why the removal step?** What goes wrong without it?
+> Without removal, **one excellent prediction could be matched to several ground-truth boxes**, each time counting as a true positive — so a detector that found one object well would score as though it had found three. Removing the matched prediction enforces **one prediction per ground-truth box**, which is what makes TP, FP and FN add up to something meaningful. *Note also that the procedure is **greedy and order-dependent**: it takes the best match for each GT box in turn, not the globally optimal assignment.*
+> *The shape worth keeping: **an evaluation protocol is not neutral bookkeeping — it encodes a decision about what counts as success**, and the one-line step that looks like housekeeping is usually the one carrying the decision.*
+
+### QB-CV-0046 · [OXFORD] · forced-choice direction · `10_ObjectDetection` — "Precision Recall Curves", slide 22 · **✅ VERIFIED 2026-11-28** · not yet asked
+A detector gives every box a **confidence**. You sweep the confidence threshold.
+**Lower the threshold. Which of precision and recall goes up, which goes down — and why?** Then say it for raising the threshold.
+> **Lower threshold → more boxes reported → recall UP, precision DOWN.** You catch more of what is really there (recall's denominator TP+FN is fixed, and TP rises), but you also emit many wrong boxes (precision's denominator TP+FP grows faster than TP). **Raise it → fewer boxes, more likely correct → precision UP, recall DOWN.**
+> *The deck's own wording: *"lower confidence threshold gives us more objects but many will be wrong (high recall, low precision)."* **The knob does not improve the detector — it only slides you along a curve the detector already fixed.** That is why the honest summary is the area under it, not a point on it.*
