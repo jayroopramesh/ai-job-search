@@ -25,7 +25,8 @@ Day numbers are computed against D1, never stored. **The 25 Dec date is the one 
 |---|---|---|
 | ~~Sun 13 Dec (BUILD BY)~~ | **CV oral mock — BUILT 27 Nov, 16 days early.** `study/mocks/mock-03-cv-oral.md` — 10 items, 8 minutes, every formula ✅ verified, avoids all six served items. | **DONE** |
 | **~Tue 22 Dec** | CV oral mock **POSTED** self-timed (honour system; say plainly that unsupervised means softer evidence) | — |
-| **~Mon 21 – Tue 22 Dec** | **Deliver `ANCHORS-CV.md`** in the **email body** (no link, no attachment) | **written 24 Nov · verified 24 Nov · HELD on purpose** |
+| **Thu 17 Dec (CUT BY)** | **`ANCHORS-CV.md` down to ≤1,200 words.** It stands at ~2,530 — **2.9× the AUS sheet that actually worked (874)** — having grown across five sessions on individually-justified edits. *Content is not final until the last mining, so the cut is dated rather than attempted early; but it is dated, because length only moves one way unless someone measures it.* | **not started** |
+| **~Mon 21 – Tue 22 Dec** | **Deliver `ANCHORS-CV.md`** in the **email body** (no link, no attachment) | **written 24 Nov · formulas verified 26–27 Nov · seven-line core moved to the front 28 Nov · HELD on purpose** |
 | **Thu 24 Dec** | **T-1** — light confidence pass, no grilling, stop early, read **only** from `ANCHORS-CV.md` | — |
 | **Fri 25 Dec** | Assessment · then debrief ask | — |
 | **After 25 Dec** | Final campaign retro, then **disable all three tutor tasks** | — |

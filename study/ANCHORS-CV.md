@@ -10,6 +10,22 @@ Everything below is cited to a deck you have. Where the lecturer makes the link 
 
 ---
 
+## The seven lines
+
+**Read only these in the ten minutes before you walk in.** Everything after them is the same seven things with their evidence attached — go as deep as you have time for, in order, and stop wherever you stop.
+
+1. **After you name it, say one more sentence starting with "because."** That single habit is the biggest gap between what you know and what you score.
+2. **A number without a mechanism is Clever Hans.** The held-out set contains the shortcut too.
+3. **Say the denominator, not the name.** Precision = what I flagged. Recall = what was really there. *In detection, also say what defines a TP — IoU is a threshold, not just a score.*
+4. **L2 returns the conditional mean** — right when the target is single-peaked, wrong when it is not. Change the loss, not the network.
+5. **Stride is subsampling, and subsampling without a low-pass is aliasing.** One constraint, one tool, two silent applications.
+6. **Euclidean lets size decide; cosine asks only about the mix.** Bag of Visual Words *is* text retrieval — the deck says so itself.
+7. **A good metric deletes the knobs you could otherwise have turned.** *"AP is an average, average, average precision"* — over confidence thresholds, IoU thresholds, and classes.
+
+**And in the room:** take a breath before answering — a pause reads as thinking, not blanking. Say what you would **do** rather than guessing a name. Give the half you know and name which half; examiners listen for whether you know where your own edges are.
+
+---
+
 ## The one that matters most
 
 **FP-9 — you stop at the label and leave out the mechanism.** It fired on **5 of 5** clinic items. Pressed for a mechanism you tend to give the *remedy* instead of the *failure*.
@@ -134,14 +150,6 @@ Two CV items are built as bait for it, so expect them:
 
 ---
 
-## If you read nothing else
+## That is the whole sheet
 
-1. **After you name it, say one more sentence starting with "because."** That single habit is the biggest gap between what you know and what you score.
-2. **A number without a mechanism is Clever Hans.** The held-out set contains the shortcut too.
-3. **Say the denominator, not the name.** Precision = what I flagged. Recall = what was there.
-4. **L2 returns the conditional mean** — right when the target is single-peaked, wrong when it is not. Change the loss, not the network.
-5. **Stride is subsampling, and subsampling without a low-pass is aliasing.** One constraint, one tool, two silent applications.
-6. **Euclidean lets size decide; cosine asks only about the mix.** Bag of Visual Words *is* text retrieval — the deck says so itself.
-7. **A good metric deletes the knobs you could otherwise have turned.** *"AP is an average, average, average precision"* — over confidence thresholds, IoU thresholds, and classes.
-
-**And in the room:** take a breath before answering — a pause reads as thinking, not blanking. Say what you would **do** rather than guessing a name. Give the half you know and name which half; examiners listen for whether you know where your own edges are.
+**The seven lines are at the top** — go back to them, not to this section. *(A derived list appears once, in the place that owns it; this used to be a second copy at the bottom, which is how two versions of a thing drift apart.)*
